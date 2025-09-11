@@ -1,158 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KIMYA – Intelligent Silence. Automated.</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIMYA – Intelligent Silence. Automated.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+          font-family: 'Inter', sans-serif;
+          background-color: #F0F2F8;
+          color: #1a202c;
+        }
 
-  <!-- Meta (SEO / Social) -->
-  <meta name="description" content="KIMYA is a smart utility that automatically manages your iPhone Focus modes based on location, time, and real-world context. Set it once — that's it." />
-  <meta property="og:title" content="KIMYA – Intelligent Silence. Automated." />
-  <meta property="og:description" content="Smart auto-silent Focus for iOS. Zones, schedules, and context awareness—set it once, that’s it." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://kimyaapp.github.io/" />
-  <meta property="og:image" content="assets/app_icon.png" />
-  <meta name="twitter:card" content="summary_large_image" />
+        /* Style for the new full-screen header */
+        .aurora-bg {
+          background: linear-gradient(135deg,
+            #2326A8, #35C3F3, #8B9FE8, #62007A,
+            #E681D8, #8A2BE2, #FFA9A4, #B22485, #FED2CE);
+          background-size: 400% 400%;
+          animation: shimmer 15s ease-in-out infinite;
+        }
 
-  <!-- Tailwind (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+        @keyframes shimmer {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
 
-  <!-- Inter font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #F0F2F8;
-      color: #1a1c23;
-    }
-    .aurora-bg {
-      background-image: linear-gradient(135deg,
-        #2326A8 0%, #35C3F3 16%, #8B9FE8 32%, #62007A 48%,
-        #E681D8 64%, #8A2BE2 80%, #FFA9A4 88%, #B22485 94%, #FED2CE 100%);
-      background-size: 250% 250%;
-      animation: shimmer 15s ease-in-out infinite alternate;
-    }
-    @keyframes shimmer {
-      0% { background-position: 0% 0%; }
-      100% { background-position: 100% 100%; }
-    }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-  </style>
+        /* Styles for the content cards below the header */
+        .liquid-glass-card {
+          background-color: rgba(255, 255, 255, 0.7);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          border: 1px solid rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-icon-container {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #1a202c;
+        }
+    </style>
 </head>
 <body class="antialiased">
+    <!-- New Full-Screen Header -->
+    <header class="relative h-screen min-h-[700px] w-full flex flex-col items-center justify-center text-center text-white overflow-hidden px-4">
+        <div class="aurora-bg absolute inset-0"></div>
+        <div class="absolute inset-0 bg-black/20"></div>
 
-  <!-- Hero Section -->
-  <header class="relative h-screen min-h-[700px] w-full flex flex-col items-center justify-center text-center text-white overflow-hidden px-4">
-    <div class="aurora-bg absolute inset-0"></div>
-    <div class="absolute inset-0 bg-black/20"></div>
-
-    <div class="relative z-10 flex flex-col items-center">
-      <!-- Your app icon -->
-      <img src="assets/app_icon.png" alt="KIMYA App Icon" class="h-24 md:h-28 w-auto mb-6 drop-shadow-lg" />
-      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight">
-        Intelligent Silence.<br class="hidden md:block" /> Automated.
-      </h1>
-      <p class="mt-6 max-w-2xl text-lg md:text-xl text-white/80">
-        KIMYA is a smart utility that automatically manages your phone’s Focus modes based on your location, time, and real-world context.
-      </p>
-      <p class="mt-2 text-lg md:text-xl font-semibold text-white">Set it once — that’s it.</p>
-
-      <!-- Replace # with your App Store URL when live -->
-      <a href="#" class="mt-10 inline-block" aria-label="Download on the App Store (coming soon)">
-        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-14" />
-      </a>
-    </div>
-  </header>
-
-  <!-- Features Section -->
-  <section class="py-20 md:py-32 px-4">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold tracking-tight">Your Focus, on Autopilot.</h2>
-        <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">
-          KIMYA’s context engine understands your environment, so you don’t have to manage your phone.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Spatial Awareness -->
-        <div class="glass-card p-8 rounded-3xl shadow-lg">
-          <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-md">
-            <svg class="w-8 h-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mt-6">Spatial Awareness</h3>
-          <p class="mt-2 text-slate-600">
-            Automatically enable Work Focus at the office, or Do Not Disturb when you get home.
-          </p>
+        <div class="relative z-10 flex flex-col items-center">
+            <!-- App Icon -->
+            <img src="assets/app_icon.png" alt="KIMYA App Icon" class="h-28 md:h-32 w-auto mb-8 drop-shadow-lg" />
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                Intelligent Silence. Automated.
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg md:text-xl text-white/80">
+                KIMYA is a smart utility that automatically manages your phone’s Focus modes based on your location, time, and real-world context.
+            </p>
+            <p class="mt-2 text-lg md:text-xl font-semibold text-white">Set it once — it just works.</p>
         </div>
+    </header>
 
-    <!-- Physical Context -->
-    <div class="glass-card p-8 rounded-3xl shadow-lg">
-       <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-md">
-      <svg class="w-8 h-8 text-indigo-600" fill="none" viewBox="0 0 24 24"
+    <!-- Main Content - Sections from previous design -->
+    <main class="relative z-10 px-4 py-20 md:py-24">
+        <div class="max-w-4xl mx-auto space-y-16">
+            <!-- Features Section -->
+            <section id="features">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Your Phone, Smarter.</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="liquid-glass-card rounded-2xl p-6 text-center flex flex-col items-center">
+                        <div class="feature-icon-container w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Spatial Automation</h3>
+                        <p class="text-gray-600">Create geofenced zones like "Home" or "Work" to automatically trigger Focus modes when you enter or leave.</p>
+                    </div>
+                    <div class="liquid-glass-card rounded-2xl p-6 text-center flex flex-col items-center">
+                        <div class="feature-icon-container w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Temporal Automation</h3>
+                        <p class="text-gray-600">Schedule Focus modes based on time of day or specific events, ensuring you’re never disturbed during important moments.</p>
+                    </div>
+                    <div class="liquid-glass-card rounded-2xl p-6 text-center flex flex-col items-center">
+                        <div class="feature-icon-container w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                <line x1="12" y1="18" x2="12.01" y2="18" />
+                                <path d="M15.54 5.54l-1.08 1.08"/>
+                                <path d="M8.46 5.54l1.08 1.08"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Physical Automation</h3>
+                        <p class="text-gray-600">KIMYA detects if your phone is face-down, in your pocket, or if you're driving, activating the right Focus mode instantly.</p>
+                    </div>
+                </div>
+            </section>
 
-  stroke="currentColor" aria-hidden="true">
-       
-      <!-- Phone outline -->
-      <rect x="7" y="2" width="10" height="20" rx="3" stroke="currentColor" stroke-width="2" />
-      <circle cx="12" cy="18" r="1" fill="currentColor"/>
-      <!-- Motion/context arcs -->
-      <path d="M4 7c0-2 1.5-3 3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <path d="M20 7c0-2-1.5-3-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    </div>
-   <h3 class="text-xl font-bold mt-6">Physical Context</h3>
-  <p class="mt-2 text-slate-600">
-    Detects driving, walking, or face-down to intelligently silence notifications.
-  </p>
-</div>
+            <!-- Download Section -->
+            <section id="download" class="liquid-glass-card rounded-2xl p-8 md:p-12 text-center">
+                <h2 class="text-3xl font-bold mb-2">Get KIMYA</h2>
+                <p class="text-gray-700 text-lg mb-6 max-w-xl mx-auto">Experience seamless, context-aware automation. Available exclusively on the App Store for iOS.</p>
+                <p class="text-gray-500 italic mb-6">Soon to be on the App Store</p>
+                <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="inline-block">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-12 md:h-14" />
+                </a>
+            </section>
 
-        <!-- Time-Based Rules -->
-        <div class="glass-card p-8 rounded-3xl shadow-lg">
-          <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-md">
-            <svg class="w-8 h-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mt-6">Temporal Rules</h3>
-          <p class="mt-2 text-slate-600">
-            Schedule a Reading Focus every evening or a Mindfulness mode on weekend mornings.
-          </p>
+            <!-- FAQ Section -->
+            <section id="faq">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+                <div class="liquid-glass-card rounded-2xl p-6 space-y-4">
+                    <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
+                        <button class="faq-question w-full flex justify-between items-center text-left">
+                            <h3 class="text-lg font-medium">Is KIMYA available on Android?</h3>
+                            <span class="transform transition-transform duration-300">▼</span>
+                        </button>
+                        <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+                           <p class="text-gray-600 mt-2">KIMYA is designed exclusively for iOS to leverage its deep integration with Focus modes, Core Location, and other native frameworks. There are no plans for an Android version at this time.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
+                        <button class="faq-question w-full flex justify-between items-center text-left">
+                            <h3 class="text-lg font-medium">How does KIMYA protect my privacy?</h3>
+                            <span class="transform transition-transform duration-300">▼</span>
+                        </button>
+                        <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+                           <p class="text-gray-600 mt-2">Your privacy is paramount. All location and contextual data is processed directly on your device and is never sent to any external servers. For more details, please review our Privacy Policy.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
+                        <button class="faq-question w-full flex justify-between items-center text-left">
+                            <h3 class="text-lg font-medium">What are the requirements to use KIMYA?</h3>
+                            <span class="transform transition-transform duration-300">▼</span>
+                        </button>
+                        <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+                           <p class="text-gray-600 mt-2">KIMYA requires an iPhone running iOS 16 or later to take full advantage of the latest Focus mode and background processing capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-      </div>
-    </div>
-  </section>
+    </main>
 
-  <!-- App Showcase (copy only, no image) -->
-  <section class="py-20 md:py-32 px-4 bg-white">
-    <div class="max-w-6xl mx-auto">
-      <div class="md:w-3/4">
-        <h2 class="text-4xl md:text-5xl font-bold tracking-tight">A Premium Experience.</h2>
-        <p class="mt-4 max-w-2xl text-lg text-slate-600">
-          Designed with our signature Aurora Glass and Liquid Glass UI, KIMYA feels right at home on your device.
-          Every detail is crafted to be beautiful, intuitive, and intelligent.
-        </p>
-      </div>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer class="bg-transparent text-gray-600 py-8 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="flex justify-center items-center gap-2 mb-4">
+                <img src="assets/kimya_logo.png" alt="KIMYA Logo" class="h-6 w-auto">
+            </div>
+            <div class="flex justify-center gap-6 mb-4 text-sm">
+                <a href="#terms" class="hover:text-black">Terms of Service</a>
+                <a href="#privacy" class="hover:text-black">Privacy Policy</a>
+                <a href="mailto:contact@kimyaapp.com" class="hover:text-black">Help & FAQ</a>
+            </div>
+            <p class="text-sm text-gray-500">&copy;2025 KIMYA. All rights reserved.</p>
+            <p class="text-xs text-gray-400 mt-1">contact@kimyaapp.com</p>
+        </div>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="py-16 text-center text-slate-500">
-   <img src="https://raw.githubusercontent.com/kimyaapp/kimyaapp.github.io/main/assets/kimya_logo.png" alt="KIMYA logo" class="h-10 mx-auto mb-4" />
-    <p>© 2025 KIMYA. All rights reserved.</p>
-    <p class="text-sm mt-1">Designed with focus in mind.</p>
-  </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const answer = item.querySelector('.faq-answer');
+                    const icon = question.querySelector('span');
+                    const isOpen = answer.classList.contains('max-h-96');
+                    
+                    // Close all answers first
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        ans.classList.remove('max-h-96');
+                        ans.classList.add('max-h-0');
+                    });
+                     document.querySelectorAll('.faq-question span').forEach(icn => {
+                        icn.classList.remove('rotate-180');
+                    });
 
+                    // Open the clicked one if it was closed
+                    if (!isOpen) {
+                        answer.classList.add('max-h-96');
+                        answer.classList.remove('max-h-0');
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+
+            // Update copyright year
+            const yearElement = document.querySelector('footer p.text-sm');
+            if(yearElement) {
+                yearElement.innerHTML = `&copy;${new Date().getFullYear()} KIMYA. All rights reserved.`;
+            }
+        });
+    </script>
 </body>
 </html>
+
+
