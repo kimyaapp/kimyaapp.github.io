@@ -49,30 +49,26 @@
     </style>
 </head>
 <body class="antialiased">
-    <!-- New Full-Screen Header -->
     <header class="relative h-screen min-h-[700px] w-full flex flex-col items-center justify-center text-center text-white overflow-hidden px-4">
         <div class="aurora-bg absolute inset-0"></div>
         <div class="absolute inset-0 bg-black/20"></div>
 
         <div class="relative z-10 flex flex-col items-center">
-            <!-- App Icon -->
             <img src="assets/app_icon.png" alt="KIMYA App Icon" class="h-64 md:h-80 w-auto mb-12 drop-shadow-lg" />
-            <h1 class="mt-24 text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+            <h1 class="mt-24 text-5xl md:text-6xl font-extrabold tracking-tight leading-tight" data-i18n="header_title">
                 Intelligent Silence. Automated.
             </h1>
-            <p class="mt-6 max-w-2xl text-lg md:text-xl text-white/80">
+            <p class="mt-6 max-w-2xl text-lg md:text-xl text-white/80" data-i18n="header_subtitle">
                 KIMYA is a smart utility that automatically manages your phone’s Focus modes based on your location, time, and real-world context.
             </p>
-            <p class="mt-2 text-lg md:text-xl font-semibold text-white">Set it once — it just works.</p>
+            <p class="mt-2 text-lg md:text-xl font-semibold text-white" data-i18n="header_slogan">Set it once — it just works.</p>
         </div>
     </header>
 
-    <!-- Main Content - Sections from previous design -->
     <main class="relative z-10 px-4 py-20 md:py-24">
         <div class="max-w-4xl mx-auto space-y-16">
-            <!-- Features Section -->
             <section id="features">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Your Phone, Smarter.</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="features_title">Your Phone, Smarter.</h2>
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="liquid-glass-card rounded-2xl p-6 text-center flex flex-col items-center">
                         <div class="feature-icon-container w-16 h-16 rounded-full flex items-center justify-center mb-4">
@@ -81,8 +77,8 @@
                                 <circle cx="12" cy="10" r="3"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">Spatial Automation</h3>
-                        <p class="text-gray-600">Create geofenced zones like "Home" or "Work" to automatically trigger Focus modes when you enter or leave.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="feature_spatial_title">Spatial Automation</h3>
+                        <p class="text-gray-600" data-i18n="feature_spatial_description">Create geofenced zones like "Home" or "Work" to automatically trigger Focus modes when you enter or leave.</p>
                     </div>
                     <div class="liquid-glass-card rounded-2xl p-6 text-center flex flex-col items-center">
                         <div class="feature-icon-container w-16 h-16 rounded-full flex items-center justify-center mb-4">
@@ -91,8 +87,8 @@
                                 <polyline points="12 6 12 12 16 14"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">Temporal Automation</h3>
-                        <p class="text-gray-600">Schedule Focus modes based on time of day or specific events, ensuring you’re never disturbed during important moments.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="feature_temporal_title">Temporal Automation</h3>
+                        <p class="text-gray-600" data-i18n="feature_temporal_description">Schedule Focus modes based on time of day or specific events, ensuring you’re never disturbed during important moments.</p>
                     </div>
                     <div class="liquid-glass-card rounded-2xl p-6 text-center flex flex-col items-center">
                         <div class="feature-icon-container w-16 h-16 rounded-full flex items-center justify-center mb-4">
@@ -103,51 +99,49 @@
                                 <path d="M8.46 5.54l-1.08 1.08"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">Physical Automation</h3>
-                        <p class="text-gray-600">KIMYA detects if your phone is face-down, in your pocket, or if you're driving, activating the right Focus mode instantly.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="feature_physical_title">Physical Automation</h3>
+                        <p class="text-gray-600" data-i18n="feature_physical_description">KIMYA detects if your phone is face-down, in your pocket, or if you're driving, activating the right Focus mode instantly.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Download Section -->
             <section id="download" class="liquid-glass-card rounded-2xl p-8 md:p-12 text-center">
-                <h2 class="text-3xl font-bold mb-2">Get KIMYA</h2>
-                <p class="text-gray-700 text-lg mb-6 max-w-xl mx-auto">Experience seamless, context-aware automation. Available exclusively on the App Store for iOS.</p>
-                <p class="text-gray-500 italic mb-6">Soon to be on the App Store</p>
-                <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="inline-block">
+                <h2 class="text-3xl font-bold mb-2" data-i18n="download_title">Get KIMYA</h2>
+                <p class="text-gray-700 text-lg mb-6 max-w-xl mx-auto" data-i18n="download_subtitle">Experience seamless, context-aware automation. Available exclusively on the App Store for iOS.</p>
+                <p class="text-gray-500 italic mb-6" data-i18n="download_coming_soon">Soon to be on the App Store</p>
+                <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="inline-block" data-i18n="download_app_store_link">
                     <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-12 md:h-14" />
                 </a>
             </section>
 
-            <!-- FAQ Section -->
             <section id="faq">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="faq_title">Frequently Asked Questions</h2>
                 <div class="liquid-glass-card rounded-2xl p-6 space-y-4">
                     <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
                         <button class="faq-question w-full flex justify-between items-center text-left">
-                            <h3 class="text-lg font-medium">Is KIMYA available on Android?</h3>
+                            <h3 class="text-lg font-medium" data-i18n="faq_android_q">Is KIMYA available on Android?</h3>
                             <span class="transform transition-transform duration-300">▼</span>
                         </button>
                         <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
-                           <p class="text-gray-600 mt-2">KIMYA is designed exclusively for iOS to leverage its deep integration with Focus modes, Core Location, and other native frameworks. There are no plans for an Android version at this time.</p>
+                           <p class="text-gray-600 mt-2" data-i18n="faq_android_a">KIMYA is designed exclusively for iOS to leverage its deep integration with Focus modes, Core Location, and other native frameworks. There are no plans for an Android version at this time.</p>
                         </div>
                     </div>
                     <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
                         <button class="faq-question w-full flex justify-between items-center text-left">
-                            <h3 class="text-lg font-medium">How does KIMYA protect my privacy?</h3>
+                            <h3 class="text-lg font-medium" data-i18n="faq_privacy_q">How does KIMYA protect my privacy?</h3>
                             <span class="transform transition-transform duration-300">▼</span>
                         </button>
                         <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
-                           <p class="text-gray-600 mt-2">Your privacy is paramount. All location and contextual data is processed directly on your device and is never sent to any external servers. For more details, please review our Privacy Policy.</p>
+                           <p class="text-gray-600 mt-2" data-i18n="faq_privacy_a">Your privacy is paramount. All location and contextual data is processed directly on your device and is never sent to any external servers. For more details, please review our Privacy Policy.</p>
                         </div>
                     </div>
                     <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
                         <button class="faq-question w-full flex justify-between items-center text-left">
-                            <h3 class="text-lg font-medium">What are the requirements to use KIMYA?</h3>
+                            <h3 class="text-lg font-medium" data-i18n="faq_requirements_q">What are the requirements to use KIMYA?</h3>
                             <span class="transform transition-transform duration-300">▼</span>
                         </button>
                         <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
-                           <p class="text-gray-600 mt-2">KIMYA requires an iPhone running iOS 16 or later to take full advantage of the latest Focus mode and background processing capabilities.</p>
+                           <p class="text-gray-600 mt-2" data-i18n="faq_requirements_a">KIMYA requires an iPhone running iOS 16 or later to take full advantage of the latest Focus mode and background processing capabilities.</p>
                         </div>
                     </div>
                 </div>
@@ -155,19 +149,40 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-transparent text-gray-600 py-8 px-4">
         <div class="max-w-4xl mx-auto text-center">
             <div class="flex justify-center items-center gap-2 mb-4">
                 <img src="assets/kimya_logo.png" alt="KIMYA Logo" class="h-12 w-auto">
             </div>
             <div class="flex justify-center gap-6 mb-4 text-sm">
-                <a href="https://kimyaapp.github.io/TermsofService.html" class="hover:text-black">Terms of Service</a>
-                <a href="https://kimyaapp.github.io/PrivacyPolicy.html" class="hover:text-black">Privacy Policy</a>
-                <a href="https://kimyaapp.github.io/Help&FAQ.html" class="hover:text-black">Help & FAQ</a>
+                <a href="https://kimyaapp.github.io/TermsofService.html" class="hover:text-black" data-i18n="footer_tos">Terms of Service</a>
+                <a href="https://kimyaapp.github.io/PrivacyPolicy.html" class="hover:text-black" data-i18n="footer_privacy">Privacy Policy</a>
+                <a href="https://kimyaapp.github.io/Help&FAQ.html" class="hover:text-black" data-i18n="footer_faq">Help & FAQ</a>
             </div>
-            <p class="text-sm text-gray-500">&copy;2025 KIMYA. All rights reserved.</p>
-            <p class="text-xs text-gray-400 mt-1">contact@kimyaapp.com</p>
+            <p class="text-sm text-gray-500" data-i18n="footer_copyright">&copy;2025 KIMYA. All rights reserved.</p>
+            <p class="text-xs text-gray-400 mt-1" data-i18n="footer_contact">contact@kimyaapp.com</p>
+            
+            <div class="mt-4">
+                <label for="language-selector" class="sr-only">Language</label>
+                <select id="language-selector" class="text-sm px-2 py-1 rounded-md border border-gray-300 bg-white">
+                    <option value="en">English</option>
+                    <option value="zh">简体中文</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="fr">Français</option>
+                    <option value="pt">Português</option>
+                    <option value="es">Español</option>
+                    <option value="de">Deutsch</option>
+                    <option value="it">Italiano</option>
+                    <option value="ar">العربية</option>
+                    <option value="kg">Kikongo</option>
+                    <option value="sw">Kiswahili</option>
+                    <option value="ru">Русский</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="tr">Türkçe</option>
+                </select>
+            </div>
         </div>
     </footer>
 
@@ -181,16 +196,14 @@
                     const icon = question.querySelector('span');
                     const isOpen = answer.classList.contains('max-h-96');
                     
-                    // Close all answers first
                     document.querySelectorAll('.faq-answer').forEach(ans => {
                         ans.classList.remove('max-h-96');
                         ans.classList.add('max-h-0');
                     });
-                     document.querySelectorAll('.faq-question span').forEach(icn => {
+                    document.querySelectorAll('.faq-question span').forEach(icn => {
                         icn.classList.remove('rotate-180');
                     });
 
-                    // Open the clicked one if it was closed
                     if (!isOpen) {
                         answer.classList.add('max-h-96');
                         answer.classList.remove('max-h-0');
@@ -199,16 +212,505 @@
                 });
             });
 
-            // Update copyright year
-            const yearElement = document.querySelector('footer p.text-sm');
-            if(yearElement) {
-                yearElement.innerHTML = `&copy;${new Date().getFullYear()} KIMYA. All rights reserved.`;
+            // Internationalization (i18n) Logic
+            const translations = {
+                en: {
+                    header_title: "Intelligent Silence. Automated.",
+                    header_subtitle: "KIMYA is a smart utility that automatically manages your phone’s Focus modes based on your location, time, and real-world context.",
+                    header_slogan: "Set it once — it just works.",
+                    features_title: "Your Phone, Smarter.",
+                    feature_spatial_title: "Spatial Automation",
+                    feature_spatial_description: "Create geofenced zones like \"Home\" or \"Work\" to automatically trigger Focus modes when you enter or leave.",
+                    feature_temporal_title: "Temporal Automation",
+                    feature_temporal_description: "Schedule Focus modes based on time of day or specific events, ensuring you’re never disturbed during important moments.",
+                    feature_physical_title: "Physical Automation",
+                    feature_physical_description: "KIMYA detects if your phone is face-down, in your pocket, or if you're driving, activating the right Focus mode instantly.",
+                    download_title: "Get KIMYA",
+                    download_subtitle: "Experience seamless, context-aware automation. Available exclusively on the App Store for iOS.",
+                    download_coming_soon: "Soon to be on the App Store",
+                    download_app_store_link: "Download on the App Store",
+                    faq_title: "Frequently Asked Questions",
+                    faq_android_q: "Is KIMYA available on Android?",
+                    faq_android_a: "KIMYA is designed exclusively for iOS to leverage its deep integration with Focus modes, Core Location, and other native frameworks. There are no plans for an Android version at this time.",
+                    faq_privacy_q: "How does KIMYA protect my privacy?",
+                    faq_privacy_a: "Your privacy is paramount. All location and contextual data is processed directly on your device and is never sent to any external servers. For more details, please review our Privacy Policy.",
+                    faq_requirements_q: "What are the requirements to use KIMYA?",
+                    faq_requirements_a: "KIMYA requires an iPhone running iOS 16 or later to take full advantage of the latest Focus mode and background processing capabilities.",
+                    footer_tos: "Terms of Service",
+                    footer_privacy: "Privacy Policy",
+                    footer_faq: "Help & FAQ",
+                    footer_copyright: "&copy;2025 KIMYA. All rights reserved.",
+                    footer_contact: "contact@kimyaapp.com"
+                },
+                zh: {
+                    header_title: "智能静默。自动化。",
+                    header_subtitle: "KIMYA是一款智能工具，可根据您的位置、时间及现实情境，自动管理手机的专注模式。",
+                    header_slogan: "一次设置 — 永久有效。",
+                    features_title: "您的手机，更智能。",
+                    feature_spatial_title: "空间自动化",
+                    feature_spatial_description: "创建像“家”或“工作”这样的地理围栏区域，当您进入或离开时自动触发专注模式。",
+                    feature_temporal_title: "时间自动化",
+                    feature_temporal_description: "根据一天中的时间或特定事件安排专注模式，确保您在重要时刻不会被打扰。",
+                    feature_physical_title: "物理自动化",
+                    feature_physical_description: "KIMYA可以检测您的手机是面朝下、放在口袋里，还是您正在驾车，并即时激活正确的专注模式。",
+                    download_title: "获取 KIMYA",
+                    download_subtitle: "体验无缝、情境感知的自动化。专为iOS在App Store上提供。",
+                    download_coming_soon: "即将登陆App Store",
+                    download_app_store_link: "在 App Store 上下载",
+                    faq_title: "常见问题",
+                    faq_android_q: "KIMYA 是否支持安卓？",
+                    faq_android_a: "KIMYA专为iOS设计，以利用其与专注模式、Core Location及其他原生框架的深度集成。目前没有推出安卓版本的计划。",
+                    faq_privacy_q: "KIMYA 如何保护我的隐私？",
+                    faq_privacy_a: "您的隐私至关重要。所有位置和情境数据都在您的设备上直接处理，绝不会发送到任何外部服务器。欲了解更多详情，请查阅我们的隐私政策。",
+                    faq_requirements_q: "使用 KIMYA 有哪些要求？",
+                    faq_requirements_a: "KIMYA需要运行iOS 16或更高版本的iPhone，才能充分利用最新的专注模式和后台处理功能。",
+                    footer_tos: "服务条款",
+                    footer_privacy: "隐私政策",
+                    footer_faq: "帮助与常见问题",
+                    footer_copyright: "&copy;2025 KIMYA. 版权所有。",
+                    footer_contact: "contact@kimyaapp.com"
+                },
+                ja: {
+                    header_title: "インテリジェント・サイレンス。自動化。",
+                    header_subtitle: "KIMYAは、あなたの現在地、時間、現実世界の状況に基づいて、スマートにスマートフォンの集中モードを自動管理するユーティリティです。",
+                    header_slogan: "一度設定すれば、あとはお任せ。",
+                    features_title: "あなたのスマホが、より賢く。",
+                    feature_spatial_title: "空間オートメーション",
+                    feature_spatial_description: "「自宅」や「職場」などのジオフェンスゾーンを作成し、出入りする際に集中モードを自動的に切り替えます。",
+                    feature_temporal_title: "時間オートメーション",
+                    feature_temporal_description: "時間帯や特定のイベントに基づいて集中モードをスケジュールし、重要な時に邪魔されないようにします。",
+                    feature_physical_title: "物理オートメーション",
+                    feature_physical_description: "KIMYAは、スマートフォンが伏せられているか、ポケットの中にあるか、または運転中かを検出し、適切な集中モードを即座に有効にします。",
+                    download_title: "KIMYAを入手",
+                    download_subtitle: "シームレスな、コンテキストを理解する自動化を体験してください。iOS向けにApp Storeでのみ提供されています。",
+                    download_coming_soon: "まもなくApp Storeに登場",
+                    download_app_store_link: "App Storeでダウンロード",
+                    faq_title: "よくある質問",
+                    faq_android_q: "KIMYAはAndroidで利用できますか？",
+                    faq_android_a: "KIMYAは、集中モード、Core Location、その他のネイティブフレームワークとの深い統合を活用するために、iOS専用に設計されています。現時点ではAndroid版の計画はありません。",
+                    faq_privacy_q: "KIMYAは私のプライバシーをどのように保護しますか？",
+                    faq_privacy_a: "お客様のプライバシーは最優先事項です。すべての位置情報およびコンテキストデータは、お客様のデバイス上で直接処理され、外部サーバーに送信されることはありません。詳細については、プライバシーポリシーをご確認ください。",
+                    faq_requirements_q: "KIMYAを使用するための要件は何ですか？",
+                    faq_requirements_a: "KIMYAは、最新の集中モードとバックグラウンド処理機能を最大限に活用するために、iOS 16以降を搭載したiPhoneが必要です。",
+                    footer_tos: "利用規約",
+                    footer_privacy: "プライバシーポリシー",
+                    footer_faq: "ヘルプとFAQ",
+                    footer_copyright: "&copy;2025 KIMYA. All rights reserved.",
+                    footer_contact: "contact@kimyaapp.com"
+                },
+                ko: {
+                    header_title: "지능적인 침묵. 자동화.",
+                    header_subtitle: "KIMYA는 위치, 시간 및 현실 세계의 상황에 따라 휴대폰의 집중 모드를 자동으로 관리하는 스마트 유틸리티입니다.",
+                    header_slogan: "한 번만 설정하면, 나머지는 알아서 처리됩니다.",
+                    features_title: "더 스마트해진 당신의 휴대폰.",
+                    feature_spatial_title: "공간 자동화",
+                    feature_spatial_description: "“집” 또는 “직장”과 같은 지오펜스 구역을 만들어, 해당 구역에 진입하거나 벗어날 때 집중 모드를 자동으로 실행합니다.",
+                    feature_temporal_title: "시간 자동화",
+                    feature_temporal_description: "시간대 또는 특정 이벤트에 따라 집중 모드를 예약하여 중요한 순간에 방해받지 않도록 합니다.",
+                    feature_physical_title: "물리적 자동화",
+                    feature_physical_description: "KIMYA는 휴대폰이 뒤집혀 있거나 주머니에 있거나 운전 중임을 감지하여 올바른 집중 모드를 즉시 활성화합니다.",
+                    download_title: "KIMYA 다운로드",
+                    download_subtitle: "끊김 없는 상황 인식 자동화를 경험하세요. iOS용으로만 App Store에서 제공됩니다.",
+                    download_coming_soon: "곧 App Store에서 만나요",
+                    download_app_store_link: "App Store에서 다운로드",
+                    faq_title: "자주 묻는 질문",
+                    faq_android_q: "KIMYA는 Android에서 사용할 수 있나요?",
+                    faq_android_a: "KIMYA는 집중 모드, Core Location 및 기타 네이티브 프레임워크와의 긴밀한 통합을 활용하기 위해 iOS 전용으로 설계되었습니다. 현재로서는 Android 버전 출시 계획이 없습니다.",
+                    faq_privacy_q: "KIMYA는 제 개인 정보를 어떻게 보호하나요?",
+                    faq_privacy_a: "귀하의 개인 정보는 가장 중요하게 다루어집니다. 모든 위치 및 상황 데이터는 귀하의 기기에서 직접 처리되며 어떤 외부 서버로도 전송되지 않습니다. 자세한 내용은 개인정보 보호정책을 참조하십시오.",
+                    faq_requirements_q: "KIMYA를 사용하기 위한 요구 사항은 무엇인가요?",
+                    faq_requirements_a: "KIMYA는 최신 집중 모드 및 백그라운드 처리 기능을 최대한 활용하기 위해 iOS 16 이상이 설치된 iPhone이 필요합니다.",
+                    footer_tos: "서비스 약관",
+                    footer_privacy: "개인정보 보호정책",
+                    footer_faq: "도움말 및 FAQ",
+                    footer_copyright: "&copy;2025 KIMYA. All rights reserved.",
+                    footer_contact: "contact@kimyaapp.com"
+                },
+                fr: {
+                    header_title: "Silence Intelligent. Automatisé.",
+                    header_subtitle: "KIMYA est un utilitaire intelligent qui gère automatiquement les modes de concentration de votre téléphone en fonction de votre position, de l'heure et du contexte réel.",
+                    header_slogan: "Configurez-le une fois — il fonctionne tout seul.",
+                    features_title: "Votre téléphone, plus intelligent.",
+                    feature_spatial_title: "Automatisation Spatiale",
+                    feature_spatial_description: "Créez des zones géofencées comme \"Maison\" ou \"Travail\" pour déclencher automatiquement les modes de concentration lorsque vous y entrez ou en sortez.",
+                    feature_temporal_title: "Automatisation Temporelle",
+                    feature_temporal_description: "Planifiez les modes de concentration en fonction de l'heure ou d'événements spécifiques, pour ne jamais être dérangé pendant les moments importants.",
+                    feature_physical_title: "Automatisation Physique",
+                    feature_physical_description: "KIMYA détecte si votre téléphone est posé face cachée, dans votre poche, ou si vous conduisez, et active instantanément le bon mode de concentration.",
+                    download_title: "Obtenir KIMYA",
+                    download_subtitle: "Découvrez une automatisation fluide et contextuelle. Disponible exclusivement sur l'App Store pour iOS.",
+                    download_coming_soon: "Bientôt sur l'App Store",
+                    download_app_store_link: "Télécharger sur l'App Store",
+                    faq_title: "Questions Fréquemment Posées",
+                    faq_android_q: "KIMYA est-il disponible sur Android ?",
+                    faq_android_a: "KIMYA est conçu exclusivement pour iOS afin de tirer parti de son intégration profonde avec les modes de concentration, Core Location et d'autres frameworks natifs. Il n'y a pas de plans pour une version Android pour le moment.",
+                    faq_privacy_q: "Comment KIMYA protège-t-il ma vie privée ?",
+                    faq_privacy_a: "Votre vie privée est primordiale. Toutes les données de localisation et de contexte sont traitées directement sur votre appareil et ne sont jamais envoyées à des serveurs externes. Pour plus de détails, veuillez consulter notre Politique de Confidentialité.",
+                    faq_requirements_q: "Quelles sont les exigences pour utiliser KIMYA ?",
+                    faq_requirements_a: "KIMYA nécessite un iPhone sous iOS 16 ou une version ultérieure pour profiter pleinement des dernières capacités des modes de concentration et de traitement en arrière-plan.",
+                    footer_tos: "Conditions d'utilisation",
+                    footer_privacy: "Politique de Confidentialité",
+                    footer_faq: "Aide & FAQ",
+                    footer_copyright: "&copy;2025 KIMYA. Tous droits réservés.",
+                    footer_contact: "contact@kimyaapp.com"
+                },
+                pt: {
+                    header_title: "Silêncio Inteligente. Automatizado.",
+                    header_subtitle: "KIMYA é um utilitário inteligente que gerencia automaticamente os modos de Foco do seu telefone com base na sua localização, horário e contexto do mundo real.",
+                    header_slogan: "Configure uma vez — e ele simplesmente funciona.",
+                    features_title: "Seu Telefone, Mais Inteligente.",
+                    feature_spatial_title: "Automação Espacial",
+                    feature_spatial_description: "Crie zonas com cerca eletrônica como \"Casa\" ou \"Trabalho\" para acionar automaticamente os modos de Foco ao entrar ou sair.",
+                    feature_temporal_title: "Automação Temporal",
+                    feature_temporal_description: "Agende os modos de Foco com base na hora do dia ou em eventos específicos, garantindo que você nunca seja incomodado em momentos importantes.",
+                    feature_physical_title: "Automação Física",
+                    feature_physical_description: "KIMYA detecta se seu telefone está virado para baixo, no seu bolso ou se você está dirigindo, ativando o modo de Foco correto instantaneamente.",
+                    download_title: "Obter KIMYA",
+                    download_subtitle: "Experimente uma automação contínua e consciente do contexto. Disponível exclusivamente na App Store para iOS.",
+                    download_coming_soon: "Em breve na App Store",
+                    download_app_store_link: "Baixar na App Store",
+                    faq_title: "Perguntas Frequentes",
+                    faq_android_q: "O KIMYA está disponível para Android?",
+                    faq_android_a: "O KIMYA foi projetado exclusivamente para iOS para aproveitar sua profunda integração com os modos de Foco, Core Location e outros frameworks nativos. Não há planos para uma versão Android no momento.",
+                    faq_privacy_q: "Como o KIMYA protege minha privacidade?",
+                    faq_privacy_a: "Sua privacidade é fundamental. Todos os dados de localização e contexto são processados diretamente no seu dispositivo e nunca são enviados para servidores externos. Para mais detalhes, revise nossa Política de Privacidade.",
+                    faq_requirements_q: "Quais são os requisitos para usar o KIMYA?",
+                    faq_requirements_a: "O KIMYA requer um iPhone com iOS 16 ou posterior para aproveitar ao máximo os recursos mais recentes de modo de Foco e processamento em segundo plano.",
+                    footer_tos: "Termos de Serviço",
+                    footer_privacy: "Política de Privacidade",
+                    footer_faq: "Ajuda e FAQ",
+                    footer_copyright: "&copy;2025 KIMYA. Todos os direitos reservados.",
+                    footer_contact: "contact@kimyaapp.com"
+                },
+                es: {
+                    header_title: "Silencio Inteligente. Automatizado.",
+                    header_subtitle: "KIMYA es una utilidad inteligente que gestiona automáticamente los modos de concentración de su teléfono basándose en su ubicación, hora y contexto del mundo real.",
+                    header_slogan: "Configúrelo una vez — y simplemente funciona.",
+                    features_title: "Su Teléfono, Más Inteligente.",
+                    feature_spatial_title: "Automatización Espacial",
+                    feature_spatial_description: "Cree zonas geocercadas como \"Casa\" o \"Trabajo\" para activar automáticamente los modos de concentración cuando entre o salga de ellas.",
+                    feature_temporal_title: "Automatización Temporal",
+                    feature_temporal_description: "Programe los modos de concentración según la hora del día o eventos específicos, asegurándose de que nunca sea molestado en momentos importantes.",
+                    feature_physical_title: "Automatización Física",
+                    feature_physical_description: "KIMYA detecta si su teléfono está boca abajo, en su bolsillo o si está conduciendo, activando instantáneamente el modo de concentración correcto.",
+                    download_title: "Obtener KIMYA",
+                    download_subtitle: "Experimente una automatización fluida y consciente del contexto. Disponible exclusivamente en la App Store para iOS.",
+                    download_coming_soon: "Próximamente en la App Store",
+                    download_app_store_link: "Descargar en el App Store",
+                    faq_title: "Preguntas Frecuentes",
+                    faq_android_q: "¿Está KIMYA disponible en Android?",
+                    faq_android_a: "KIMYA está diseñado exclusivamente para iOS para aprovechar su profunda integración con los modos de concentración, Core Location y otros frameworks nativos. No hay planes para una versión de Android en este momento.",
+                    faq_privacy_q: "¿Cómo protege KIMYA mi privacidad?",
+                    faq_privacy_a: "Su privacidad es primordial. Todos los datos de ubicación y contexto se procesan directamente en su dispositivo y nunca se envían a servidores externos. Para más detalles, revise nuestra Política de Privacidad.",
+                    faq_requirements_q: "¿Cuáles son los requisitos para usar KIMYA?",
+                    faq_requirements_a: "KIMYA requiere un iPhone con iOS 16 o posterior para aprovechar al máximo las últimas capacidades de modo de concentración y procesamiento en segundo plano.",
+                    footer_tos: "Términos de Servicio",
+                    footer_privacy: "Política de Privacidad",
+                    footer_faq: "Ayuda y Preguntas Frecuentes",
+                    footer_copyright: "&copy;2025 KIMYA. Todos los derechos reservados.",
+                    footer_contact: "contact@kimyaapp.com"
+                },
+                de: {
+                    header_title: "Intelligente Stille. Automatisiert.",
+                    header_subtitle: "KIMYA ist ein intelligentes Dienstprogramm, das die Fokus-Modi Ihres Telefons automatisch basierend auf Ihrem Standort, der Uhrzeit und dem realen Kontext verwaltet.",
+                    header_slogan: "Einmal einstellen — es funktioniert einfach.",
+                    features_title: "Ihr Telefon, intelligenter.",
+                    feature_spatial_title: "Räumliche Automatisierung",
+                    feature_spatial_description: "Erstellen Sie Geofencing-Zonen wie „Zuhause“ oder „Arbeit“, um Fokus-Modi automatisch auszulösen, wenn Sie sie betreten oder verlassen.",
+                    feature_temporal_title: "Zeitliche Automatisierung",
+                    feature_temporal_description: "Planen Sie Fokus-Modi basierend auf der Tageszeit oder bestimmten Ereignissen, um sicherzustellen, dass Sie in wichtigen Momenten nicht gestört werden.",
+                    feature_physical_title: "Physische Automatisierung",
+                    feature_physical_description: "KIMYA erkennt, ob Ihr Telefon mit dem Bildschirm nach unten, in Ihrer Tasche oder ob Sie Auto fahren, und aktiviert sofort den richtigen Fokus-Modus.",
+                    download_title: "KIMYA erhalten",
+                    download_subtitle: "Erleben Sie nahtlose, kontextbewusste Automatisierung. Exklusiv im App Store für iOS erhältlich.",
+                    download_coming_soon: "Bald im App Store",
+                    download_app_store_link: "Im App Store laden",
+                    faq_title: "Häufig gestellte Fragen",
+                    faq_android_q: "Ist KIMYA auf Android verfügbar?",
+                    faq_android_a: "KIMYA wurde exklusiv für iOS entwickelt, um die tiefe Integration mit Fokus-Modi, Core Location und anderen nativen Frameworks zu nutzen. Derzeit sind keine Pläne für eine Android-Version vorhanden.",
+                    faq_privacy_q: "Wie schützt KIMYA meine Privatsphäre?",
+                    faq_privacy_a: "Ihre Privatsphäre ist von größter Bedeutung. Alle Standort- und Kontextdaten werden direkt auf Ihrem Gerät verarbeitet und niemals an externe Server gesendet. Für weitere Details lesen Sie bitte unsere Datenschutzrichtlinie.",
+                    faq_requirements_q: "Was sind die Anforderungen, um KIMYA zu nutzen?",
+                    faq_requirements_a: "KIMYA erfordert ein iPhone mit iOS 16 oder höher, um die neuesten Funktionen für den Fokus-Modus und die Hintergrundverarbeitung voll auszuschöpfen.",
+                    footer_tos: "Nutzungsbedingungen",
+                    footer_privacy: "Datenschutzrichtlinie",
+                    footer_faq: "Hilfe & FAQ",
+                    footer_copyright: "&copy;2025 KIMYA. Alle Rechte vorbehalten.",
+                    footer_contact: "contact@kimyaapp.com"
+                },
+                it: {
+                    header_title: "Silenzio Intelligente. Automatizzato.",
+                    header_subtitle: "KIMYA è un'utilità intelligente che gestisce automaticamente le modalità di Full Immersion del tuo telefono in base alla tua posizione, all'ora e al contesto del mondo reale.",
+                    header_slogan: "Impostalo una volta — e funziona da solo.",
+                    features_title: "Il tuo telefono, più intelligente.",
+                    feature_spatial_title: "Automazione Spaziale",
+                    feature_spatial_description: "Crea zone georeferenziate come \"Casa\" o \"Lavoro\" per attivare automaticamente le modalità di Full Immersion quando entri o esci.",
+                    feature_temporal_title: "Automazione Temporale",
+                    feature_temporal_description: "Pianifica le modalità di Full Immersion in base all'ora del giorno o a eventi specifici, assicurandoti di non essere mai disturbato nei momenti importanti.",
+                    feature_physical_title: "Automazione Fisica",
+                    feature_physical_description: "KIMYA rileva se il tuo telefono è a faccia in giù, in tasca o se stai guidando, attivando istantaneamente la modalità di Full Immersion corretta.",
+                    download_title: "Ottieni KIMYA",
+                    download_subtitle: "Sperimenta un'automazione fluida e consapevole del contesto. Disponibile esclusivamente sull'App Store per iOS.",
+                    download_coming_soon: "Presto sull'App Store",
+                    download_app_store_link: "Scarica sull'App Store",
+                    faq_title: "Domande Frequenti",
+                    faq_android_q: "KIMYA è disponibile su Android?",
+                    faq_android_a: "KIMYA è progettato esclusivamente per iOS per sfruttare la sua profonda integrazione con le modalità di Full Immersion, Core Location e altri framework nativi. Attualmente non ci sono piani per una versione Android.",
+                    faq_privacy_q: "Come KIMYA protegge la mia privacy?",
+                    faq_privacy_a: "La tua privacy è fondamentale. Tutti i dati di posizione e contesto vengono elaborati direttamente sul tuo dispositivo e non vengono mai inviati a server esterni. Per maggiori dettagli, consulta la nostra Informativa sulla Privacy.",
+                    faq_requirements_q: "Quali sono i requisiti per usare KIMYA?",
+                    faq_requirements_a: "KIMYA richiede un iPhone con iOS 16 o versioni successive per sfruttare appieno le ultime funzionalità di modalità di Full Immersion e di elaborazione in background.",
+                    footer_tos: "Termini di Servizio",
+                    footer_privacy: "Informativa sulla Privacy",
+                    footer_faq: "Guida e FAQ",
+                    footer_copyright: "&copy;2025 KIMYA. Tutti i diritti riservati.",
+                    footer_contact: "contact@kimyaapp.com"
+                },
+                ar: {
+                    header_title: "صمت ذكي. آلي.",
+                    header_subtitle: "كيميا هو أداة مساعدة ذكية تدير أوضاع التركيز في هاتفك تلقائيًا بناءً على موقعك، الوقت، والسياق الواقعي.",
+                    header_slogan: "اضبطه مرة واحدة — وسيعمل تلقائيًا.",
+                    features_title: "هاتفك، أصبح أذكى.",
+                    feature_spatial_title: "الأتمتة المكانية",
+                    feature_spatial_description: "أنشئ مناطق محددة جغرافيًا مثل \"المنزل\" أو \"العمل\" لتفعيل أوضاع التركيز تلقائيًا عند الدخول أو الخروج منها.",
+                    feature_temporal_title: "الأتمتة الزمنية",
+                    feature_temporal_description: "جدولة أوضاع التركيز بناءً على وقت اليوم أو أحداث معينة، مما يضمن عدم إزعاجك في اللحظات الهامة.",
+                    feature_physical_title: "الأتمتة الجسدية",
+                    feature_physical_description: "يكتشف كيميا إذا كان هاتفك مقلوبًا على وجهه، في جيبك، أو إذا كنت تقود السيارة، ويقوم بتفعيل وضع التركيز الصحيح على الفور.",
+                    download_title: "احصل على كيميا",
+                    download_subtitle: "جرب الأتمتة السلسة وواعية السياق. متاح حصريًا على متجر التطبيقات لنظام iOS.",
+                    download_coming_soon: "قريبًا في متجر التطبيقات",
+                    download_app_store_link: "تحميل من متجر التطبيقات",
+                    faq_title: "الأسئلة الشائعة",
+                    faq_android_q: "هل كيميا متاح على نظام أندرويد؟",
+                    faq_android_a: "صمم كيميا حصريًا لنظام iOS للاستفادة من تكامله العميق مع أوضاع التركيز، Core Location، وغيرها من الأطر البرمجية الأصلية. لا توجد خطط لإصدار نسخة أندرويد في الوقت الحالي.",
+                    faq_privacy_q: "كيف يحمي كيميا خصوصيتي؟",
+                    faq_privacy_a: "خصوصيتك هي الأولوية القصوى. تتم معالجة جميع بيانات الموقع والسياق مباشرة على جهازك ولا يتم إرسالها أبدًا إلى أي خوادم خارجية. لمزيد من التفاصيل، يرجى مراجعة سياسة الخصوصية الخاصة بنا.",
+                    faq_requirements_q: "ما هي متطلبات استخدام كيميا؟",
+                    faq_requirements_a: "يتطلب كيميا جهاز آيفون يعمل بنظام iOS 16 أو أحدث للاستفادة الكاملة من أحدث قدرات أوضاع التركيز والمعالجة في الخلفية.",
+                    footer_tos: "شروط الخدمة",
+                    footer_privacy: "سياسة الخصوصية",
+                    footer_faq: "المساعدة والأسئلة الشائعة",
+                    footer_copyright: "&copy;2025 كيميا. جميع الحقوق محفوظة.",
+                    footer_contact: "contact@kimyaapp.com"
+                },
+                kg: {
+                    header_title: "KIMYA: Fimbu ya Nzambi, Ntelam’o.",
+                    header_subtitle: "KIMYA i nsikulu ya luzingu ya mfunu ya nlekelo ya ntima ye nkwa. Yameka wumbongo wuna wunkanga na lufwa, m’bilu ya n’tima ye n’simba-ntima ya lufwa.",
+                    header_slogan: "Ntu-nima ye mosi — o wumona yona yina ye.",
+                    features_title: "K’na wumona l’o n’tima. O wumona wa nkwu.",
+                    feature_spatial_title: "Ntelam’o ya n’ti-nima",
+                    feature_spatial_description: "K’na wumona yo kamba na l’o n’tima ye m’bita ya kimya, o wumona ntima ye n’simba-ntima ya lufwa.",
+                    feature_temporal_title: "Ntelam’o ya n’tsun-nima",
+                    feature_temporal_description: "K’na wumona yo kamba na l’o n’tima ye m’bita ya kimya, o wumona ntima ye n’simba-ntima ya lufwa.",
+                    feature_physical_title: "Ntelam’o ya n’kwa-ntima",
+                    feature_physical_description: "K’na wumona yo kamba na l’o n’tima ye m’bita ya kimya, o wumona ntima ye n’simba-ntima ya lufwa.",
+                    download_title: "KIMYA ye l’o nganga",
+                    download_subtitle: "O wumona l’o n’tima, m’bita ya kimya, ye m’bilu ya n’tima ye nkwa. O wumona ntima ye n’simba-ntima ya lufwa.",
+                    download_coming_soon: "Ya n’tima ya lufwa.",
+                    download_app_store_link: "Download na App Store",
+                    faq_title: "M’bilu ya n’tima",
+                    faq_android_q: "KIMYA ye l’o nganga?",
+                    faq_android_a: "KIMYA i nsikulu ya luzingu ya mfunu ya nlekelo ya ntima ye nkwa. O wumona ntima ye n’simba-ntima ya lufwa.",
+                    faq_privacy_q: "KIMYA ye l’o nganga na l’o n’tima?",
+                    faq_privacy_a: "KIMYA i nsikulu ya luzingu ya mfunu ya nlekelo ya ntima ye nkwa. O wumona ntima ye n’simba-ntima ya lufwa.",
+                    faq_requirements_q: "KIMYA ye l’o nganga na l’o n’tima?",
+                    faq_requirements_a: "KIMYA i nsikulu ya luzingu ya mfunu ya nlekelo ya ntima ye nkwa. O wumona ntima ye n’simba-ntima ya lufwa.",
+                    footer_tos: "M’bilu ya n’tima",
+                    footer_privacy: "M’bilu ya n’tima",
+                    footer_faq: "M’bilu ya n’tima",
+                    footer_copyright: "&copy;2025 KIMYA. All rights reserved.",
+                    footer_contact: "contact@kimyaapp.com"
+                },
+                sw: {
+                    header_title: "Utulivu Wenye Akili. Kiotomatiki.",
+                    header_subtitle: "KIMYA ni programu mahiri inayodhibiti kiotomatiki hali za Focus za simu yako kulingana na eneo, muda, na muktadha halisi.",
+                    header_slogan: "Weka mara moja — itafanya kazi.",
+                    features_title: "Simu Yako, Ikiwa Bora Zaidi.",
+                    feature_spatial_title: "Uotomatiki wa Eneo",
+                    feature_spatial_description: "Unda maeneo maalum kama \"Nyumbani\" au \"Kazi\" ili kuwezesha kiotomatiki hali za Focus unapoingia au kutoka.",
+                    feature_temporal_title: "Uotomatiki wa Muda",
+                    feature_temporal_description: "Panga hali za Focus kulingana na muda wa siku au matukio maalum, ukihakikisha hautasumbuliwa wakati muhimu.",
+                    feature_physical_title: "Uotomatiki wa Kimwili",
+                    feature_physical_description: "KIMYA hutambua kama simu yako imeelekezwa chini, iko mfukoni, au kama unaendesha gari, na kuwezesha hali sahihi ya Focus mara moja.",
+                    download_title: "Pata KIMYA",
+                    download_subtitle: "Pata uzoefu wa kiotomatiki usio na mshono na unaozingatia muktadha. Inapatikana pekee kwenye App Store kwa iOS.",
+                    download_coming_soon: "Inakuja hivi karibuni kwenye App Store",
+                    download_app_store_link: "Pakua kwenye App Store",
+                    faq_title: "Maswali Yanayoulizwa Mara Kwa Mara",
+                    faq_android_q: "Je, KIMYA inapatikana kwenye Android?",
+                    faq_android_a: "KIMYA imeundwa pekee kwa ajili ya iOS ili kutumia ushirikiano wake wa kina na hali za Focus, Core Location, na mifumo mingine asilia. Hakuna mipango ya toleo la Android kwa sasa.",
+                    faq_privacy_q: "KIMYA inalindaje faragha yangu?",
+                    faq_privacy_a: "Faragha yako ni muhimu zaidi. Data zote za eneo na muktadha huchakatwa moja kwa moja kwenye kifaa chako na hazitumwi kamwe kwa seva zozote za nje. Kwa maelezo zaidi, tafadhali soma Sera yetu ya Faragha.",
+                    faq_requirements_q: "Je, ni mahitaji gani ya kutumia KIMYA?",
+                    faq_requirements_a: "KIMYA inahitaji iPhone inayoendesha iOS 16 au toleo jipya zaidi ili kutumia kikamilifu uwezo wa hivi karibuni wa hali za Focus na usindikaji wa nyuma.",
+                    footer_tos: "Masharti ya Huduma",
+                    footer_privacy: "Sera ya Faragha",
+                    footer_faq: "Msaada na FAQ",
+                    footer_copyright: "&copy;2025 KIMYA. Haki zote zimehifadhiwa.",
+                    footer_contact: "contact@kimyaapp.com"
+                },
+                ru: {
+                    header_title: "Интеллектуальная тишина. Автоматизировано.",
+                    header_subtitle: "KIMYA — это умная утилита, которая автоматически управляет режимами «Фокус» вашего телефона на основе вашего местоположения, времени и реального контекста.",
+                    header_slogan: "Настройте один раз — и это просто работает.",
+                    features_title: "Ваш телефон, умнее.",
+                    feature_spatial_title: "Пространственная автоматизация",
+                    feature_spatial_description: "Создавайте геозоны, такие как «Дом» или «Работа», чтобы автоматически активировать режимы «Фокус» при входе или выходе.",
+                    feature_temporal_title: "Временная автоматизация",
+                    feature_temporal_description: "Планируйте режимы «Фокус» в зависимости от времени суток или определенных событий, чтобы вас не беспокоили в важные моменты.",
+                    feature_physical_title: "Физическая автоматизация",
+                    feature_physical_description: "KIMYA определяет, лежит ли ваш телефон экраном вниз, находится в кармане или вы за рулем, и мгновенно активирует нужный режим «Фокус».",
+                    download_title: "Получить KIMYA",
+                    download_subtitle: "Оцените бесшовную, контекстно-зависимую автоматизацию. Доступно эксклюзивно в App Store для iOS.",
+                    download_coming_soon: "Скоро в App Store",
+                    download_app_store_link: "Загрузить в App Store",
+                    faq_title: "Часто задаваемые вопросы",
+                    faq_android_q: "Доступен ли KIMYA на Android?",
+                    faq_android_a: "KIMYA разработан исключительно для iOS, чтобы использовать глубокую интеграцию с режимами «Фокус», Core Location и другими нативными фреймворками. В настоящее время планы по созданию версии для Android отсутствуют.",
+                    faq_privacy_q: "Как KIMYA защищает мою конфиденциальность?",
+                    faq_privacy_a: "Ваша конфиденциальность имеет первостепенное значение. Все данные о местоположении и контексте обрабатываются непосредственно на вашем устройстве и никогда не отправляются на внешние серверы. Для получения более подробной информации, пожалуйста, ознакомьтесь с нашей Политикой конфиденциальности.",
+                    faq_requirements_q: "Каковы требования для использования KIMYA?",
+                    faq_requirements_a: "KIMYA требует iPhone с iOS 16 или более поздней версией, чтобы в полной мере использовать последние возможности режима «Фокус» и фоновой обработки.",
+                    footer_tos: "Условия использования",
+                    footer_privacy: "Политика конфиденциальности",
+                    footer_faq: "Помощь и FAQ",
+                    footer_copyright: "&copy;2025 KIMYA. Все права защищены.",
+                    footer_contact: "contact@kimyaapp.com"
+                },
+                hi: {
+                    header_title: "बुद्धिमान मौन। स्वचालित।",
+                    header_subtitle: "किमया एक स्मार्ट यूटिलिटी है जो आपके स्थान, समय, और वास्तविक दुनिया के संदर्भ के आधार पर आपके फोन के फोकस मोड्स को स्वचालित रूप से प्रबंधित करती है।",
+                    header_slogan: "एक बार सेट करें — यह बस काम करता है।",
+                    features_title: "आपका फोन, और भी स्मार्ट।",
+                    feature_spatial_title: "स्थानिक स्वचालन",
+                    feature_spatial_description: "भौगोलिक-बाड़ वाले क्षेत्र जैसे \"घर\" या \"काम\" बनाएं, ताकि आपके प्रवेश करने या बाहर निकलने पर फोकस मोड्स स्वचालित रूप से ट्रिगर हो जाएं।",
+                    feature_temporal_title: "कालिक स्वचालन",
+                    feature_temporal_description: "दिन के समय या विशिष्ट घटनाओं के आधार पर फोकस मोड्स को शेड्यूल करें, यह सुनिश्चित करते हुए कि आपको महत्वपूर्ण क्षणों में कभी परेशान न किया जाए।",
+                    feature_physical_title: "भौतिक स्वचालन",
+                    feature_physical_description: "किमया पता लगाती है कि आपका फोन उल्टा रखा है, जेब में है, या आप ड्राइव कर रहे हैं, और सही फोकस मोड को तुरंत सक्रिय कर देती है।",
+                    download_title: "किमया प्राप्त करें",
+                    download_subtitle: "निर्बाध, संदर्भ-जागरूक स्वचालन का अनुभव करें। यह विशेष रूप से iOS के लिए ऐप स्टोर पर उपलब्ध है।",
+                    download_coming_soon: "जल्द ही ऐप स्टोर पर",
+                    download_app_store_link: "ऐप स्टोर पर डाउनलोड करें",
+                    faq_title: "अक्सर पूछे जाने वाले प्रश्न",
+                    faq_android_q: "क्या किमया Android पर उपलब्ध है?",
+                    faq_android_a: "किमया को विशेष रूप से iOS के लिए डिज़ाइन किया गया है ताकि फोकस मोड्स, कोर लोकेशन और अन्य मूल फ्रेमवर्क के साथ इसके गहरे एकीकरण का लाभ उठाया जा सके। फिलहाल Android संस्करण के लिए कोई योजना नहीं है।",
+                    faq_privacy_q: "किमया मेरी गोपनीयता की रक्षा कैसे करती है?",
+                    faq_privacy_a: "आपकी गोपनीयता सर्वोपरि है। सभी स्थान और प्रासंगिक डेटा सीधे आपके डिवाइस पर संसाधित होते हैं और कभी भी किसी बाहरी सर्वर पर नहीं भेजे जाते। अधिक विवरण के लिए, कृपया हमारी गोपनीयता नीति देखें।",
+                    faq_requirements_q: "किमया का उपयोग करने के लिए क्या आवश्यकताएं हैं?",
+                    faq_requirements_a: "किमया को iOS 16 या उससे बाद के संस्करण वाले iPhone की आवश्यकता होती है ताकि नवीनतम फोकस मोड और बैकग्राउंड प्रोसेसिंग क्षमताओं का पूरा लाभ उठाया जा सके।",
+                    footer_tos: "सेवा की शर्तें",
+                    footer_privacy: "गोपनीयता नीति",
+                    footer_faq: "सहायता और अक्सर पूछे जाने वाले प्रश्न",
+                    footer_copyright: "&copy;2025 किमया। सर्वाधिकार सुरक्षित।",
+                    footer_contact: "contact@kimyaapp.com"
+                },
+                nl: {
+                    header_title: "Intelligente Stilte. Geautomatiseerd.",
+                    header_subtitle: "KIMYA is een slimme utility die de Focus-modi van je telefoon automatisch beheert op basis van je locatie, tijd en real-world context.",
+                    header_slogan: "Eén keer instellen — het werkt gewoon.",
+                    features_title: "Je Telefoon, Slimmer.",
+                    feature_spatial_title: "Ruimtelijke Automatisering",
+                    feature_spatial_description: "Creëer geofence-zones zoals \"Thuis\" of \"Werk\" om Focus-modi automatisch te activeren wanneer je ze betreedt of verlaat.",
+                    feature_temporal_title: "Tijdsautomatisering",
+                    feature_temporal_description: "Plan Focus-modi op basis van de tijd van de dag of specifieke gebeurtenissen, zodat je nooit wordt gestoord tijdens belangrijke momenten.",
+                    feature_physical_title: "Fysieke Automatisering",
+                    feature_physical_description: "KIMYA detecteert of je telefoon met de voorkant naar beneden ligt, in je zak zit of dat je aan het rijden bent, en activeert onmiddellijk de juiste Focus-modus.",
+                    download_title: "Krijg KIMYA",
+                    download_subtitle: "Ervaar naadloze, context-bewuste automatisering. Exclusief beschikbaar in de App Store voor iOS.",
+                    download_coming_soon: "Binnenkort in de App Store",
+                    download_app_store_link: "Download in de App Store",
+                    faq_title: "Veelgestelde vragen",
+                    faq_android_q: "Is KIMYA beschikbaar op Android?",
+                    faq_android_a: "KIMYA is exclusief ontworpen voor iOS om de diepe integratie met Focus-modi, Core Location en andere native frameworks te benutten. Er zijn momenteel geen plannen voor een Android-versie.",
+                    faq_privacy_q: "Hoe beschermt KIMYA mijn privacy?",
+                    faq_privacy_a: "Jouw privacy staat voorop. Alle locatie- en contextuele gegevens worden direct op je apparaat verwerkt en nooit naar externe servers gestuurd. Voor meer details, raadpleeg ons Privacybeleid.",
+                    faq_requirements_q: "Wat zijn de vereisten om KIMYA te gebruiken?",
+                    faq_requirements_a: "KIMYA vereist een iPhone met iOS 16 of nieuwer om optimaal gebruik te maken van de nieuwste Focus-modus en achtergrondverwerkingsmogelijkheden.",
+                    footer_tos: "Servicevoorwaarden",
+                    footer_privacy: "Privacybeleid",
+                    footer_faq: "Help & FAQ",
+                    footer_copyright: "&copy;2025 KIMYA. Alle rechten voorbehouden.",
+                    footer_contact: "contact@kimyaapp.com"
+                },
+                tr: {
+                    header_title: "Akıllı Sessizlik. Otomatik.",
+                    header_subtitle: "KIMYA, konumunuza, saatinize ve gerçek dünya bağlamınıza göre telefonunuzun Odak modlarını otomatik olarak yöneten akıllı bir yardımcı programdır.",
+                    header_slogan: "Bir kez ayarlayın — sadece çalışır.",
+                    features_title: "Telefonunuz, Daha Akıllı.",
+                    feature_spatial_title: "Mekansal Otomasyon",
+                    feature_spatial_description: "Girdiğiniz veya çıktığınızda Odak modlarını otomatik olarak tetiklemek için \"Ev\" veya \"İş\" gibi coğrafi sınırlı bölgeler oluşturun.",
+                    feature_temporal_title: "Zamansal Otomasyon",
+                    feature_temporal_description: "Önemli anlarda rahatsız edilmemenizi sağlamak için Odak modlarını günün saatine veya belirli etkinliklere göre programlayın.",
+                    feature_physical_title: "Fiziksel Otomasyon",
+                    feature_physical_description: "KIMYA, telefonunuzun yüzü aşağı dönük, cebinizde veya araba kullanırken olduğunu algılar ve doğru Odak modunu anında etkinleştirir.",
+                    download_title: "KIMYA'yı Edinin",
+                    download_subtitle: "Kesintisiz, bağlamsal olarak bilinçli otomasyonu deneyimleyin. Sadece iOS için App Store'da mevcuttur.",
+                    download_coming_soon: "Yakında App Store'da",
+                    download_app_store_link: "App Store'dan İndir",
+                    faq_title: "Sıkça Sorulan Sorular",
+                    faq_android_q: "KIMYA Android'de mevcut mu?",
+                    faq_android_a: "KIMYA, Odak modları, Core Location ve diğer yerel çerçevelerle derin entegrasyonundan yararlanmak için özel olarak iOS için tasarlanmıştır. Şu anda bir Android sürümü planı bulunmamaktadır.",
+                    faq_privacy_q: "KIMYA gizliliğimi nasıl koruyor?",
+                    faq_privacy_a: "Gizliliğiniz bizim için çok önemlidir. Tüm konum ve bağlamsal veriler doğrudan cihazınızda işlenir ve hiçbir zaman harici sunuculara gönderilmez. Daha fazla ayrıntı için lütfen Gizlilik Politikamızı inceleyin.",
+                    faq_requirements_q: "KIMYA'yı kullanmak için gereksinimler nelerdir?",
+                    faq_requirements_a: "KIMYA, en son Odak modu ve arka plan işleme yeteneklerinden tam olarak yararlanmak için iOS 16 veya sonraki bir sürümü çalıştıran bir iPhone gerektirir.",
+                    footer_tos: "Hizmet Şartları",
+                    footer_privacy: "Gizlilik Politikası",
+                    footer_faq: "Yardım ve SSS",
+                    footer_copyright: "&copy;2025 KIMYA. Tüm hakları saklıdır.",
+                    footer_contact: "contact@kimyaapp.com"
+                }
+            };
+
+            const languageSelector = document.getElementById('language-selector');
+            const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+            
+            // Function to update content based on selected language
+            function updateContent(lang) {
+                const translationsForLang = translations[lang] || translations.en;
+                elementsToTranslate.forEach(element => {
+                    const key = element.getAttribute('data-i18n');
+                    if (translationsForLang[key]) {
+                        element.innerHTML = translationsForLang[key];
+                    }
+                });
+                document.documentElement.lang = lang; // Update the HTML lang attribute
             }
+
+            // Set initial language based on browser preference
+            const userLang = navigator.language.split('-')[0];
+            const availableLangs = Object.keys(translations);
+            let initialLang = 'en';
+
+            if (availableLangs.includes(userLang)) {
+                initialLang = userLang;
+            } else {
+                // Check for a few common language families
+                if (userLang.startsWith('es')) initialLang = 'es';
+                else if (userLang.startsWith('pt')) initialLang = 'pt';
+                else if (userLang.startsWith('zh')) initialLang = 'zh';
+                else if (userLang.startsWith('fr')) initialLang = 'fr';
+                else if (userLang.startsWith('de')) initialLang = 'de';
+                else if (userLang.startsWith('it')) initialLang = 'it';
+                else if (userLang.startsWith('ru')) initialLang = 'ru';
+                else if (userLang.startsWith('hi')) initialLang = 'hi';
+                else if (userLang.startsWith('nl')) initialLang = 'nl';
+                else if (userLang.startsWith('tr')) initialLang = 'tr';
+                else if (userLang.startsWith('ko')) initialLang = 'ko';
+                else if (userLang.startsWith('ja')) initialLang = 'ja';
+                else if (userLang.startsWith('ar')) initialLang = 'ar';
+            }
+            
+            languageSelector.value = initialLang;
+            updateContent(initialLang);
+
+            // Add event listener for language selector
+            languageSelector.addEventListener('change', (event) => {
+                updateContent(event.target.value);
+            });
         });
     </script>
 </body>
 </html>
-
-
-
-
