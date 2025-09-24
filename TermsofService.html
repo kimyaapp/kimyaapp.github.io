@@ -1,115 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIMYA – Terms of Service</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F0F2F8; /* Fallback for outside the frame */
-            color: #1a202c;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="terms_title">KIMYA – Terms of Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F2F8; /* Fallback for outside the frame */
+            color: #1a202c;
+        }
 
-        /* The Aurora gradient, applied to the body for the frame effect */
-        .aurora-frame-bg {
-            background: linear-gradient(135deg,
-                #2326A8, #35C3F3, #8B9FE8, #62007A,
-                #E681D8, #8A2BE2, #FFA9A4, #B22485, #FED2CE);
-            background-size: 400% 400%;
-            animation: shimmer 15s ease-in-out infinite;
-            padding: 8px; /* This creates the thin frame */
-        }
+        /* The Aurora gradient, applied to the body for the frame effect */
+        .aurora-frame-bg {
+            background: linear-gradient(135deg,
+                #2326A8, #35C3F3, #8B9FE8, #62007A,
+                #E681D8, #8A2BE2, #FFA9A4, #B22485, #FED2CE);
+            background-size: 400% 400%;
+            animation: shimmer 15s ease-in-out infinite;
+            padding: 8px; /* This creates the thin frame */
+        }
 
-        @keyframes shimmer {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        /* Ensure links are styled nicely */
-        .content a {
-            color: #2326A8;
-            text-decoration: underline;
-        }
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Ensure links are styled nicely */
+        .content a {
+            color: #2326A8;
+            text-decoration: underline;
+        }
 
-        .terms-section {
-            margin-bottom: 1.5rem; /* 24px */
-        }
+        .terms-section {
+            margin-bottom: 1.5rem; /* 24px */
+        }
 
-        .terms-section h2 {
-            font-size: 1.25rem; /* 20px */
-            font-weight: 600;
-            margin-bottom: 0.5rem; /* 8px */
-        }
+        .terms-section h2 {
+            font-size: 1.25rem; /* 20px */
+            font-weight: 600;
+            margin-bottom: 0.5rem; /* 8px */
+        }
 
-    </style>
+    </style>
 </head>
 <body class="antialiased min-h-screen flex items-center justify-center p-4">
 
-    <div class="aurora-frame-bg w-full max-w-4xl rounded-2xl shadow-lg">
-        <div class="bg-white rounded-lg p-8 md:p-12 content">
-            <h1 class="text-3xl md:text-4xl font-bold mb-2">Terms of Service</h1>
-            <p class="text-sm text-gray-500 mb-8">Last Updated: September 22, 2025</p>
-            
-            <div class="space-y-6 text-gray-700">
+    <div class="aurora-frame-bg w-full max-w-4xl rounded-2xl shadow-lg">
+        <div class="bg-white rounded-lg p-8 md:p-12 content">
+            <div class="flex justify-between items-center mb-4">
+                <h1 class="text-3xl md:text-4xl font-bold" data-lang-key="terms_of_service_heading">Terms of Service</h1>
+                <div class="relative inline-block text-gray-700">
+                    <select id="language-selector" onchange="changeLanguage(this.value)" class="block w-full py-2 px-4 pr-8 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 border-gray-300 cursor-pointer">
+                        <option value="en" selected>English</option>
+                        <option value="de">Deutsch</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="it">Italiano</option>
+                        <option value="ja">日本語</option>
+                        <option value="kg">Kikongo</option>
+                        <option value="ko">한국어</option>
+                        <option value="pt">Português</option>
+                        <option value="ru">Русский</option>
+                        <option value="sw">Kiswahili</option>
+                        <option value="zh">简体中文</option>
+                    </select>
+                </div>
+            </div>
+            <p class="text-sm text-gray-500 mb-8" data-lang-key="last_updated">Last Updated: September 22, 2025</p>
+            
+            <div class="space-y-6 text-gray-700">
 
-                <div class="terms-section">
-                    <h2>1. Acceptance of Terms</h2>
-                    <p>By downloading, installing, or using KIMYA ("the App"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the App.</p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_1_heading">1. Acceptance of Terms</h2>
+                    <p data-lang-key="terms_section_1_text">By downloading, installing, or using KIMYA ("the App"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the App.</p>
+                </div>
 
-                <div class="terms-section">
-                    <h2>2. Description of Service</h2>
-                    <p>KIMYA is an intelligent auto-silent utility that manages your device's Focus modes based on location, motion detection, and custom rules. The App requires certain permissions to function properly.</p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_2_heading">2. Description of Service</h2>
+                    <p data-lang-key="terms_section_2_text">KIMYA is an intelligent auto-silent utility that manages your device's Focus modes based on location, motion detection, and custom rules. The App requires certain permissions to function properly.</p>
+                </div>
 
-                <div class="terms-section">
-                    <h2>3. User Responsibilities</h2>
-                    <p>You are responsible for maintaining the confidentiality of your account and for all activities that occur under your account. You agree to use the App in compliance with all applicable laws and regulations.</p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_3_heading">3. User Responsibilities</h2>
+                    <p data-lang-key="terms_section_3_text">You are responsible for maintaining the confidentiality of your account and for all activities that occur under your account. You agree to use the App in compliance with all applicable laws and regulations.</p>
+                </div>
 
-                <div class="terms-section">
-                    <h2>4. Privacy and Data</h2>
-                    <p>Your use of the App is also governed by our <a href="./privacy-policy.html">Privacy Policy</a>. We collect and process location data, motion data, and device settings to provide the service. All data is processed locally on your device.</p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_4_heading">4. Privacy and Data</h2>
+                    <p data-lang-key="terms_section_4_text">Your use of the App is also governed by our <a href="./privacy-policy.html">Privacy Policy</a>. We collect and process location data, motion data, and device settings to provide the service. All data is processed locally on your device.</p>
+                </div>
 
-                <div class="terms-section">
-                    <h2>5. Subscription and Billing</h2>
-                    <p>KIMYA requires a paid subscription. Monthly and Yearly plans are available, both granting full access to all features. Subscriptions are billed through your Apple ID and automatically renew unless canceled at least 24 hours before the end of the current period. A 7-day trial may be offered by Apple depending on your region; trial availability and management are handled solely by Apple.</p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_5_heading">5. Subscription and Billing</h2>
+                    <p data-lang-key="terms_section_5_text">KIMYA requires a paid subscription. Monthly and Yearly plans are available, both granting full access to all features. Subscriptions are billed through your Apple ID and automatically renew unless canceled at least 24 hours before the end of the current period. A 7-day trial may be offered by Apple depending on your region; trial availability and management are handled solely by Apple.</p>
+                </div>
 
-                <div class="terms-section">
-                    <h2>6. Intellectual Property</h2>
-                    <p>All content, features, and functionality of the App are owned by KIMYA and are protected by international copyright, trademark, and other intellectual property laws.</p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_6_heading">6. Intellectual Property</h2>
+                    <p data-lang-key="terms_section_6_text">All content, features, and functionality of the App are owned by KIMYA and are protected by international copyright, trademark, and other intellectual property laws.</p>
+                </div>
 
-                <div class="terms-section">
-                    <h2>7. Limitation of Liability</h2>
-                    <p>KIMYA shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use or inability to use the App.</p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_7_heading">7. Limitation of Liability</h2>
+                    <p data-lang-key="terms_section_7_text">KIMYA shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use or inability to use the App.</p>
+                </div>
 
-                <div class="terms-section">
-                    <h2>8. Changes to Terms</h2>
-                    <p>We reserve the right to modify these Terms at any time. We will notify users of any material changes through the App or via email.</p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_8_heading">8. Changes to Terms</h2>
+                    <p data-lang-key="terms_section_8_text">We reserve the right to modify these Terms at any time. We will notify users of any material changes through the App or via email.</p>
+                </div>
+                
+                <div class="terms-section">
+                  <h2 data-lang-key="supported_languages_heading">9. Supported Languages</h2>
+                  <ul class="list-disc list-inside space-y-2 pl-2">
+                    <li>German</li>
+                    <li>English</li>
+                    <li>Spanish</li>
+                    <li>French</li>
+                    <li>Hindi</li>
+                    <li>Italian</li>
+                    <li>Japanese</li>
+                    <li>Kikongo</li>
+                    <li>Korean</li>
+                    <li>Portuguese</li>
+                    <li>Russian</li>
+                    <li>Kiswahili</li>
+                    <li>Simplified Chinese</li>
+                  </ul>
+                </div>
 
-                <div class="terms-section">
-                    <h2>9. Contact Information</h2>
-                    <p>For questions about these Terms, please contact us at <a href="mailto:contact@kimyaapp.com">contact@kimyaapp.com</a></p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_10_heading">10. Contact Information</h2>
+                    <p data-lang-key="terms_section_10_text">For questions about these Terms, please contact us at <a href="mailto:contact@kimyaapp.com">contact@kimyaapp.com</a></p>
+                </div>
 
-            </div>
+            </div>
 
-            <div class="mt-8 pt-6 border-t border-gray-200">
-                <a href="./index.html" class="text-sm font-semibold hover:text-indigo-800">&larr; Back to Home</a>
-            </div>
-        </div>
-    </div>
+            <div class="mt-8 pt-6 border-t border-gray-200">
+                <a href="./index.html" class="text-sm font-semibold hover:text-indigo-800" data-lang-key="back_to_home">&larr; Back to Home</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentLang = new URLSearchParams(window.location.search).get('lang') || 'en';
+            document.getElementById('language-selector').value = currentLang;
+            document.documentElement.lang = currentLang;
+        });
+        function changeLanguage(lang) {
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', lang);
+            window.location.href = url.toString();
+        }
+    </script>
 
 </body>
 </html>
