@@ -1,162 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIMYA – Help & FAQ</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F0F2F8;
-            color: #1a202c;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="faq_title">KIMYA – Help & FAQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F2F8;
+            color: #1a202c;
+        }
 
-        .aurora-frame-bg {
-            background: linear-gradient(135deg,
-                #2326A8, #35C3F3, #8B9FE8, #62007A,
-                #E681D8, #8A2BE2, #FFA9A4, #B22485, #FED2CE);
-            background-size: 400% 400%;
-            animation: shimmer 15s ease-in-out infinite;
-            padding: 8px; /* This creates the thin frame */
-        }
+        .aurora-frame-bg {
+            background: linear-gradient(135deg,
+                #2326A8, #35C3F3, #8B9FE8, #62007A,
+                #E681D8, #8A2BE2, #FFA9A4, #B22485, #FED2CE);
+            background-size: 400% 400%;
+            animation: shimmer 15s ease-in-out infinite;
+            padding: 8px; /* This creates the thin frame */
+        }
 
-        @keyframes shimmer {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        .content a {
-            color: #2326A8;
-            text-decoration: underline;
-        }
-    </style>
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .content a {
+            color: #2326A8;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body class="antialiased min-h-screen flex items-center justify-center p-4">
 
-    <div class="aurora-frame-bg w-full max-w-4xl rounded-2xl shadow-lg">
-        <div class="bg-white rounded-lg p-8 md:p-12 content">
-            <h1 class="text-3xl md:text-4xl font-bold mb-8">Help & FAQ</h1>
-            
-            <div class="space-y-4">
+    <div class="aurora-frame-bg w-full max-w-4xl rounded-2xl shadow-lg">
+        <div class="bg-white rounded-lg p-8 md:p-12 content">
+            <div class="flex justify-between items-center mb-4">
+                <h1 class="text-3xl md:text-4xl font-bold" data-lang-key="faq_heading">Help & FAQ</h1>
+                <div class="relative inline-block text-gray-700">
+                    <select id="language-selector" onchange="changeLanguage(this.value)" class="block w-full py-2 px-4 pr-8 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 border-gray-300 cursor-pointer">
+                        <option value="en" selected>English</option>
+                        <option value="de">Deutsch</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="it">Italiano</option>
+                        <option value="ja">日本語</option>
+                        <option value="kg">Kikongo</option>
+                        <option value="ko">한국어</option>
+                        <option value="pt">Português</option>
+                        <option value="ru">Русский</option>
+                        <option value="sw">Kiswahili</option>
+                        <option value="zh">简体中文</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="space-y-4">
+
+                <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
+                    <button class="faq-question w-full flex justify-between items-center text-left">
+                        <h3 class="text-lg font-medium" data-lang-key="faq_q1">How do zones work?</h3>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+                       <p class="text-gray-700 mt-2" data-lang-key="faq_a1">Zones are geographical areas you define where KIMYA automatically manages your Focus modes. When you enter or exit a zone, the app triggers the automation rules you've configured.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
+                    <button class="faq-question w-full flex justify-between items-center text-left">
+                        <h3 class="text-lg font-medium" data-lang-key="faq_q2">How does driving detection work?</h3>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+                       <p class="text-gray-700 mt-2" data-lang-key="faq_a2">KIMYA uses your device's motion sensors to detect when you're in a moving vehicle. When driving is detected, it can automatically enable Do Not Disturb to keep you safe on the road.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
+                    <button class="faq-question w-full flex justify-between items-center text-left">
+                        <h3 class="text-lg font-medium" data-lang-key="faq_q3">What are contact exceptions?</h3>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+                       <p class="text-gray-700 mt-2" data-lang-key="faq_a3">Contact exceptions allow specific people to reach you even when Focus mode is active. You can set different exception rules for each zone or automation type.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
+                    <button class="faq-question w-full flex justify-between items-center text-left">
+                        <h3 class="text-lg font-medium" data-lang-key="faq_q4">Does KIMYA drain battery?</h3>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+                       <p class="text-gray-700 mt-2" data-lang-key="faq_a4">KIMYA is optimized for minimal battery impact. It uses iOS's efficient location services and only activates when entering or exiting zones.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
+                    <button class="faq-question w-full flex justify-between items-center text-left">
+                        <h3 class="text-lg font-medium" data-lang-key="faq_q5">Is my location data private?</h3>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+                       <p class="text-gray-700 mt-2" data-lang-key="faq_a5">Yes! All location processing happens locally on your device. KIMYA never sends your location data to any servers. Zone data syncs via your private iCloud account if enabled.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
+                    <button class="faq-question w-full flex justify-between items-center text-left">
+                        <h3 class="text-lg font-medium" data-lang-key="faq_q6">What do I get with KIMYA?</h3>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+                       <p class="text-gray-700 mt-2" data-lang-key="faq_a6">KIMYA is paid-only. Choose Monthly or Yearly—both include full access to all features: context-aware automation (spatial, temporal, physical), rules, calendar integration, contact exceptions, and native iOS UI.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
+                    <button class="faq-question w-full flex justify-between items-center text-left">
+                        <h3 class="text-lg font-medium" data-lang-key="faq_q7">Why can't KIMYA control Focus modes directly?</h3>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+                       <p class="text-gray-700 mt-2" data-lang-key="faq_a7">Due to iOS restrictions, third-party apps cannot directly control Focus modes. KIMYA detects your context and sends smart suggestions to help you enable the right Focus mode at the right time.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
+                    <button class="faq-question w-full flex justify-between items-center text-left">
+                        <h3 class="text-lg font-medium" data-lang-key="faq_q8">Zones aren't working properly</h3>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+                       <p class="text-gray-700 mt-2" data-lang-key="faq_a8">Make sure you've granted 'Always Allow' location permission and enabled Background App Refresh. Also check that you haven't exceeded the 20-zone iOS limit for geofencing.</p>
+                    </div>
+                </div>
 
                 <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
-                    <button class="faq-question w-full flex justify-between items-center text-left">
-                        <h3 class="text-lg font-medium">How do zones work?</h3>
-                        <span class="transform transition-transform duration-300">▼</span>
-                    </button>
-                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
-                       <p class="text-gray-700 mt-2">Zones are geographical areas you define where KIMYA automatically manages your Focus modes. When you enter or exit a zone, the app triggers the automation rules you've configured.</p>
-                    </div>
-                </div>
+                    <button class="faq-question w-full flex justify-between items-center text-left">
+                        <h3 class="text-lg font-medium">Supported Languages</h3>
+                        <span class="transform transition-transform duration-300">▼</span>
+                    </button>
+                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+                        <ul class="text-gray-700 mt-2 list-disc list-inside space-y-2 pl-2">
+                          <li>German</li>
+                          <li>English</li>
+                          <li>Spanish</li>
+                          <li>French</li>
+                          <li>Hindi</li>
+                          <li>Italian</li>
+                          <li>Japanese</li>
+                          <li>Kikongo</li>
+                          <li>Korean</li>
+                          <li>Portuguese</li>
+                          <li>Russian</li>
+                          <li>Kiswahili</li>
+                          <li>Simplified Chinese</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-                <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
-                    <button class="faq-question w-full flex justify-between items-center text-left">
-                        <h3 class="text-lg font-medium">How does driving detection work?</h3>
-                        <span class="transform transition-transform duration-300">▼</span>
-                    </button>
-                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
-                       <p class="text-gray-700 mt-2">KIMYA uses your device's motion sensors to detect when you're in a moving vehicle. When driving is detected, it can automatically enable Do Not Disturb to keep you safe on the road.</p>
-                    </div>
-                </div>
+            <div class="mt-8 pt-6 border-t border-gray-200">
+                <a href="./index.html" class="text-sm font-semibold hover:text-indigo-800" data-lang-key="back_to_home">&larr; Back to Home</a>
+            </div>
+        </div>
+    </div>
 
-                <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
-                    <button class="faq-question w-full flex justify-between items-center text-left">
-                        <h3 class="text-lg font-medium">What are contact exceptions?</h3>
-                        <span class="transform transition-transform duration-300">▼</span>
-                    </button>
-                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
-                       <p class="text-gray-700 mt-2">Contact exceptions allow specific people to reach you even when Focus mode is active. You can set different exception rules for each zone or automation type.</p>
-                    </div>
-                </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentLang = new URLSearchParams(window.location.search).get('lang') || 'en';
+            document.getElementById('language-selector').value = currentLang;
+            document.documentElement.lang = currentLang;
+            document.querySelectorAll('.faq-answer').forEach(ans => {
+                ans.style.maxHeight = '0px';
+                ans.style.transition = 'max-height 0.5s ease-in-out';
+            });
+        });
 
-                <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
-                    <button class="faq-question w-full flex justify-between items-center text-left">
-                        <h3 class="text-lg font-medium">Does KIMYA drain battery?</h3>
-                        <span class="transform transition-transform duration-300">▼</span>
-                    </button>
-                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
-                       <p class="text-gray-700 mt-2">KIMYA is optimized for minimal battery impact. It uses iOS's efficient location services and only activates when entering or exiting zones.</p>
-                    </div>
-                </div>
+        function changeLanguage(lang) {
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', lang);
+            window.location.href = url.toString();
+        }
 
-                <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
-                    <button class="faq-question w-full flex justify-between items-center text-left">
-                        <h3 class="text-lg font-medium">Is my location data private?</h3>
-                        <span class="transform transition-transform duration-300">▼</span>
-                    </button>
-                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
-                       <p class="text-gray-700 mt-2">Yes! All location processing happens locally on your device. KIMYA never sends your location data to any servers. Zone data syncs via your private iCloud account if enabled.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
-                    <button class="faq-question w-full flex justify-between items-center text-left">
-                        <h3 class="text-lg font-medium">What do I get with KIMYA?</h3>
-                        <span class="transform transition-transform duration-300">▼</span>
-                    </button>
-                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
-                       <p class="text-gray-700 mt-2">KIMYA is paid-only. Choose Monthly or Yearly—both include full access to all features: context-aware automation (spatial, temporal, physical), rules, calendar integration, contact exceptions, and native iOS UI.</p>
-                    </div>
-                </div>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const answer = item.querySelector('.faq-answer');
+                    const icon = question.querySelector('span');
+                    const isOpen = answer.style.maxHeight !== '0px';
+                    
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        ans.style.maxHeight = '0px';
+                    });
+                    document.querySelectorAll('.faq-question span').forEach(icn => {
+                        icn.classList.remove('rotate-180');
+                    });
 
-                <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
-                    <button class="faq-question w-full flex justify-between items-center text-left">
-                        <h3 class="text-lg font-medium">Why can't KIMYA control Focus modes directly?</h3>
-                        <span class="transform transition-transform duration-300">▼</span>
-                    </button>
-                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
-                       <p class="text-gray-700 mt-2">Due to iOS restrictions, third-party apps cannot directly control Focus modes. KIMYA detects your context and sends smart suggestions to help you enable the right Focus mode at the right time.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
-                    <button class="faq-question w-full flex justify-between items-center text-left">
-                        <h3 class="text-lg font-medium">Zones aren't working properly</h3>
-                        <span class="transform transition-transform duration-300">▼</span>
-                    </button>
-                    <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0">
-                       <p class="text-gray-700 mt-2">Make sure you've granted 'Always Allow' location permission and enabled Background App Refresh. Also check that you haven't exceeded the 20-zone iOS limit for geofencing.</p>
-                    </div>
-                </div>
-            </div>
+                    if (!isOpen) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
 
-            <div class="mt-8 pt-6 border-t border-gray-200">
-                <a href="./index.html" class="text-sm font-semibold hover:text-indigo-800">&larr; Back to Home</a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                question.addEventListener('click', () => {
-                    const answer = item.querySelector('.faq-answer');
-                    const icon = question.querySelector('span');
-                    const isOpen = answer.classList.contains('max-h-96');
-                    
-                    document.querySelectorAll('.faq-answer').forEach(ans => {
-                        ans.classList.remove('max-h-96');
-                        ans.classList.add('max-h-0');
-                    });
-                    document.querySelectorAll('.faq-question span').forEach(icn => {
-                        icn.classList.remove('rotate-180');
-                    });
-
-                    if (!isOpen) {
-                        answer.classList.add('max-h-96');
-                        answer.classList.remove('max-h-0');
-                        icon.classList.add('rotate-180');
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
