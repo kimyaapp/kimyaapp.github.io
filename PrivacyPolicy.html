@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang-key="privacy_policy_title">KIMYA – Privacy Policy</title>
+    <title>KIMYA – Privacy Policy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,545 +45,610 @@
             margin-bottom: 0.5rem;
         }
 
+        .lang-select-container {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 10;
+        }
     </style>
 </head>
 <body class="antialiased min-h-screen flex items-center justify-center p-4">
 
+    <div class="lang-select-container">
+        <select id="language-selector" class="p-2 rounded-lg border border-gray-300">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+            <option value="de">Deutsch</option>
+            <option value="es">Español</option>
+            <option value="hi">हिन्दी</option>
+            <option value="it">Italiano</option>
+            <option value="ja">日本語</option>
+            <option value="kg">Kikongo</option>
+            <option value="ko">한국어</option>
+            <option value="pt">Português</option>
+            <option value="ru">Русский</option>
+            <option value="sw">Kiswahili</option>
+            <option value="zh">中文 (简体)</option>
+        </select>
+    </div>
+
     <div class="aurora-frame-bg w-full max-w-4xl rounded-2xl shadow-lg">
         <div class="bg-white rounded-lg p-8 md:p-12 content">
-            <div class="flex justify-between items-center mb-4">
-                <h1 class="text-3xl md:text-4xl font-bold" data-lang-key="privacy_policy_heading"></h1>
-                <div class="relative inline-block text-gray-700">
-                    <select id="language-selector" onchange="changeLanguage(this.value)" class="block w-full py-2 px-4 pr-8 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 border-gray-300 cursor-pointer">
-                        <option value="en" selected>English</option>
-                        <option value="de">Deutsch</option>
-                        <option value="es">Español</option>
-                        <option value="fr">Français</option>
-                        <option value="hi">हिंदी</option>
-                        <option value="it">Italiano</option>
-                        <option value="ja">日本語</option>
-                        <option value="kg">Kikongo</option>
-                        <option value="ko">한국어</option>
-                        <option value="pt">Português</option>
-                        <option value="ru">Русский</option>
-                        <option value="sw">Kiswahili</option>
-                        <option value="zh">简体中文</option>
-                    </select>
-                </div>
-            </div>
-            <p class="text-sm text-gray-500 mb-8" data-lang-key="last_updated"></p>
+            <h1 class="text-3xl md:text-4xl font-bold mb-2" id="privacy-title"></h1>
+            <p class="text-sm text-gray-500 mb-8" id="last-updated"></p>
             
             <div class="space-y-6 text-gray-700">
-
-                <p data-lang-key="privacy_intro"></p>
+                <p id="privacy-intro"></p>
 
                 <div class="policy-section">
-                    <h2 data-lang-key="info_we_collect_heading"></h2>
+                    <h2 id="info-we-collect-title"></h2>
                     <ul class="list-disc list-inside space-y-2 pl-2">
-                        <li data-lang-key="info_collect_1"></li>
-                        <li data-lang-key="info_collect_2"></li>
-                        <li data-lang-key="info_collect_3"></li>
-                        <li data-lang-key="info_collect_4"></li>
+                        <li id="li-location-data"></li>
+                        <li id="li-motion-data"></li>
+                        <li id="li-device-settings"></li>
+                        <li id="li-usage-analytics"></li>
                     </ul>
                 </div>
 
                 <div class="policy-section">
-                    <h2 data-lang-key="how_we_use_data_heading"></h2>
+                    <h2 id="how-we-use-data-title"></h2>
                     <ul class="list-disc list-inside space-y-2 pl-2">
-                        <li data-lang-key="use_data_1"></li>
-                        <li data-lang-key="use_data_2"></li>
-                        <li data-lang-key="use_data_3"></li>
-                        <li data-lang-key="use_data_4"></li>
+                        <li id="li-enable-focus"></li>
+                        <li id="li-detect-driving"></li>
+                        <li id="li-personalized-zones"></li>
+                        <li id="li-improve-app"></li>
                     </ul>
                 </div>
 
                 <div class="policy-section">
-                    <h2 data-lang-key="data_storage_heading"></h2>
+                    <h2 id="storage-security-title"></h2>
                     <ul class="list-disc list-inside space-y-2 pl-2">
-                        <li data-lang-key="data_storage_1"></li>
-                        <li data-lang-key="data_storage_2"></li>
-                        <li data-lang-key="data_storage_3"></li>
-                        <li data-lang-key="data_storage_4"></li>
+                        <li id="li-local-processing"></li>
+                        <li id="li-icloud-sync"></li>
+                        <li id="li-encryption"></li>
+                        <li id="li-no-third-parties"></li>
                     </ul>
                 </div>
 
                 <div class="policy-section">
-                    <h2 data-lang-key="your_rights_heading"></h2>
+                    <h2 id="your-rights-title"></h2>
                     <ul class="list-disc list-inside space-y-2 pl-2">
-                        <li data-lang-key="your_rights_1"></li>
-                        <li data-lang-key="your_rights_2"></li>
-                        <li data-lang-key="your_rights_3"></li>
-                        <li data-lang-key="your_rights_4"></li>
+                        <li id="li-access-data"></li>
+                        <li id="li-delete-data"></li>
+                        <li id="li-opt-out"></li>
+                        <li id="li-control-permissions"></li>
                     </ul>
                 </div>
 
                 <div class="policy-section">
-                    <h2 data-lang-key="third_party_heading"></h2>
+                    <h2 id="third-party-services-title"></h2>
                     <ul class="list-disc list-inside space-y-2 pl-2">
-                        <li data-lang-key="third_party_1"></li>
-                        <li data-lang-key="third_party_2"></li>
-                        <li data-lang-key="third_party_3"></li>
-                        <li data-lang-key="third_party_4"></li>
+                        <li id="li-apple-maps"></li>
+                        <li id="li-icloud-sync-services"></li>
+                        <li id="li-storekit"></li>
+                        <li id="li-no-ads"></li>
                     </ul>
                 </div>
-                
-                <div class="policy-section">
-                    <h2 data-lang-key="supported_languages_heading"></h2>
-                    <ul class="list-disc list-inside space-y-2 pl-2" data-lang-key="supported_languages"></ul>
-                </div>
 
-                <p class="pt-4" data-lang-key="contact_intro"></p>
-                
+                <p class="pt-4" id="contact-info"></p>
             </div>
 
             <div class="mt-8 pt-6 border-t border-gray-200">
-                <a href="./index.html" class="text-sm font-semibold hover:text-indigo-800" data-lang-key="back_to_home"></a>
+                <a href="./index.html" class="text-sm font-semibold hover:text-indigo-800" id="back-home-link"></a>
             </div>
         </div>
     </div>
     <script>
-        const translations = {
-            en: {
-                privacy_policy_title: "KIMYA – Privacy Policy",
-                privacy_policy_heading: "Privacy Policy",
-                last_updated: "Last Updated: September 22, 2025",
-                privacy_intro: "At KIMYA, your privacy is our top priority. This policy explains what information we collect, how we use it, and how we protect it.",
-                info_we_collect_heading: "Information We Collect",
-                info_collect_1: "Location data for zone-based automation",
-                info_collect_2: "Motion and activity data for context detection",
-                info_collect_3: "Device settings and Focus mode preferences",
-                info_collect_4: "Usage analytics to improve the app",
-                how_we_use_data_heading: "How We Use Your Data",
-                use_data_1: "Enable automatic Focus mode management",
-                use_data_2: "Detect driving and other activities",
-                use_data_3: "Provide personalized zone suggestions",
-                use_data_4: "Improve app performance and features",
-                data_storage_heading: "Data Storage and Security",
-                data_storage_1: "All data is processed locally on your device",
-                data_storage_2: "Zone data is synced via iCloud (if enabled)",
-                data_storage_3: "We use industry-standard encryption",
-                data_storage_4: "No personal data is shared with third parties",
-                your_rights_heading: "Your Rights",
-                your_rights_1: "Access your personal data at any time",
-                your_rights_2: "Delete your data by removing the app",
-                your_rights_3: "Opt-out of analytics in Settings",
-                your_rights_4: "Control all permissions in iOS Settings",
-                third_party_heading: "Third-Party Services",
-                third_party_1: "Apple Maps for location services",
-                third_party_2: "iCloud for data synchronization",
-                third_party_3: "StoreKit for subscription management",
-                third_party_4: "No advertising networks or trackers",
-                supported_languages_heading: "Supported Languages",
-                supported_languages: `<li>German</li><li>English</li><li>Spanish</li><li>French</li><li>Hindi</li><li>Italian</li><li>Japanese</li><li>Kikongo</li><li>Korean</li><li>Portuguese</li><li>Russian</li><li>Kiswahili</li><li>Simplified Chinese</li>`,
-                contact_intro: "For any questions or concerns regarding your privacy, please contact us at <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>.",
-                back_to_home: "← Back to Home"
-            },
-            de: {
-                privacy_policy_title: "KIMYA – Datenschutzrichtlinie",
-                privacy_policy_heading: "Datenschutzrichtlinie",
-                last_updated: "Zuletzt aktualisiert: 22. September 2025",
-                privacy_intro: "Bei KIMYA hat Ihre Privatsphäre höchste Priorität. Diese Richtlinie erklärt, welche Informationen wir sammeln, wie wir sie verwenden und wie wir sie schützen.",
-                info_we_collect_heading: "Informationen, die wir sammeln",
-                info_collect_1: "Standortdaten für zonenbasierte Automatisierung",
-                info_collect_2: "Bewegungs- und Aktivitätsdaten zur Kontext-Erkennung",
-                info_collect_3: "Geräteeinstellungen und Präferenzen des Fokusmodus",
-                info_collect_4: "Nutzungsanalysen zur Verbesserung der App",
-                how_we_use_data_heading: "Wie wir Ihre Daten verwenden",
-                use_data_1: "Automatisches Management des Fokusmodus ermöglichen",
-                use_data_2: "Fahrt und andere Aktivitäten erkennen",
-                use_data_3: "Personalisierte Zonenvorschläge bereitstellen",
-                use_data_4: "App-Leistung und -Funktionen verbessern",
-                data_storage_heading: "Datenspeicherung und -sicherheit",
-                data_storage_1: "Alle Daten werden lokal auf Ihrem Gerät verarbeitet",
-                data_storage_2: "Zonendaten werden über iCloud synchronisiert (falls aktiviert)",
-                data_storage_3: "Wir verwenden branchenübliche Verschlüsselung",
-                data_storage_4: "Keine persönlichen Daten werden an Dritte weitergegeben",
-                your_rights_heading: "Ihre Rechte",
-                your_rights_1: "Jederzeit auf Ihre persönlichen Daten zugreifen",
-                your_rights_2: "Ihre Daten durch Entfernen der App löschen",
-                your_rights_3: "Analytics in den Einstellungen deaktivieren",
-                your_rights_4: "Alle Berechtigungen in den iOS-Einstellungen kontrollieren",
-                third_party_heading: "Dienstleistungen Dritter",
-                third_party_1: "Apple Maps für Standortdienste",
-                third_party_2: "iCloud für die Datensynchronisation",
-                third_party_3: "StoreKit für die Abonnementverwaltung",
-                third_party_4: "Keine Werbenetzwerke oder Tracker",
-                supported_languages_heading: "Unterstützte Sprachen",
-                supported_languages: `<li>Deutsch</li><li>Englisch</li><li>Spanisch</li><li>Französisch</li><li>Hindi</li><li>Italienisch</li><li>Japanisch</li><li>Kikongo</li><li>Koreanisch</li><li>Portugiesisch</li><li>Russisch</li><li>Kiswahili</li><li>Vereinfachtes Chinesisch</li>`,
-                contact_intro: "Für Fragen oder Bedenken bezüglich Ihrer Privatsphäre kontaktieren Sie uns bitte unter <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>.",
-                back_to_home: "← Zurück zur Startseite"
-            },
-            es: {
-                privacy_policy_title: "KIMYA – Política de privacidad",
-                privacy_policy_heading: "Política de privacidad",
-                last_updated: "Última actualización: 22 de septiembre de 2025",
-                privacy_intro: "En KIMYA, su privacidad es nuestra máxima prioridad. Esta política explica qué información recopilamos, cómo la usamos y cómo la protegemos.",
-                info_we_collect_heading: "Información que recopilamos",
-                info_collect_1: "Datos de ubicación para la automatización basada en zonas",
-                info_collect_2: "Datos de movimiento y actividad para la detección de contexto",
-                info_collect_3: "Configuraciones del dispositivo y preferencias del modo de enfoque",
-                info_collect_4: "Análisis de uso para mejorar la aplicación",
-                how_we_use_data_heading: "Cómo usamos sus datos",
-                use_data_1: "Habilitar la gestión automática del modo de enfoque",
-                use_data_2: "Detectar la conducción y otras actividades",
-                use_data_3: "Proporcionar sugerencias de zonas personalizadas",
-                use_data_4: "Mejorar el rendimiento y las características de la aplicación",
-                data_storage_heading: "Almacenamiento y seguridad de datos",
-                data_storage_1: "Todos los datos se procesan localmente en su dispositivo",
-                data_storage_2: "Los datos de zona se sincronizan a través de iCloud (si está habilitado)",
-                data_storage_3: "Utilizamos cifrado estándar de la industria",
-                data_storage_4: "No se comparten datos personales con terceros",
-                your_rights_heading: "Sus derechos",
-                your_rights_1: "Acceder a sus datos personales en cualquier momento",
-                your_rights_2: "Eliminar sus datos al desinstalar la aplicación",
-                your_rights_3: "Optar por no participar en los análisis en Configuración",
-                your_rights_4: "Controlar todos los permisos en la Configuración de iOS",
-                third_party_heading: "Servicios de terceros",
-                third_party_1: "Apple Maps para servicios de ubicación",
-                third_party_2: "iCloud para la sincronización de datos",
-                third_party_3: "StoreKit para la gestión de suscripciones",
-                third_party_4: "Sin redes publicitarias ni rastreadores",
-                supported_languages_heading: "Idiomas admitidos",
-                supported_languages: `<li>Alemán</li><li>Inglés</li><li>Español</li><li>Francés</li><li>Hindi</li><li>Italiano</li><li>Japonés</li><li>Kikongo</li><li>Coreano</li><li>Portugués</li><li>Ruso</li><li>Kiswahili</li><li>Chino simplificado</li>`,
-                contact_intro: "Para cualquier pregunta o inquietud con respecto a su privacidad, contáctenos en <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>.",
-                back_to_home: "← Volver a la página principal"
-            },
-            fr: {
-                privacy_policy_title: "KIMYA – Politique de confidentialité",
-                privacy_policy_heading: "Politique de confidentialité",
-                last_updated: "Dernière mise à jour : 22 septembre 2025",
-                privacy_intro: "Chez KIMYA, votre vie privée est notre priorité absolue. Cette politique explique quelles informations nous collectons, comment nous les utilisons et comment nous les protégeons.",
-                info_we_collect_heading: "Informations que nous collectons",
-                info_collect_1: "Données de localisation pour l'automatisation basée sur les zones",
-                info_collect_2: "Données de mouvement et d'activité pour la détection de contexte",
-                info_collect_3: "Paramètres de l'appareil et préférences du mode de mise au point",
-                info_collect_4: "Analyses d'utilisation pour améliorer l'application",
-                how_we_use_data_heading: "Comment nous utilisons vos données",
-                use_data_1: "Permettre la gestion automatique du mode de mise au point",
-                use_data_2: "Détecter la conduite et d'autres activités",
-                use_data_3: "Fournir des suggestions de zones personnalisées",
-                use_data_4: "Améliorer les performances et les fonctionnalités de l'application",
-                data_storage_heading: "Stockage et sécurité des données",
-                data_storage_1: "Toutes les données sont traitées localement sur votre appareil",
-                data_storage_2: "Les données de zone sont synchronisées via iCloud (si activé)",
-                data_storage_3: "Nous utilisons un cryptage standard de l'industrie",
-                data_storage_4: "Aucune donnée personnelle n'est partagée avec des tiers",
-                your_rights_heading: "Vos droits",
-                your_rights_1: "Accéder à vos données personnelles à tout moment",
-                your_rights_2: "Supprimer vos données en supprimant l'application",
-                your_rights_3: "Se désinscrire des analyses dans les paramètres",
-                your_rights_4: "Contrôler toutes les autorisations dans les paramètres iOS",
-                third_party_heading: "Services tiers",
-                third_party_1: "Apple Maps pour les services de localisation",
-                third_party_2: "iCloud pour la synchronisation des données",
-                third_party_3: "StoreKit pour la gestion des abonnements",
-                third_party_4: "Aucun réseau publicitaire ou traqueur",
-                supported_languages_heading: "Langues prises en charge",
-                supported_languages: `<li>Allemand</li><li>Anglais</li><li>Espagnol</li><li>Français</li><li>Hindi</li><li>Italien</li><li>Japonais</li><li>Kikongo</li><li>Coréen</li><li>Portugais</li><li>Russe</li><li>Kiswahili</li><li>Chinois simplifié</li>`,
-                contact_intro: "Pour toute question ou préoccupation concernant votre vie privée, veuillez nous contacter à <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>.",
-                back_to_home: "← Retour à l'accueil"
-            },
-            hi: {
-                privacy_policy_title: "किमया - गोपनीयता नीति",
-                privacy_policy_heading: "गोपनीयता नीति",
-                last_updated: "अंतिम अपडेट: 22 सितंबर 2025",
-                privacy_intro: "किमया में, आपकी गोपनीयता हमारी सर्वोच्च प्राथमिकता है। यह नीति बताती है कि हम कौन सी जानकारी एकत्र करते हैं, हम इसका उपयोग कैसे करते हैं, और हम इसकी सुरक्षा कैसे करते हैं।",
-                info_we_collect_heading: "हम जो जानकारी एकत्र करते हैं",
-                info_collect_1: "ज़ोन-आधारित स्वचालन के लिए स्थान डेटा",
-                info_collect_2: "संदर्भ का पता लगाने के लिए गति और गतिविधि डेटा",
-                info_collect_3: "डिवाइस सेटिंग्स और फ़ोकस मोड प्राथमिकताएँ",
-                info_collect_4: "ऐप को बेहतर बनाने के लिए उपयोग विश्लेषण",
-                how_we_use_data_heading: "हम आपके डेटा का उपयोग कैसे करते हैं",
-                use_data_1: "स्वचालित फ़ोकस मोड प्रबंधन सक्षम करें",
-                use_data_2: "ड्राइविंग और अन्य गतिविधियों का पता लगाएँ",
-                use_data_3: "व्यक्तिगत ज़ोन सुझाव प्रदान करें",
-                use_data_4: "ऐप के प्रदर्शन और सुविधाओं में सुधार करें",
-                data_storage_heading: "डेटा संग्रहण और सुरक्षा",
-                data_storage_1: "सभी डेटा आपके डिवाइस पर स्थानीय रूप से संसाधित होते हैं",
-                data_storage_2: "ज़ोन डेटा iCloud के माध्यम से सिंक होता है (यदि सक्षम हो)",
-                data_storage_3: "हम उद्योग-मानक एन्क्रिप्शन का उपयोग करते हैं",
-                data_storage_4: "कोई भी व्यक्तिगत डेटा तीसरे पक्ष के साथ साझा नहीं किया जाता है",
-                your_rights_heading: "आपके अधिकार",
-                your_rights_1: "किसी भी समय अपने व्यक्तिगत डेटा तक पहुँचें",
-                your_rights_2: "ऐप को हटाकर अपना डेटा हटाएँ",
-                your_rights_3: "सेटिंग्स में विश्लेषण से ऑप्ट-आउट करें",
-                your_rights_4: "iOS सेटिंग्स में सभी अनुमतियों को नियंत्रित करें",
-                third_party_heading: "तीसरे पक्ष की सेवाएँ",
-                third_party_1: "स्थान सेवाओं के लिए Apple Maps",
-                third_party_2: "डेटा सिंक्रनाइज़ेशन के लिए iCloud",
-                third_party_3: "सदस्यता प्रबंधन के लिए StoreKit",
-                third_party_4: "कोई विज्ञापन नेटवर्क या ट्रैकर नहीं",
-                supported_languages_heading: "समर्थित भाषाएँ",
-                supported_languages: `<li>जर्मन</li><li>अंग्रेजी</li><li>स्पेनिश</li><li>फ्रेंच</li><li>हिंदी</li><li>इतालवी</li><li>जापानी</li><li>किकोंगो</li><li>कोरियाई</li><li>पुर्तगाली</li><li>रूसी</li><li>किस्वाहिली</li><li>सरलीकृत चीनी</li>`,
-                contact_intro: "अपनी गोपनीयता के संबंध में किसी भी प्रश्न या चिंता के लिए, कृपया हमसे <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a> पर संपर्क करें।",
-                back_to_home: "← होम पर वापस जाएँ"
-            },
-            it: {
-                privacy_policy_title: "KIMYA – Informativa sulla privacy",
-                privacy_policy_heading: "Informativa sulla privacy",
-                last_updated: "Ultimo aggiornamento: 22 settembre 2025",
-                privacy_intro: "In KIMYA, la tua privacy è la nostra massima priorità. Questa politica spiega quali informazioni raccogliamo, come le usiamo e come le proteggiamo.",
-                info_we_collect_heading: "Informazioni che raccogliamo",
-                info_collect_1: "Dati sulla posizione per l'automazione basata su zone",
-                info_collect_2: "Dati su movimento e attività per il rilevamento del contesto",
-                info_collect_3: "Impostazioni del dispositivo e preferenze del Focus mode",
-                info_collect_4: "Analisi sull'utilizzo per migliorare l'app",
-                how_we_use_data_heading: "Come usiamo i tuoi dati",
-                use_data_1: "Abilitare la gestione automatica del Focus mode",
-                use_data_2: "Rilevare la guida e altre attività",
-                use_data_3: "Fornire suggerimenti di zone personalizzati",
-                use_data_4: "Migliorare le prestazioni e le funzionalità dell'app",
-                data_storage_heading: "Archiviazione e sicurezza dei dati",
-                data_storage_1: "Tutti i dati vengono elaborati localmente sul tuo dispositivo",
-                data_storage_2: "I dati delle zone vengono sincronizzati tramite iCloud (se abilitato)",
-                data_storage_3: "Utilizziamo la crittografia standard del settore",
-                data_storage_4: "Nessun dato personale viene condiviso con terze parti",
-                your_rights_heading: "I tuoi diritti",
-                your_rights_1: "Accedere ai tuoi dati personali in qualsiasi momento",
-                your_rights_2: "Eliminare i tuoi dati rimuovendo l'app",
-                your_rights_3: "Disattivare l'analisi nelle Impostazioni",
-                your_rights_4: "Controllare tutte le autorizzazioni nelle Impostazioni di iOS",
-                third_party_heading: "Servizi di terze parti",
-                third_party_1: "Apple Maps per i servizi di localizzazione",
-                third_party_2: "iCloud per la sincronizzazione dei dati",
-                third_party_3: "StoreKit per la gestione degli abbonamenti",
-                third_party_4: "Nessuna rete pubblicitaria o tracker",
-                supported_languages_heading: "Lingue supportate",
-                supported_languages: `<li>Tedesco</li><li>Inglese</li><li>Spagnolo</li><li>Francese</li><li>Hindi</li><li>Italiano</li><li>Giapponese</li><li>Kikongo</li><li>Coreano</li><li>Portoghese</li><li>Russo</li><li>Kiswahili</li><li>Cinese semplificato</li>`,
-                contact_intro: "Per qualsiasi domanda o preoccupazione sulla tua privacy, contattaci all'indirizzo <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>.",
-                back_to_home: "← Torna alla Home"
-            },
-            ja: {
-                privacy_policy_title: "KIMYA – プライバシーポリシー",
-                privacy_policy_heading: "プライバシーポリシー",
-                last_updated: "最終更新日：2025年9月22日",
-                privacy_intro: "KIMYAでは、お客様のプライバシーを最優先事項としています。このポリシーは、当社が収集する情報、その使用方法、および保護方法について説明しています。",
-                info_we_collect_heading: "収集する情報",
-                info_collect_1: "ゾーンベースの自動化のための位置情報データ",
-                info_collect_2: "コンテキスト検出のための動作およびアクティビティデータ",
-                info_collect_3: "デバイス設定およびフォーカスモードの好み",
-                info_collect_4: "アプリ改善のための利用状況分析",
-                how_we_use_data_heading: "データの使用方法",
-                use_data_1: "自動フォーカスモード管理を有効にする",
-                use_data_2: "運転やその他のアクティビティを検出する",
-                use_data_3: "パーソナライズされたゾーンの提案を提供する",
-                use_data_4: "アプリのパフォーマンスと機能を改善する",
-                data_storage_heading: "データの保存とセキュリティ",
-                data_storage_1: "すべてのデータはデバイス上でローカルに処理されます",
-                data_storage_2: "ゾーンデータはiCloud経由で同期されます（有効な場合）",
-                data_storage_3: "業界標準の暗号化を使用しています",
-                data_storage_4: "個人情報は第三者と共有されません",
-                your_rights_heading: "あなたの権利",
-                your_rights_1: "いつでも個人データにアクセスできる",
-                your_rights_2: "アプリを削除してデータを削除できる",
-                your_rights_3: "設定で分析をオプトアウトできる",
-                your_rights_4: "iOS設定ですべての権限を制御できる",
-                third_party_heading: "サードパーティサービス",
-                third_party_1: "位置情報サービス用のApple Maps",
-                third_party_2: "データ同期用のiCloud",
-                third_party_3: "サブスクリプション管理用のStoreKit",
-                third_party_4: "広告ネットワークやトラッカーなし",
-                supported_languages_heading: "サポートされている言語",
-                supported_languages: `<li>ドイツ語</li><li>英語</li><li>スペイン語</li><li>フランス語</li><li>ヒンディー語</li><li>イタリア語</li><li>日本語</li><li>キコンゴ語</li><li>韓国語</li><li>ポルトガル語</li><li>ロシア語</li><li>スワヒリ語</li><li>簡体字中国語</li>`,
-                contact_intro: "プライバシーに関するご質問やご懸念がある場合は、<a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>までお問い合わせください。",
-                back_to_home: "← ホームに戻る"
-            },
-            ko: {
-                privacy_policy_title: "KIMYA – 개인정보처리방침",
-                privacy_policy_heading: "개인정보처리방침",
-                last_updated: "최종 업데이트: 2025년 9월 22일",
-                privacy_intro: "KIMYA는 귀하의 개인정보를 최우선으로 생각합니다. 이 정책은 당사가 수집하는 정보, 사용 방법 및 보호 방법을 설명합니다.",
-                info_we_collect_heading: "수집하는 정보",
-                info_collect_1: "영역 기반 자동화를 위한 위치 데이터",
-                info_collect_2: "컨텍스트 감지를 위한 동작 및 활동 데이터",
-                info_collect_3: "장치 설정 및 집중 모드 기본 설정",
-                info_collect_4: "앱 개선을 위한 사용 분석",
-                how_we_use_data_heading: "데이터 사용 방법",
-                use_data_1: "자동 집중 모드 관리 활성화",
-                use_data_2: "운전 및 기타 활동 감지",
-                use_data_3: "맞춤형 영역 제안 제공",
-                use_data_4: "앱 성능 및 기능 개선",
-                data_storage_heading: "데이터 저장 및 보안",
-                data_storage_1: "모든 데이터는 장치에서 로컬로 처리됩니다",
-                data_storage_2: "영역 데이터는 iCloud를 통해 동기화됩니다 (활성화된 경우)",
-                data_storage_3: "업계 표준 암호화를 사용합니다",
-                data_storage_4: "개인 데이터는 제3자와 공유되지 않습니다",
-                your_rights_heading: "귀하의 권리",
-                your_rights_1: "언제든지 개인 데이터에 접근",
-                your_rights_2: "앱을 제거하여 데이터 삭제",
-                your_rights_3: "설정에서 분석 수집 비활성화",
-                your_rights_4: "iOS 설정에서 모든 권한 제어",
-                third_party_heading: "제3자 서비스",
-                third_party_1: "위치 서비스를 위한 Apple Maps",
-                third_party_2: "데이터 동기화를 위한 iCloud",
-                third_party_3: "구독 관리를 위한 StoreKit",
-                third_party_4: "광고 네트워크 또는 추적기 없음",
-                supported_languages_heading: "지원되는 언어",
-                supported_languages: `<li>독일어</li><li>영어</li><li>스페인어</li><li>프랑스어</li><li>힌디어</li><li>이탈리아어</li><li>일본어</li><li>키콩고어</li><li>한국어</li><li>포르투갈어</li><li>러시아어</li><li>스와힐리어</li><li>중국어 간체</li>`,
-                contact_intro: "개인정보에 관한 질문이나 우려 사항이 있으면 <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>으로 문의해 주십시오.",
-                back_to_home: "← 홈으로 돌아가기"
-            },
-            pt: {
-                privacy_policy_title: "KIMYA – Política de privacidade",
-                privacy_policy_heading: "Política de privacidade",
-                last_updated: "Última atualização: 22 de setembro de 2025",
-                privacy_intro: "Na KIMYA, sua privacidade é nossa principal prioridade. Esta política explica quais informações coletamos, como as usamos e como as protegemos.",
-                info_we_collect_heading: "Informações que coletamos",
-                info_collect_1: "Dados de localização para automação baseada em zonas",
-                info_collect_2: "Dados de movimento e atividade para detecção de contexto",
-                info_collect_3: "Configurações do dispositivo e preferências do modo de foco",
-                info_collect_4: "Análises de uso para melhorar o aplicativo",
-                how_we_use_data_heading: "Como usamos seus dados",
-                use_data_1: "Ativar o gerenciamento automático do modo de foco",
-                use_data_2: "Detectar a condução e outras atividades",
-                use_data_3: "Fornecer sugestões de zonas personalizadas",
-                use_data_4: "Melhorar o desempenho e os recursos do aplicativo",
-                data_storage_heading: "Armazenamento e segurança de dados",
-                data_storage_1: "Todos os dados são processados localmente em seu dispositivo",
-                data_storage_2: "Os dados de zona são sincronizados via iCloud (se ativado)",
-                data_storage_3: "Usamos criptografia padrão da indústria",
-                data_storage_4: "Nenhum dado pessoal é compartilhado com terceiros",
-                your_rights_heading: "Seus direitos",
-                your_rights_1: "Acessar seus dados pessoais a qualquer momento",
-                your_rights_2: "Excluir seus dados removendo o aplicativo",
-                your_rights_3: "Desativar a análise em Configurações",
-                your_rights_4: "Controlar todas as permissões nas Configurações do iOS",
-                third_party_heading: "Serviços de terceiros",
-                third_party_1: "Apple Maps para serviços de localização",
-                third_party_2: "iCloud para sincronização de dados",
-                third_party_3: "StoreKit para gerenciamento de assinaturas",
-                third_party_4: "Nenhuma rede de publicidade ou rastreadores",
-                supported_languages_heading: "Idiomas suportados",
-                supported_languages: `<li>Alemão</li><li>Inglês</li><li>Espanhol</li><li>Francês</li><li>Hindi</li><li>Italiano</li><li>Japonês</li><li>Kikongo</li><li>Coreano</li><li>Português</li><li>Russo</li><li>Kiswahili</li><li>Chinês simplificado</li>`,
-                contact_intro: "Para quaisquer dúvidas ou preocupações sobre sua privacidade, entre em contato conosco em <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>.",
-                back_to_home: "← Voltar ao Início"
-            },
-            ru: {
-                privacy_policy_title: "KIMYA – Политика конфиденциальности",
-                privacy_policy_heading: "Политика конфиденциальности",
-                last_updated: "Последнее обновление: 22 сентября 2025 г.",
-                privacy_intro: "В KIMYA ваша конфиденциальность является нашим главным приоритетом. Эта политика объясняет, какую информацию мы собираем, как мы ее используем и как мы ее защищаем.",
-                info_we_collect_heading: "Информация, которую мы собираем",
-                info_collect_1: "Данные о местоположении для автоматизации на основе зон",
-                info_collect_2: "Данные о движении и активности для определения контекста",
-                info_collect_3: "Настройки устройства и предпочтения режима фокусировки",
-                info_collect_4: "Аналитика использования для улучшения приложения",
-                how_we_use_data_heading: "Как мы используем ваши данные",
-                use_data_1: "Включить автоматическое управление режимом фокусировки",
-                use_data_2: "Обнаружение вождения и других видов деятельности",
-                use_data_3: "Предоставление персонализированных предложений зон",
-                use_data_4: "Улучшение производительности и функций приложения",
-                data_storage_heading: "Хранение и безопасность данных",
-                data_storage_1: "Все данные обрабатываются локально на вашем устройстве",
-                data_storage_2: "Данные зон синхронизируются через iCloud (если включено)",
-                data_storage_3: "Мы используем стандартное шифрование",
-                data_storage_4: "Персональные данные не передаются третьим лицам",
-                your_rights_heading: "Ваши права",
-                your_rights_1: "Доступ к вашим персональным данным в любое время",
-                your_rights_2: "Удалить ваши данные, удалив приложение",
-                your_rights_3: "Отказаться от аналитики в настройках",
-                your_rights_4: "Управлять всеми разрешениями в настройках iOS",
-                third_party_heading: "Сторонние сервисы",
-                third_party_1: "Apple Maps для служб определения местоположения",
-                third_party_2: "iCloud для синхронизации данных",
-                third_party_3: "StoreKit для управления подписками",
-                third_party_4: "Нет рекламных сетей или трекеров",
-                supported_languages_heading: "Поддерживаемые языки",
-                supported_languages: `<li>Немецкий</li><li>Английский</li><li>Испанский</li><li>Французский</li><li>Хинди</li><li>Итальянский</li><li>Японский</li><li>Киконго</li><li>Корейский</li><li>Португальский</li><li>Русский</li><li>Кисуахили</li><li>Упрощенный китайский</li>`,
-                contact_intro: "По любым вопросам или опасениям относительно вашей конфиденциальности, пожалуйста, свяжитесь с нами по адресу <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>.",
-                back_to_home: "← Назад на главную"
-            },
-            sw: {
-                privacy_policy_title: "KIMYA – Sera ya Faragha",
-                privacy_policy_heading: "Sera ya Faragha",
-                last_updated: "Iliyosasishwa Mwisho: Septemba 22, 2025",
-                privacy_intro: "Katika KIMYA, faragha yako ni kipaumbele chetu kikuu. Sera hii inaeleza ni taarifa gani tunakusanya, jinsi tunavyoitumia, na jinsi tunavyoilinda.",
-                info_we_collect_heading: "Habari Tunayokusanya",
-                info_collect_1: "Data ya eneo kwa ajili ya otomatiki kulingana na eneo",
-                info_collect_2: "Data ya mwendo na shughuli kwa ajili ya kutambua mazingira",
-                info_collect_3: "Mipangilio ya kifaa na mapendeleo ya modi ya Kuzingatia",
-                info_collect_4: "Uchanganuzi wa matumizi ili kuboresha programu",
-                how_we_use_data_heading: "Jinsi Tunavyotumia Data Yako",
-                use_data_1: "Wezesha usimamizi wa kiotomatiki wa modi ya Kuzingatia",
-                use_data_2: "Tambua uendeshaji gari na shughuli nyingine",
-                use_data_3: "Toa mapendekezo ya eneo yaliyobinafsishwa",
-                use_data_4: "Boresha utendaji na vipengele vya programu",
-                data_storage_heading: "Uhifadhi na Usalama wa Data",
-                data_storage_1: "Data zote huchakatwa ndani ya kifaa chako",
-                data_storage_2: "Data ya eneo husawazishwa kupitia iCloud (ikiwa imewezeshwa)",
-                data_storage_3: "Tunatumia usimbaji fiche wa kiwango cha tasnia",
-                data_storage_4: "Hakuna data ya kibinafsi inayoshirikiwa na wahusika wengine",
-                your_rights_heading: "Haki Zako",
-                your_rights_1: "Fikia data yako ya kibinafsi wakati wowote",
-                your_rights_2: "Futa data yako kwa kuondoa programu",
-                your_rights_3: "Chagua kutoka kwa uchanganuzi katika Mipangilio",
-                your_rights_4: "Dhibiti ruhusa zote katika Mipangilio ya iOS",
-                third_party_heading: "Huduma za Wahusika Wengine",
-                third_party_1: "Apple Maps kwa huduma za eneo",
-                third_party_2: "iCloud kwa usawazishaji wa data",
-                third_party_3: "StoreKit kwa usimamizi wa usajili",
-                third_party_4: "Hakuna mitandao ya matangazo au vifuatiliaji",
-                supported_languages_heading: "Lugha Zinazotumika",
-                supported_languages: `<li>Kijerumani</li><li>Kiingereza</li><li>Kihispania</li><li>Kifaransa</li><li>Kihindi</li><li>Kiitaliano</li><li>Kijapani</li><li>Kikongo</li><li>Kikorea</li><li>Kireno</li><li>Kirusi</li><li>Kiswahili</li><li>Kichina Rahisi</li>`,
-                contact_intro: "Kwa maswali yoyote au wasiwasi kuhusu faragha yako, tafadhali wasiliana nasi kwa <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>.",
-                back_to_home: "← Rudi Nyumbani"
-            },
-            zh: {
-                privacy_policy_title: "KIMYA – 隐私政策",
-                privacy_policy_heading: "隐私政策",
-                last_updated: "最后更新：2025年9月22日",
-                privacy_intro: "在 KIMYA，您的隐私是我们的首要任务。本政策解释了我们收集哪些信息、如何使用以及如何保护它。",
-                info_we_collect_heading: "我们收集的信息",
-                info_collect_1: "用于基于区域的自动化的位置数据",
-                info_collect_2: "用于上下文检测的运动和活动数据",
-                info_collect_3: "设备设置和专注模式偏好",
-                info_collect_4: "用于改进应用的用法分析",
-                how_we_use_data_heading: "我们如何使用您的数据",
-                use_data_1: "启用自动专注模式管理",
-                use_data_2: "检测驾驶和其他活动",
-                use_data_3: "提供个性化区域建议",
-                use_data_4: "改善应用性能和功能",
-                data_storage_heading: "数据存储和安全",
-                data_storage_1: "所有数据都在您的设备上本地处理",
-                data_storage_2: "区域数据通过 iCloud 同步（如果启用）",
-                data_storage_3: "我们使用行业标准加密",
-                data_storage_4: "不与第三方共享个人数据",
-                your_rights_heading: "您的权利",
-                your_rights_1: "随时访问您的个人数据",
-                your_rights_2: "通过移除应用来删除您的数据",
-                your_rights_3: "在“设置”中选择退出分析",
-                your_rights_4: "在 iOS 设置中控制所有权限",
-                third_party_heading: "第三方服务",
-                third_party_1: "用于位置服务的 Apple 地图",
-                third_party_2: "用于数据同步的 iCloud",
-                third_party_3: "用于订阅管理的 StoreKit",
-                third_party_4: "无广告网络或跟踪器",
-                supported_languages_heading: "支持的语言",
-                supported_languages: `<li>德语</li><li>英语</li><li>西班牙语</li><li>法语</li><li>印地语</li><li>意大利语</li><li>日语</li><li>基孔戈语</li><li>韩语</li><li>葡萄牙语</li><li>俄语</li><li>斯瓦希里语</li><li>简体中文</li>`,
-                contact_intro: "对于您的隐私有任何疑问或疑虑，请通过 <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a> 联系我们。",
-                back_to_home: "← 返回主页"
-            }
-        };
-
-        function changeLanguage(lang) {
-            const elements = document.querySelectorAll('[data-lang-key]');
-            elements.forEach(el => {
-                const key = el.getAttribute('data-lang-key');
-                if (translations[lang] && translations[lang][key]) {
-                    el.innerHTML = translations[lang][key];
-                }
-            });
-            document.documentElement.lang = lang;
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
-            const languageSelector = document.getElementById('language-selector');
-            const urlParams = new URLSearchParams(window.location.search);
-            const initialLang = urlParams.get('lang') || 'en';
-            languageSelector.value = initialLang;
-            changeLanguage(initialLang);
+            const translations = {
+                en: {
+                    privacyTitle: "Privacy Policy",
+                    lastUpdated: "Last Updated: September 22, 2025",
+                    privacyIntro: "At KIMYA, your privacy is our top priority. This policy explains what information we collect, how we use it, and how we protect it.",
+                    infoWeCollectTitle: "Information We Collect",
+                    liLocationData: "Location data for zone-based automation",
+                    liMotionData: "Motion and activity data for context detection",
+                    liDeviceSettings: "Device settings and Focus mode preferences",
+                    liUsageAnalytics: "Usage analytics to improve the app",
+                    howWeUseDataTitle: "How We Use Your Data",
+                    liEnableFocus: "Enable automatic Focus mode management",
+                    liDetectDriving: "Detect driving and other activities",
+                    liPersonalizedZones: "Provide personalized zone suggestions",
+                    liImproveApp: "Improve app performance and features",
+                    storageSecurityTitle: "Data Storage and Security",
+                    liLocalProcessing: "All data is processed locally on your device",
+                    liIcloudSync: "Zone data is synced via iCloud (if enabled)",
+                    liEncryption: "We use industry-standard encryption",
+                    liNoThirdParties: "No personal data is shared with third parties",
+                    yourRightsTitle: "Your Rights",
+                    liAccessData: "Access your personal data at any time",
+                    liDeleteData: "Delete your data by removing the app",
+                    liOptOut: "Opt-out of analytics in Settings",
+                    liControlPermissions: "Control all permissions in iOS Settings",
+                    thirdPartyServicesTitle: "Third-Party Services",
+                    liAppleMaps: "Apple Maps for location services",
+                    liIcloudSyncServices: "iCloud for data synchronization",
+                    liStorekit: "StoreKit for subscription management",
+                    liNoAds: "No advertising networks or trackers",
+                    contactInfo: "For any questions or concerns regarding your privacy, please contact us at contact@kimyaapp.com.",
+                    backHomeLink: "← Back to Home"
+                },
+                fr: {
+                    privacyTitle: "Politique de Confidentialité",
+                    lastUpdated: "Dernière mise à jour: 22 septembre 2025",
+                    privacyIntro: "Chez KIMYA, votre vie privée est notre priorité absolue. Cette politique explique quelles informations nous recueillons, comment nous les utilisons et comment nous les protégeons.",
+                    infoWeCollectTitle: "Informations que nous recueillons",
+                    liLocationData: "Données de localisation pour l'automatisation basée sur les zones",
+                    liMotionData: "Données de mouvement et d'activité pour la détection de contexte",
+                    liDeviceSettings: "Paramètres de l'appareil et préférences du mode Concentration",
+                    liUsageAnalytics: "Analytiques d'utilisation pour améliorer l'application",
+                    howWeUseDataTitle: "Comment nous utilisons vos données",
+                    liEnableFocus: "Activer la gestion automatique du mode Concentration",
+                    liDetectDriving: "Détecter la conduite et d'autres activités",
+                    liPersonalizedZones: "Fournir des suggestions de zones personnalisées",
+                    liImproveApp: "Améliorer les performances et les fonctionnalités de l'application",
+                    storageSecurityTitle: "Stockage et sécurité des données",
+                    liLocalProcessing: "Toutes les données sont traitées localement sur votre appareil",
+                    liIcloudSync: "Les données de zone sont synchronisées via iCloud (si activé)",
+                    liEncryption: "Nous utilisons un chiffrement standard de l'industrie",
+                    liNoThirdParties: "Aucune donnée personnelle n'est partagée avec des tiers",
+                    yourRightsTitle: "Vos droits",
+                    liAccessData: "Accéder à vos données personnelles à tout moment",
+                    liDeleteData: "Supprimer vos données en désinstallant l'application",
+                    liOptOut: "Désactiver les analytiques dans les paramètres",
+                    liControlPermissions: "Contrôler toutes les autorisations dans les paramètres iOS",
+                    thirdPartyServicesTitle: "Services tiers",
+                    liAppleMaps: "Apple Maps pour les services de localisation",
+                    liIcloudSyncServices: "iCloud pour la synchronisation des données",
+                    liStorekit: "StoreKit pour la gestion des abonnements",
+                    liNoAds: "Aucun réseau publicitaire ou de suivi",
+                    contactInfo: "Pour toute question ou préoccupation concernant votre vie privée, veuillez nous contacter à contact@kimyaapp.com.",
+                    backHomeLink: "← Retour à l'accueil"
+                },
+                ar: {
+                    privacyTitle: "سياسة الخصوصية",
+                    lastUpdated: "آخر تحديث: 22 سبتمبر 2025",
+                    privacyIntro: "في KIMYA، خصوصيتك هي أولويتنا القصوى. تشرح هذه السياسة المعلومات التي نجمعها، وكيف نستخدمها، وكيف نحميها.",
+                    infoWeCollectTitle: "المعلومات التي نجمعها",
+                    liLocationData: "بيانات الموقع للأتمتة القائمة على المناطق",
+                    liMotionData: "بيانات الحركة والنشاط للكشف عن السياق",
+                    liDeviceSettings: "إعدادات الجهاز وتفضيلات وضع التركيز",
+                    liUsageAnalytics: "تحليلات الاستخدام لتحسين التطبيق",
+                    howWeUseDataTitle: "كيف نستخدم بياناتك",
+                    liEnableFocus: "تمكين الإدارة التلقائية لوضع التركيز",
+                    liDetectDriving: "الكشف عن القيادة والأنشطة الأخرى",
+                    liPersonalizedZones: "توفير اقتراحات مناطق مخصصة",
+                    liImproveApp: "تحسين أداء التطبيق وميزاته",
+                    storageSecurityTitle: "تخزين البيانات والأمان",
+                    liLocalProcessing: "تتم معالجة جميع البيانات محليًا على جهازك",
+                    liIcloudSync: "تتم مزامنة بيانات المنطقة عبر iCloud (إذا تم تمكينها)",
+                    liEncryption: "نستخدم التشفير القياسي للصناعة",
+                    liNoThirdParties: "لا تتم مشاركة أي بيانات شخصية مع أطراف ثالثة",
+                    yourRightsTitle: "حقوقك",
+                    liAccessData: "الوصول إلى بياناتك الشخصية في أي وقت",
+                    liDeleteData: "حذف بياناتك عن طريق إزالة التطبيق",
+                    liOptOut: "إلغاء الاشتراك في التحليلات في الإعدادات",
+                    liControlPermissions: "التحكم في جميع الأذونات في إعدادات iOS",
+                    thirdPartyServicesTitle: "خدمات الطرف الثالث",
+                    liAppleMaps: "Apple Maps لخدمات الموقع",
+                    liIcloudSyncServices: "iCloud لمزامنة البيانات",
+                    liStorekit: "StoreKit لإدارة الاشتراك",
+                    liNoAds: "لا توجد شبكات إعلانية أو أدوات تتبع",
+                    contactInfo: "لأي أسئلة أو مخاوف بشأن خصوصيتك، يرجى الاتصال بنا على contact@kimyaapp.com.",
+                    backHomeLink: "← العودة إلى الصفحة الرئيسية"
+                },
+                de: {
+                    privacyTitle: "Datenschutzrichtlinie",
+                    lastUpdated: "Zuletzt aktualisiert: 22. September 2025",
+                    privacyIntro: "Bei KIMYA hat Ihre Privatsphäre höchste Priorität. Diese Richtlinie erklärt, welche Informationen wir sammeln, wie wir sie verwenden und wie wir sie schützen.",
+                    infoWeCollectTitle: "Informationen, die wir sammeln",
+                    liLocationData: "Standortdaten für zonenbasierte Automatisierung",
+                    liMotionData: "Bewegungs- und Aktivitätsdaten zur Kontext-Erkennung",
+                    liDeviceSettings: "Geräteeinstellungen und Fokusmodus-Präferenzen",
+                    liUsageAnalytics: "Nutzungsanalysen zur Verbesserung der App",
+                    howWeUseDataTitle: "Wie wir Ihre Daten verwenden",
+                    liEnableFocus: "Automatische Fokusmodus-Verwaltung ermöglichen",
+                    liDetectDriving: "Fahrten und andere Aktivitäten erkennen",
+                    liPersonalizedZones: "Personalisierte Zonenvorschläge bereitstellen",
+                    liImproveApp: "App-Leistung und Funktionen verbessern",
+                    storageSecurityTitle: "Datenspeicherung und Sicherheit",
+                    liLocalProcessing: "Alle Daten werden lokal auf Ihrem Gerät verarbeitet",
+                    liIcloudSync: "Zonendaten werden über iCloud synchronisiert (falls aktiviert)",
+                    liEncryption: "Wir verwenden branchenübliche Verschlüsselung",
+                    liNoThirdParties: "Keine persönlichen Daten werden an Dritte weitergegeben",
+                    yourRightsTitle: "Ihre Rechte",
+                    liAccessData: "Jederzeit auf Ihre persönlichen Daten zugreifen",
+                    liDeleteData: "Ihre Daten durch Entfernen der App löschen",
+                    liOptOut: "Analysen in den Einstellungen deaktivieren",
+                    liControlPermissions: "Alle Berechtigungen in den iOS-Einstellungen steuern",
+                    thirdPartyServicesTitle: "Dienste von Drittanbietern",
+                    liAppleMaps: "Apple Maps für Standortdienste",
+                    liIcloudSyncServices: "iCloud für Datensynchronisation",
+                    liStorekit: "StoreKit zur Abonnementverwaltung",
+                    liNoAds: "Keine Werbenetzwerke oder Tracker",
+                    contactInfo: "Für Fragen oder Bedenken bezüglich Ihrer Privatsphäre kontaktieren Sie uns bitte unter contact@kimyaapp.com.",
+                    backHomeLink: "← Zurück zur Startseite"
+                },
+                es: {
+                    privacyTitle: "Política de Privacidad",
+                    lastUpdated: "Última actualización: 22 de septiembre de 2025",
+                    privacyIntro: "En KIMYA, su privacidad es nuestra máxima prioridad. Esta política explica qué información recopilamos, cómo la usamos y cómo la protegemos.",
+                    infoWeCollectTitle: "Información que Recopilamos",
+                    liLocationData: "Datos de ubicación para la automatización basada en zonas",
+                    liMotionData: "Datos de movimiento y actividad para la detección de contexto",
+                    liDeviceSettings: "Configuración del dispositivo y preferencias del modo de enfoque",
+                    liUsageAnalytics: "Análisis de uso para mejorar la aplicación",
+                    howWeUseDataTitle: "Cómo Usamos sus Datos",
+                    liEnableFocus: "Habilitar la gestión automática del modo de enfoque",
+                    liDetectDriving: "Detectar la conducción y otras actividades",
+                    liPersonalizedZones: "Proporcionar sugerencias de zonas personalizadas",
+                    liImproveApp: "Mejorar el rendimiento y las características de la aplicación",
+                    storageSecurityTitle: "Almacenamiento y Seguridad de Datos",
+                    liLocalProcessing: "Todos los datos se procesan localmente en su dispositivo",
+                    liIcloudSync: "Los datos de la zona se sincronizan a través de iCloud (si está habilitado)",
+                    liEncryption: "Utilizamos cifrado estándar de la industria",
+                    liNoThirdParties: "No se comparten datos personales con terceros",
+                    yourRightsTitle: "Sus Derechos",
+                    liAccessData: "Acceder a sus datos personales en cualquier momento",
+                    liDeleteData: "Eliminar sus datos al eliminar la aplicación",
+                    liOptOut: "Optar por no recibir análisis en Configuración",
+                    liControlPermissions: "Controlar todos los permisos en la Configuración de iOS",
+                    thirdPartyServicesTitle: "Servicios de Terceros",
+                    liAppleMaps: "Apple Maps para servicios de ubicación",
+                    liIcloudSyncServices: "iCloud para la sincronización de datos",
+                    liStorekit: "StoreKit para la gestión de suscripciones",
+                    liNoAds: "Sin redes publicitarias ni rastreadores",
+                    contactInfo: "Para cualquier pregunta o inquietud sobre su privacidad, contáctenos en contact@kimyaapp.com.",
+                    backHomeLink: "← Volver a la página de inicio"
+                },
+                hi: {
+                    privacyTitle: "गोपनीयता नीति",
+                    lastUpdated: "अंतिम अद्यतन: 22 सितंबर, 2025",
+                    privacyIntro: "KIMYA में, आपकी गोपनीयता हमारी सर्वोच्च प्राथमिकता है। यह नीति बताती है कि हम कौन सी जानकारी एकत्र करते हैं, हम इसका उपयोग कैसे करते हैं, और हम इसे कैसे सुरक्षित रखते हैं।",
+                    infoWeCollectTitle: "जानकारी जो हम एकत्र करते हैं",
+                    liLocationData: "ज़ोन-आधारित स्वचालन के लिए स्थान डेटा",
+                    liMotionData: "संदर्भ का पता लगाने के लिए गति और गतिविधि डेटा",
+                    liDeviceSettings: "डिवाइस सेटिंग्स और फोकस मोड प्राथमिकताएँ",
+                    liUsageAnalytics: "ऐप को बेहतर बनाने के लिए उपयोग एनालिटिक्स",
+                    howWeUseDataTitle: "हम आपके डेटा का उपयोग कैसे करते हैं",
+                    liEnableFocus: "स्वचालित फोकस मोड प्रबंधन को सक्षम करें",
+                    liDetectDriving: "ड्राइविंग और अन्य गतिविधियों का पता लगाएं",
+                    liPersonalizedZones: "व्यक्तिगत ज़ोन सुझाव प्रदान करें",
+                    liImproveApp: "ऐप के प्रदर्शन और सुविधाओं में सुधार करें",
+                    storageSecurityTitle: "डेटा संग्रहण और सुरक्षा",
+                    liLocalProcessing: "सभी डेटा आपके डिवाइस पर स्थानीय रूप से संसाधित होते हैं",
+                    liIcloudSync: "ज़ोन डेटा iCloud के माध्यम से सिंक किया जाता है (यदि सक्षम हो)",
+                    liEncryption: "हम उद्योग-मानक एन्क्रिप्शन का उपयोग करते हैं",
+                    liNoThirdParties: "कोई भी व्यक्तिगत डेटा तीसरे पक्ष के साथ साझा नहीं किया जाता है",
+                    yourRightsTitle: "आपके अधिकार",
+                    liAccessData: "किसी भी समय अपने व्यक्तिगत डेटा तक पहुँचें",
+                    liDeleteData: "ऐप को हटाकर अपना डेटा हटाएँ",
+                    liOptOut: "सेटिंग्स में एनालिटिक्स से ऑप्ट-आउट करें",
+                    liControlPermissions: "iOS सेटिंग्स में सभी अनुमतियों को नियंत्रित करें",
+                    thirdPartyServicesTitle: "तीसरे पक्ष की सेवाएँ",
+                    liAppleMaps: "स्थान सेवाओं के लिए Apple Maps",
+                    liIcloudSyncServices: "डेटा सिंक्रनाइज़ेशन के लिए iCloud",
+                    liStorekit: "सदस्यता प्रबंधन के लिए StoreKit",
+                    liNoAds: "कोई विज्ञापन नेटवर्क या ट्रैकर्स नहीं",
+                    contactInfo: "आपकी गोपनीयता के संबंध में किसी भी प्रश्न या चिंता के लिए, कृपया हमसे contact@kimyaapp.com पर संपर्क करें।",
+                    backHomeLink: "← वापस होम पेज पर"
+                },
+                it: {
+                    privacyTitle: "Informativa sulla privacy",
+                    lastUpdated: "Ultimo aggiornamento: 22 settembre 2025",
+                    privacyIntro: "In KIMYA, la tua privacy è la nostra massima priorità. Questa politica spiega quali informazioni raccogliamo, come le usiamo e come le proteggiamo.",
+                    infoWeCollectTitle: "Informazioni che raccogliamo",
+                    liLocationData: "Dati di localizzazione per l'automazione basata su zone",
+                    liMotionData: "Dati di movimento e attività per il rilevamento del contesto",
+                    liDeviceSettings: "Impostazioni del dispositivo e preferenze della modalità Focus",
+                    liUsageAnalytics: "Analisi sull'utilizzo per migliorare l'app",
+                    howWeUseDataTitle: "Come usiamo i tuoi dati",
+                    liEnableFocus: "Abilita la gestione automatica della modalità Focus",
+                    liDetectDriving: "Rileva la guida e altre attività",
+                    liPersonalizedZones: "Fornisci suggerimenti di zone personalizzate",
+                    liImproveApp: "Migliora le prestazioni e le funzionalità dell'app",
+                    storageSecurityTitle: "Archiviazione e sicurezza dei dati",
+                    liLocalProcessing: "Tutti i dati vengono elaborati localmente sul tuo dispositivo",
+                    liIcloudSync: "I dati della zona vengono sincronizzati tramite iCloud (se abilitato)",
+                    liEncryption: "Usiamo la crittografia standard del settore",
+                    liNoThirdParties: "Nessun dato personale viene condiviso con terze parti",
+                    yourRightsTitle: "I tuoi diritti",
+                    liAccessData: "Accedi ai tuoi dati personali in qualsiasi momento",
+                    liDeleteData: "Cancella i tuoi dati rimuovendo l'app",
+                    liOptOut: "Disattiva le analisi nelle Impostazioni",
+                    liControlPermissions: "Controlla tutte le autorizzazioni nelle Impostazioni di iOS",
+                    thirdPartyServicesTitle: "Servizi di terze parti",
+                    liAppleMaps: "Apple Maps per i servizi di localizzazione",
+                    liIcloudSyncServices: "iCloud per la sincronizzazione dei dati",
+                    liStorekit: "StoreKit per la gestione degli abbonamenti",
+                    liNoAds: "Nessuna rete pubblicitaria o tracker",
+                    contactInfo: "Per qualsiasi domanda o dubbio sulla tua privacy, contattaci a contact@kimyaapp.com.",
+                    backHomeLink: "← Torna alla Home"
+                },
+                ja: {
+                    privacyTitle: "プライバシーポリシー",
+                    lastUpdated: "最終更新日：2025年9月22日",
+                    privacyIntro: "KIMYAでは、お客様のプライバシーを最優先に考えています。このポリシーでは、収集する情報、その使用方法、および保護方法について説明します。",
+                    infoWeCollectTitle: "収集する情報",
+                    liLocationData: "ゾーンベースの自動化のための位置データ",
+                    liMotionData: "コンテキスト検出のためのモーションおよびアクティビティデータ",
+                    liDeviceSettings: "デバイス設定と集中モードの好み",
+                    liUsageAnalytics: "アプリを改善するための利用分析",
+                    howWeUseDataTitle: "データの使用方法",
+                    liEnableFocus: "自動集中モード管理を有効にする",
+                    liDetectDriving: "運転およびその他のアクティビティを検出する",
+                    liPersonalizedZones: "パーソナライズされたゾーンの提案を提供する",
+                    liImproveApp: "アプリのパフォーマンスと機能を改善する",
+                    storageSecurityTitle: "データの保存とセキュリティ",
+                    liLocalProcessing: "すべてのデータはデバイス上でローカルに処理されます",
+                    liIcloudSync: "ゾーンデータはiCloud経由で同期されます（有効な場合）",
+                    liEncryption: "業界標準の暗号化を使用します",
+                    liNoThirdParties: "個人データは第三者と共有されません",
+                    yourRightsTitle: "あなたの権利",
+                    liAccessData: "いつでも個人データにアクセスする",
+                    liDeleteData: "アプリを削除してデータを削除する",
+                    liOptOut: "設定で分析をオプトアウトする",
+                    liControlPermissions: "iOS設定ですべての権限を制御する",
+                    thirdPartyServicesTitle: "サードパーティサービス",
+                    liAppleMaps: "位置情報サービスのためのApple Maps",
+                    liIcloudSyncServices: "データ同期のためのiCloud",
+                    liStorekit: "サブスクリプション管理のためのStoreKit",
+                    liNoAds: "広告ネットワークやトラッカーはありません",
+                    contactInfo: "プライバシーに関するご質問やご懸念がある場合は、contact@kimyaapp.comまでご連絡ください。",
+                    backHomeLink: "← ホームに戻る"
+                },
+                kg: {
+                    privacyTitle: "Ntiama ya Kubomba Nkadulu",
+                    lastUpdated: "Yelama ya Nsuka: September 22, 2025",
+                    privacyIntro: "Na KIMYA, nkadulu aku ya kibombilu i kima ya mfunu ya nene. Ntiama yayi ke tubila diambu ya nsoba yina beto ke baka, mutindu beto ke sadilaka yo, mpi mutindu beto ke taninaka yo.",
+                    infoWeCollectTitle: "Mambu Yina Beto ke Baka",
+                    liLocationData: "Ba données ya kisika sambu na ba automatisations ya ba zones",
+                    liMotionData: "Ba données ya mouvements na ya bisalu sambu na ku détection ya contexte",
+                    liDeviceSettings: "Ba paramètres ya appareil na ba préférences ya Focus mode",
+                    liUsageAnalytics: "Ba analytiques ya usage sambu na kubongisa app",
+                    howWeUseDataTitle: "Mutindu Beto ke Sadilaka Ba Données Na Nge",
+                    liEnableFocus: "Kusadila l'automatisations ya Focus mode",
+                    liDetectDriving: "Ku détecter la conduite na ba bisalu ya nkaka",
+                    liPersonalizedZones: "Kupesa ba suggestions ya ba zones ya personnalisé",
+                    liImproveApp: "Kubongisa performance na ba fonctionnalités ya app",
+                    storageSecurityTitle: "Kubomba na Kubomba ya Ba Données",
+                    liLocalProcessing: "Ba données nionso ke sadilaka localement na appareil na nge",
+                    liIcloudSync: "Ba données ya zone ke sincronisé via iCloud (kana yo ke sadilaka)",
+                    liEncryption: "Beto ke sadilaka ba encryptions ya nene",
+                    liNoThirdParties: "Ba données ya kibombilu ke sadilaka ve ti ba nkaka",
+                    yourRightsTitle: "Ba Droits Na Nge",
+                    liAccessData: "Ku accéder na ba données na nge ya kibombilu n'a l'heure nionso",
+                    liDeleteData: "Ku supprimer ba données na nge na ku enlever app",
+                    liOptOut: "Ku enlever ba analytiques na ba Paramètres",
+                    liControlPermissions: "Ku contrôler ba permissions nionso na ba Paramètres ya iOS",
+                    thirdPartyServicesTitle: "Ba Services ya Nkaka",
+                    liAppleMaps: "Apple Maps sambu na ba services ya localisation",
+                    liIcloudSyncServices: "iCloud sambu na ba synchronisations ya ba données",
+                    liStorekit: "StoreKit sambu na ba gestions ya ba abonnements",
+                    liNoAds: "Ba réseaux ya publicités ve na ba trackers ve",
+                    contactInfo: "Sambu na ba questions na ba soucis ya nkadulu na nge, s'il vous plait, contacter beto na contact@kimyaapp.com.",
+                    backHomeLink: "← Kuzonga na Page ya Ntima"
+                },
+                ko: {
+                    privacyTitle: "개인정보처리방침",
+                    lastUpdated: "최종 업데이트: 2025년 9월 22일",
+                    privacyIntro: "KIMYA에서 귀하의 개인정보는 최우선 순위입니다. 이 정책은 우리가 수집하는 정보, 사용 방법 및 보호 방법을 설명합니다.",
+                    infoWeCollectTitle: "우리가 수집하는 정보",
+                    liLocationData: "구역 기반 자동화를 위한 위치 데이터",
+                    liMotionData: "맥락 감지를 위한 동작 및 활동 데이터",
+                    liDeviceSettings: "장치 설정 및 집중 모드 기본 설정",
+                    liUsageAnalytics: "앱 개선을 위한 사용 분석",
+                    howWeUseDataTitle: "데이터 사용 방법",
+                    liEnableFocus: "자동 집중 모드 관리 활성화",
+                    liDetectDriving: "운전 및 기타 활동 감지",
+                    liPersonalizedZones: "개인화된 구역 제안 제공",
+                    liImproveApp: "앱 성능 및 기능 개선",
+                    storageSecurityTitle: "데이터 저장 및 보안",
+                    liLocalProcessing: "모든 데이터는 장치에서 로컬로 처리됩니다",
+                    liIcloudSync: "구역 데이터는 iCloud를 통해 동기화됩니다 (활성화된 경우)",
+                    liEncryption: "우리는 산업 표준 암호화를 사용합니다",
+                    liNoThirdParties: "개인 데이터는 제3자와 공유되지 않습니다",
+                    yourRightsTitle: "귀하의 권리",
+                    liAccessData: "언제든지 개인 데이터에 액세스",
+                    liDeleteData: "앱을 제거하여 데이터 삭제",
+                    liOptOut: "설정에서 분석 수집 거부",
+                    liControlPermissions: "iOS 설정에서 모든 권한 제어",
+                    thirdPartyServicesTitle: "타사 서비스",
+                    liAppleMaps: "위치 서비스를 위한 Apple Maps",
+                    liIcloudSyncServices: "데이터 동기화를 위한 iCloud",
+                    liStorekit: "구독 관리를 위한 StoreKit",
+                    liNoAds: "광고 네트워크 또는 추적기 없음",
+                    contactInfo: "개인정보에 대한 질문이나 우려 사항이 있으면 contact@kimyaapp.com으로 문의하십시오.",
+                    backHomeLink: "← 홈으로 돌아가기"
+                },
+                pt: {
+                    privacyTitle: "Política de Privacidade",
+                    lastUpdated: "Última atualização: 22 de setembro de 2025",
+                    privacyIntro: "Na KIMYA, sua privacidade é a nossa principal prioridade. Esta política explica quais informações coletamos, como as usamos e como as protegemos.",
+                    infoWeCollectTitle: "Informações que Coletamos",
+                    liLocationData: "Dados de localização para automação baseada em zonas",
+                    liMotionData: "Dados de movimento e atividade para detecção de contexto",
+                    liDeviceSettings: "Configurações do dispositivo e preferências do modo Foco",
+                    liUsageAnalytics: "Análise de uso para melhorar o aplicativo",
+                    howWeUseDataTitle: "Como Usamos seus Dados",
+                    liEnableFocus: "Habilitar o gerenciamento automático do modo Foco",
+                    liDetectDriving: "Detectar direção e outras atividades",
+                    liPersonalizedZones: "Fornecer sugestões de zonas personalizadas",
+                    liImproveApp: "Melhorar o desempenho e os recursos do aplicativo",
+                    storageSecurityTitle: "Armazenamento e Segurança de Dados",
+                    liLocalProcessing: "Todos os dados são processados localmente em seu dispositivo",
+                    liIcloudSync: "Os dados da zona são sincronizados via iCloud (se ativado)",
+                    liEncryption: "Usamos criptografia padrão da indústria",
+                    liNoThirdParties: "Nenhum dado pessoal é compartilhado com terceiros",
+                    yourRightsTitle: "Seus Direitos",
+                    liAccessData: "Acessar seus dados pessoais a qualquer momento",
+                    liDeleteData: "Excluir seus dados removendo o aplicativo",
+                    liOptOut: "Optar por não receber análises nas Configurações",
+                    liControlPermissions: "Controlar todas as permissões nas Configurações do iOS",
+                    thirdPartyServicesTitle: "Serviços de Terceiros",
+                    liAppleMaps: "Apple Maps para serviços de localização",
+                    liIcloudSyncServices: "iCloud para sincronização de dados",
+                    liStorekit: "StoreKit para gerenciamento de assinatura",
+                    liNoAds: "Nenhuma rede de publicidade ou rastreadores",
+                    contactInfo: "Para quaisquer perguntas ou preocupações sobre sua privacidade, entre em contato conosco em contact@kimyaapp.com.",
+                    backHomeLink: "← Voltar ao Início"
+                },
+                ru: {
+                    privacyTitle: "Политика конфиденциальности",
+                    lastUpdated: "Последнее обновление: 22 сентября 2025 г.",
+                    privacyIntro: "В KIMYA ваша конфиденциальность является нашим главным приоритетом. Эта политика объясняет, какую информацию мы собираем, как мы ее используем и как мы ее защищаем.",
+                    infoWeCollectTitle: "Информация, которую мы собираем",
+                    liLocationData: "Данные о местоположении для автоматизации на основе зон",
+                    liMotionData: "Данные о движении и активности для определения контекста",
+                    liDeviceSettings: "Настройки устройства и предпочтения режима «Фокус»",
+                    liUsageAnalytics: "Аналитика использования для улучшения приложения",
+                    howWeUseDataTitle: "Как мы используем ваши данные",
+                    liEnableFocus: "Включить автоматическое управление режимом «Фокус»",
+                    liDetectDriving: "Обнаружение вождения и других действий",
+                    liPersonalizedZones: "Предоставление персонализированных предложений зон",
+                    liImproveApp: "Улучшение производительности и функций приложения",
+                    storageSecurityTitle: "Хранение и безопасность данных",
+                    liLocalProcessing: "Все данные обрабатываются локально на вашем устройстве",
+                    liIcloudSync: "Данные зоны синхронизируются через iCloud (если включено)",
+                    liEncryption: "Мы используем стандартное шифрование",
+                    liNoThirdParties: "Персональные данные не передаются третьим лицам",
+                    yourRightsTitle: "Ваши права",
+                    liAccessData: "Доступ к вашим личным данным в любое время",
+                    liDeleteData: "Удаление ваших данных путем удаления приложения",
+                    liOptOut: "Отказаться от аналитики в настройках",
+                    liControlPermissions: "Управлять всеми разрешениями в настройках iOS",
+                    thirdPartyServicesTitle: "Сторонние сервисы",
+                    liAppleMaps: "Apple Maps для служб геолокации",
+                    liIcloudSyncServices: "iCloud для синхронизации данных",
+                    liStorekit: "StoreKit для управления подпиской",
+                    liNoAds: "Без рекламных сетей или трекеров",
+                    contactInfo: "По любым вопросам или проблемам, касающимся вашей конфиденциальности, пожалуйста, свяжитесь с нами по адресу contact@kimyaapp.com.",
+                    backHomeLink: "← Вернуться на главную"
+                },
+                sw: {
+                    privacyTitle: "Sera ya Faragha",
+                    lastUpdated: "Ilisasishwa Mwisho: Septemba 22, 2025",
+                    privacyIntro: "Katika KIMYA, faragha yako ni kipaumbele chetu kikuu. Sera hii inaeleza habari tunazokusanya, jinsi tunavyozitumia, na jinsi tunavyozilinda.",
+                    infoWeCollectTitle: "Habari Tunazokusanya",
+                    liLocationData: "Data ya eneo kwa ajili ya otomatiki inayotegemea eneo",
+                    liMotionData: "Data ya mwendo na shughuli kwa ajili ya kugundua muktadha",
+                    liDeviceSettings: "Mipangilio ya kifaa na mapendeleo ya hali ya Kuzingatia",
+                    liUsageAnalytics: "Analitiki za matumizi ili kuboresha programu",
+                    howWeUseDataTitle: "Jinsi Tunavyotumia Data Yako",
+                    liEnableFocus: "Washa usimamizi wa hali ya Kuzingatia kiotomatiki",
+                    liDetectDriving: "Gundua uendeshaji gari na shughuli zingine",
+                    liPersonalizedZones: "Toa mapendekezo ya eneo yaliyobinafsishwa",
+                    liImproveApp: "Boresha utendaji na vipengele vya programu",
+                    storageSecurityTitle: "Hifadhi na Usalama wa Data",
+                    liLocalProcessing: "Data zote huchakatwa ndani ya kifaa chako",
+                    liIcloudSync: "Data ya eneo husawazishwa kupitia iCloud (ikiwa imewashwa)",
+                    liEncryption: "Tunatumia usimbaji fiche wa viwango vya sekta",
+                    liNoThirdParties: "Hakuna data ya kibinafsi inayoshirikiwa na wahusika wengine",
+                    yourRightsTitle: "Haki Zako",
+                    liAccessData: "Fikia data yako ya kibinafsi wakati wowote",
+                    liDeleteData: "Futa data yako kwa kuondoa programu",
+                    liOptOut: "Jiondoe kwenye analitiki katika Mipangilio",
+                    liControlPermissions: "Dhibiti ruhusa zote katika Mipangilio ya iOS",
+                    thirdPartyServicesTitle: "Huduma za Wahusika Wengine",
+                    liAppleMaps: "Apple Maps kwa huduma za eneo",
+                    liIcloudSyncServices: "iCloud kwa usawazishaji wa data",
+                    liStorekit: "StoreKit kwa usimamizi wa usajili",
+                    liNoAds: "Hakuna mitandao ya matangazo au vifuatiliaji",
+                    contactInfo: "Kwa maswali yoyote au wasiwasi kuhusu faragha yako, tafadhali wasiliana nasi kwa contact@kimyaapp.com.",
+                    backHomeLink: "← Rudi Nyumbani"
+                },
+                zh: {
+                    privacyTitle: "隐私政策",
+                    lastUpdated: "最后更新：2025年9月22日",
+                    privacyIntro: "在KIMYA，您的隐私是我们的首要任务。本政策解释了我们收集哪些信息，如何使用以及如何保护它。",
+                    infoWeCollectTitle: "我们收集的信息",
+                    liLocationData: "用于基于区域的自动化的位置数据",
+                    liMotionData: "用于上下文检测的运动和活动数据",
+                    liDeviceSettings: "设备设置和专注模式偏好",
+                    liUsageAnalytics: "用于改进应用程序的使用分析",
+                    howWeUseDataTitle: "我们如何使用您的数据",
+                    liEnableFocus: "启用自动专注模式管理",
+                    liDetectDriving: "检测驾驶和其他活动",
+                    liPersonalizedZones: "提供个性化的区域建议",
+                    liImproveApp: "改进应用程序性能和功能",
+                    storageSecurityTitle: "数据存储和安全",
+                    liLocalProcessing: "所有数据都在您的设备上本地处理",
+                    liIcloudSync: "区域数据通过iCloud同步（如果启用）",
+                    liEncryption: "我们使用行业标准加密",
+                    liNoThirdParties: "不与第三方共享个人数据",
+                    yourRightsTitle: "您的权利",
+                    liAccessData: "随时访问您的个人数据",
+                    liDeleteData: "通过删除应用程序来删除您的数据",
+                    liOptOut: "在设置中选择退出分析",
+                    liControlPermissions: "在iOS设置中控制所有权限",
+                    thirdPartyServicesTitle: "第三方服务",
+                    liAppleMaps: "用于位置服务的Apple Maps",
+                    liIcloudSyncServices: "用于数据同步的iCloud",
+                    liStorekit: "用于订阅管理的StoreKit",
+                    liNoAds: "无广告网络或跟踪器",
+                    contactInfo: "如果您对您的隐私有任何疑问或疑虑，请通过 contact@kimyaapp.com 与我们联系。",
+                    backHomeLink: "← 返回主页"
+                }
+            };
+
+            const elementsToTranslate = {
+                'privacy-title': 'privacyTitle',
+                'last-updated': 'lastUpdated',
+                'privacy-intro': 'privacyIntro',
+                'info-we-collect-title': 'infoWeCollectTitle',
+                'li-location-data': 'liLocationData',
+                'li-motion-data': 'liMotionData',
+                'li-device-settings': 'liDeviceSettings',
+                'li-usage-analytics': 'liUsageAnalytics',
+                'how-we-use-data-title': 'howWeUseDataTitle',
+                'li-enable-focus': 'liEnableFocus',
+                'li-detect-driving': 'liDetectDriving',
+                'li-personalized-zones': 'liPersonalizedZones',
+                'li-improve-app': 'liImproveApp',
+                'storage-security-title': 'storageSecurityTitle',
+                'li-local-processing': 'liLocalProcessing',
+                'li-icloud-sync': 'liIcloudSync',
+                'li-encryption': 'liEncryption',
+                'li-no-third-parties': 'liNoThirdParties',
+                'your-rights-title': 'yourRightsTitle',
+                'li-access-data': 'liAccessData',
+                'li-delete-data': 'liDeleteData',
+                'li-opt-out': 'liOptOut',
+                'li-control-permissions': 'liControlPermissions',
+                'third-party-services-title': 'thirdPartyServicesTitle',
+                'li-apple-maps': 'liAppleMaps',
+                'li-icloud-sync-services': 'liIcloudSyncServices',
+                'li-storekit': 'liStorekit',
+                'li-no-ads': 'liNoAds',
+                'contact-info': 'contactInfo',
+                'back-home-link': 'backHomeLink'
+            };
+
+            const updateContent = (lang) => {
+                const currentTranslations = translations[lang];
+                for (const id in elementsToTranslate) {
+                    const element = document.getElementById(id);
+                    const key = elementsToTranslate[id];
+                    if (element && currentTranslations[key]) {
+                        if (id === 'contact-info') {
+                            element.innerHTML = currentTranslations[key].replace('contact@kimyaapp.com', '<a href="mailto:contact@kimyaapp.com">contact@kimyaapp.com</a>');
+                        } else {
+                            element.textContent = currentTranslations[key];
+                        }
+                    }
+                }
+            };
+
+            const langSelector = document.getElementById('language-selector');
+            langSelector.addEventListener('change', (event) => {
+                updateContent(event.target.value);
+            });
+
+            // Set initial language
+            updateContent('en');
         });
     </script>
-
 </body>
 </html>
