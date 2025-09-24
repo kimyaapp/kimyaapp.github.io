@@ -1,165 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang-key="terms_title">KIMYA – Terms of Service</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F0F2F8; /* Fallback for outside the frame */
-            color: #1a202c;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="terms_title">KIMYA – Terms of Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F2F8;
+            color: #1a202c;
+        }
 
-        /* The Aurora gradient, applied to the body for the frame effect */
-        .aurora-frame-bg {
-            background: linear-gradient(135deg,
-                #2326A8, #35C3F3, #8B9FE8, #62007A,
-                #E681D8, #8A2BE2, #FFA9A4, #B22485, #FED2CE);
-            background-size: 400% 400%;
-            animation: shimmer 15s ease-in-out infinite;
-            padding: 8px; /* This creates the thin frame */
-        }
+        .aurora-frame-bg {
+            background: linear-gradient(135deg,
+                #2326A8, #35C3F3, #8B9FE8, #62007A,
+                #E681D8, #8A2BE2, #FFA9A4, #B22485, #FED2CE);
+            background-size: 400% 400%;
+            animation: shimmer 15s ease-in-out infinite;
+            padding: 8px;
+        }
 
-        @keyframes shimmer {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        /* Ensure links are styled nicely */
-        .content a {
-            color: #2326A8;
-            text-decoration: underline;
-        }
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .content a {
+            color: #2326A8;
+            text-decoration: underline;
+        }
 
-        .terms-section {
-            margin-bottom: 1.5rem; /* 24px */
-        }
+        .terms-section {
+            margin-bottom: 1.5rem;
+        }
 
-        .terms-section h2 {
-            font-size: 1.25rem; /* 20px */
-            font-weight: 600;
-            margin-bottom: 0.5rem; /* 8px */
-        }
+        .terms-section h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
 
-    </style>
+    </style>
 </head>
 <body class="antialiased min-h-screen flex items-center justify-center p-4">
 
-    <div class="aurora-frame-bg w-full max-w-4xl rounded-2xl shadow-lg">
-        <div class="bg-white rounded-lg p-8 md:p-12 content">
-            <div class="flex justify-between items-center mb-4">
-                <h1 class="text-3xl md:text-4xl font-bold" data-lang-key="terms_of_service_heading">Terms of Service</h1>
-                <div class="relative inline-block text-gray-700">
-                    <select id="language-selector" onchange="changeLanguage(this.value)" class="block w-full py-2 px-4 pr-8 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 border-gray-300 cursor-pointer">
-                        <option value="en" selected>English</option>
-                        <option value="de">Deutsch</option>
-                        <option value="es">Español</option>
-                        <option value="fr">Français</option>
-                        <option value="hi">हिंदी</option>
-                        <option value="it">Italiano</option>
-                        <option value="ja">日本語</option>
-                        <option value="kg">Kikongo</option>
-                        <option value="ko">한국어</option>
-                        <option value="pt">Português</option>
-                        <option value="ru">Русский</option>
-                        <option value="sw">Kiswahili</option>
-                        <option value="zh">简体中文</option>
-                    </select>
-                </div>
-            </div>
-            <p class="text-sm text-gray-500 mb-8" data-lang-key="last_updated">Last Updated: September 22, 2025</p>
-            
-            <div class="space-y-6 text-gray-700">
+    <div class="aurora-frame-bg w-full max-w-4xl rounded-2xl shadow-lg">
+        <div class="bg-white rounded-lg p-8 md:p-12 content">
+            <div class="flex justify-between items-center mb-4">
+                <h1 class="text-3xl md:text-4xl font-bold" data-lang-key="terms_of_service_heading"></h1>
+                <div class="relative inline-block text-gray-700">
+                    <select id="language-selector" onchange="changeLanguage(this.value)" class="block w-full py-2 px-4 pr-8 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-100 border-gray-300 cursor-pointer">
+                        <option value="en" selected>English</option>
+                        <option value="de">Deutsch</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="it">Italiano</option>
+                        <option value="ja">日本語</option>
+                        <option value="kg">Kikongo</option>
+                        <option value="ko">한국어</option>
+                        <option value="pt">Português</option>
+                        <option value="ru">Русский</option>
+                        <option value="sw">Kiswahili</option>
+                        <option value="zh">简体中文</option>
+                    </select>
+                </div>
+            </div>
+            <p class="text-sm text-gray-500 mb-8" data-lang-key="last_updated"></p>
+            
+            <div class="space-y-6 text-gray-700">
 
-                <div class="terms-section">
-                    <h2 data-lang-key="terms_section_1_heading">1. Acceptance of Terms</h2>
-                    <p data-lang-key="terms_section_1_text">By downloading, installing, or using KIMYA ("the App"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the App.</p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_1_heading"></h2>
+                    <p data-lang-key="terms_section_1_text"></p>
+                </div>
 
-                <div class="terms-section">
-                    <h2 data-lang-key="terms_section_2_heading">2. Description of Service</h2>
-                    <p data-lang-key="terms_section_2_text">KIMYA is an intelligent auto-silent utility that manages your device's Focus modes based on location, motion detection, and custom rules. The App requires certain permissions to function properly.</p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_2_heading"></h2>
+                    <p data-lang-key="terms_section_2_text"></p>
+                </div>
 
-                <div class="terms-section">
-                    <h2 data-lang-key="terms_section_3_heading">3. User Responsibilities</h2>
-                    <p data-lang-key="terms_section_3_text">You are responsible for maintaining the confidentiality of your account and for all activities that occur under your account. You agree to use the App in compliance with all applicable laws and regulations.</p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_3_heading"></h2>
+                    <p data-lang-key="terms_section_3_text"></p>
+                </div>
 
-                <div class="terms-section">
-                    <h2 data-lang-key="terms_section_4_heading">4. Privacy and Data</h2>
-                    <p data-lang-key="terms_section_4_text">Your use of the App is also governed by our <a href="./privacy-policy.html">Privacy Policy</a>. We collect and process location data, motion data, and device settings to provide the service. All data is processed locally on your device.</p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_4_heading"></h2>
+                    <p data-lang-key="terms_section_4_text"></p>
+                </div>
 
-                <div class="terms-section">
-                    <h2 data-lang-key="terms_section_5_heading">5. Subscription and Billing</h2>
-                    <p data-lang-key="terms_section_5_text">KIMYA requires a paid subscription. Monthly and Yearly plans are available, both granting full access to all features. Subscriptions are billed through your Apple ID and automatically renew unless canceled at least 24 hours before the end of the current period. A 7-day trial may be offered by Apple depending on your region; trial availability and management are handled solely by Apple.</p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_5_heading"></h2>
+                    <p data-lang-key="terms_section_5_text"></p>
+                </div>
 
-                <div class="terms-section">
-                    <h2 data-lang-key="terms_section_6_heading">6. Intellectual Property</h2>
-                    <p data-lang-key="terms_section_6_text">All content, features, and functionality of the App are owned by KIMYA and are protected by international copyright, trademark, and other intellectual property laws.</p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_6_heading"></h2>
+                    <p data-lang-key="terms_section_6_text"></p>
+                </div>
 
-                <div class="terms-section">
-                    <h2 data-lang-key="terms_section_7_heading">7. Limitation of Liability</h2>
-                    <p data-lang-key="terms_section_7_text">KIMYA shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use or inability to use the App.</p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_7_heading"></h2>
+                    <p data-lang-key="terms_section_7_text"></p>
+                </div>
 
-                <div class="terms-section">
-                    <h2 data-lang-key="terms_section_8_heading">8. Changes to Terms</h2>
-                    <p data-lang-key="terms_section_8_text">We reserve the right to modify these Terms at any time. We will notify users of any material changes through the App or via email.</p>
-                </div>
-                
-                <div class="terms-section">
-                  <h2 data-lang-key="supported_languages_heading">9. Supported Languages</h2>
-                  <ul class="list-disc list-inside space-y-2 pl-2">
-                    <li>German</li>
-                    <li>English</li>
-                    <li>Spanish</li>
-                    <li>French</li>
-                    <li>Hindi</li>
-                    <li>Italian</li>
-                    <li>Japanese</li>
-                    <li>Kikongo</li>
-                    <li>Korean</li>
-                    <li>Portuguese</li>
-                    <li>Russian</li>
-                    <li>Kiswahili</li>
-                    <li>Simplified Chinese</li>
-                  </ul>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_8_heading"></h2>
+                    <p data-lang-key="terms_section_8_text"></p>
+                </div>
+                
+                <div class="terms-section">
+                    <h2 data-lang-key="supported_languages_heading"></h2>
+                    <ul class="list-disc list-inside space-y-2 pl-2" data-lang-key="supported_languages"></ul>
+                </div>
 
-                <div class="terms-section">
-                    <h2 data-lang-key="terms_section_10_heading">10. Contact Information</h2>
-                    <p data-lang-key="terms_section_10_text">For questions about these Terms, please contact us at <a href="mailto:contact@kimyaapp.com">contact@kimyaapp.com</a></p>
-                </div>
+                <div class="terms-section">
+                    <h2 data-lang-key="terms_section_10_heading"></h2>
+                    <p data-lang-key="terms_section_10_text"></p>
+                </div>
 
-            </div>
+            </div>
 
-            <div class="mt-8 pt-6 border-t border-gray-200">
-                <a href="./index.html" class="text-sm font-semibold hover:text-indigo-800" data-lang-key="back_to_home">&larr; Back to Home</a>
-            </div>
-        </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const currentLang = new URLSearchParams(window.location.search).get('lang') || 'en';
-            document.getElementById('language-selector').value = currentLang;
-            document.documentElement.lang = currentLang;
-        });
-        function changeLanguage(lang) {
-            const url = new URL(window.location.href);
-            url.searchParams.set('lang', lang);
-            window.location.href = url.toString();
-        }
-    </script>
+            <div class="mt-8 pt-6 border-t border-gray-200">
+                <a href="./index.html" class="text-sm font-semibold hover:text-indigo-800" data-lang-key="back_to_home"></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const translations = {
+            en: {
+                terms_title: "KIMYA – Terms of Service",
+                terms_of_service_heading: "Terms of Service",
+                last_updated: "Last Updated: September 22, 2025",
+                terms_section_1_heading: "1. Acceptance of Terms",
+                terms_section_1_text: "By downloading, installing, or using KIMYA ('the App'), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the App.",
+                terms_section_2_heading: "2. Description of Service",
+                terms_section_2_text: "KIMYA is an intelligent auto-silent utility that manages your device's Focus modes based on location, motion detection, and custom rules. The App requires certain permissions to function properly.",
+                terms_section_3_heading: "3. User Responsibilities",
+                terms_section_3_text: "You are responsible for maintaining the confidentiality of your account and for all activities that occur under your account. You agree to use the App in compliance with all applicable laws and regulations.",
+                terms_section_4_heading: "4. Privacy and Data",
+                terms_section_4_text: "Your use of the App is also governed by our <a href='./privacy-policy.html'>Privacy Policy</a>. We collect and process location data, motion data, and device settings to provide the service. All data is processed locally on your device.",
+                terms_section_5_heading: "5. Subscription and Billing",
+                terms_section_5_text: "KIMYA requires a paid subscription. Monthly and Yearly plans are available, both granting full access to all features. Subscriptions are billed through your Apple ID and automatically renew unless canceled at least 24 hours before the end of the current period. A 7-day trial may be offered by Apple depending on your region; trial availability and management are handled solely by Apple.",
+                terms_section_6_heading: "6. Intellectual Property",
+                terms_section_6_text: "All content, features, and functionality of the App are owned by KIMYA and are protected by international copyright, trademark, and other intellectual property laws.",
+                terms_section_7_heading: "7. Limitation of Liability",
+                terms_section_7_text: "KIMYA shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use or inability to use the App.",
+                terms_section_8_heading: "8. Changes to Terms",
+                terms_section_8_text: "We reserve the right to modify these Terms at any time. We will notify users of any material changes through the App or via email.",
+                supported_languages_heading: "9. Supported Languages",
+                supported_languages: `<li>German</li><li>English</li><li>Spanish</li><li>French</li><li>Hindi</li><li>Italian</li><li>Japanese</li><li>Kikongo</li><li>Korean</li><li>Portuguese</li><li>Russian</li><li>Kiswahili</li><li>Simplified Chinese</li>`,
+                terms_section_10_heading: "10. Contact Information",
+                terms_section_10_text: "For questions about these Terms, please contact us at <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>",
+                back_to_home: "← Back to Home"
+            },
+            de: {
+                terms_title: "KIMYA – Nutzungsbedingungen",
+                terms_of_service_heading: "Nutzungsbedingungen",
+                last_updated: "Zuletzt aktualisiert: 22. September 2025",
+                terms_section_1_heading: "1. Annahme der Bedingungen",
+                terms_section_1_text: "Durch das Herunterladen, Installieren oder die Nutzung von KIMYA ('der App') erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Wenn Sie diesen Bedingungen nicht zustimmen, verwenden Sie die App bitte nicht.",
+                terms_section_2_heading: "2. Beschreibung des Dienstes",
+                terms_section_2_text: "KIMYA ist ein intelligentes, automatisch stummschaltendes Dienstprogramm, das die Fokus-Modi Ihres Geräts basierend auf Standort, Bewegungserkennung und benutzerdefinierten Regeln verwaltet. Die App erfordert bestimmte Berechtigungen, um ordnungsgemäß zu funktionieren.",
+                terms_section_3_heading: "3. Verantwortlichkeiten des Benutzers",
+                terms_section_3_text: "Sie sind für die Vertraulichkeit Ihres Kontos und für alle Aktivitäten, die unter Ihrem Konto stattfinden, verantwortlich. Sie stimmen zu, die App in Übereinstimmung mit allen anwendbaren Gesetzen und Vorschriften zu verwenden.",
+                terms_section_4_heading: "4. Datenschutz und Daten",
+                terms_section_4_text: "Ihre Nutzung der App unterliegt auch unserer <a href='./privacy-policy.html'>Datenschutzrichtlinie</a>. Wir sammeln und verarbeiten Standortdaten, Bewegungsdaten und Geräteeinstellungen, um den Dienst bereitzustellen. Alle Daten werden lokal auf Ihrem Gerät verarbeitet.",
+                terms_section_5_heading: "5. Abonnement und Abrechnung",
+                terms_section_5_text: "KIMYA erfordert ein kostenpflichtiges Abonnement. Monatliche und jährliche Pläne sind verfügbar, die beide vollen Zugriff auf alle Funktionen gewähren. Abonnements werden über Ihre Apple-ID abgerechnet und verlängern sich automatisch, sofern sie nicht mindestens 24 Stunden vor dem Ende des aktuellen Zeitraums gekündigt werden. Ein 7-tägiger Testzeitraum kann von Apple je nach Ihrer Region angeboten werden; die Verfügbarkeit und Verwaltung des Testzeitraums wird ausschließlich von Apple gehandhabt.",
+                terms_section_6_heading: "6. Geistiges Eigentum",
+                terms_section_6_text: "Alle Inhalte, Funktionen und Funktionalitäten der App sind Eigentum von KIMYA und durch internationale Urheber-, Marken- und andere Gesetze zum geistigen Eigentum geschützt.",
+                terms_section_7_heading: "7. Haftungsbeschränkung",
+                terms_section_7_text: "KIMYA haftet nicht für indirekte, zufällige, spezielle, Folge- oder Strafschäden, die aus Ihrer Nutzung oder Unfähigkeit zur Nutzung der App resultieren.",
+                terms_section_8_heading: "8. Änderungen an den Bedingungen",
+                terms_section_8_text: "Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Wir werden die Benutzer über wesentliche Änderungen durch die App oder per E-Mail informieren.",
+                supported_languages_heading: "9. Unterstützte Sprachen",
+                supported_languages: `<li>Deutsch</li><li>Englisch</li><li>Spanisch</li><li>Französisch</li><li>Hindi</li><li>Italienisch</li><li>Japanisch</li><li>Kikongo</li><li>Koreanisch</li><li>Portugiesisch</li><li>Russisch</li><li>Kiswahili</li><li>Vereinfachtes Chinesisch</li>`,
+                terms_section_10_heading: "10. Kontaktinformationen",
+                terms_section_10_text: "Für Fragen zu diesen Bedingungen kontaktieren Sie uns bitte unter <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>",
+                back_to_home: "← Zurück zur Startseite"
+            },
+            es: {
+                terms_title: "KIMYA – Términos de Servicio",
+                terms_of_service_heading: "Términos de Servicio",
+                last_updated: "Última actualización: 22 de septiembre de 2025",
+                terms_section_1_heading: "1. Aceptación de los Términos",
+                terms_section_1_text: "Al descargar, instalar o usar KIMYA ('la Aplicación'), usted acepta estar sujeto a estos Términos de Servicio. Si no está de acuerdo con estos términos, no utilice la Aplicación.",
+                terms_section_2_heading: "2. Descripción del Servicio",
+                terms_section_2_text: "KIMYA es una utilidad inteligente de silencio automático que gestiona los modos de enfoque de su dispositivo basándose en la ubicación, la detección de movimiento y reglas personalizadas. La Aplicación requiere ciertos permisos para funcionar correctamente.",
+                terms_section_3_heading: "3. Responsabilidades del Usuario",
+                terms_section_3_text: "Usted es responsable de mantener la confidencialidad de su cuenta y de todas las actividades que ocurran bajo su cuenta. Acepta usar la Aplicación en cumplimiento con todas las leyes y regulaciones aplicables.",
+                terms_section_4_heading: "4. Privacidad y Datos",
+                terms_section_4_text: "El uso de la Aplicación también se rige por nuestra <a href='./privacy-policy.html'>Política de privacidad</a>. Recopilamos y procesamos datos de ubicación, datos de movimiento y configuraciones del dispositivo para proporcionar el servicio. Todos los datos se procesan localmente en su dispositivo.",
+                terms_section_5_heading: "5. Suscripción y Facturación",
+                terms_section_5_text: "KIMYA requiere una suscripción de pago. Los planes mensuales y anuales están disponibles, ambos otorgan acceso completo a todas las funciones. Las suscripciones se facturan a través de su Apple ID y se renuevan automáticamente a menos que se cancelen al menos 24 horas antes del final del período actual. Es posible que Apple ofrezca una prueba de 7 días, dependiendo de su región; la disponibilidad y gestión de la prueba son manejadas exclusivamente por Apple.",
+                terms_section_6_heading: "6. Propiedad Intelectual",
+                terms_section_6_text: "Todo el contenido, las características y la funcionalidad de la Aplicación son propiedad de KIMYA y están protegidos por las leyes internacionales de derechos de autor, marcas registradas y otras leyes de propiedad intelectual.",
+                terms_section_7_heading: "7. Limitación de Responsabilidad",
+                terms_section_7_text: "KIMYA no será responsable de ningún daño indirecto, incidental, especial, consecuente o punitivo que resulte de su uso o incapacidad para usar la Aplicación.",
+                terms_section_8_heading: "8. Cambios en los Términos",
+                terms_section_8_text: "Nos reservamos el derecho de modificar estos Términos en cualquier momento. Notificaremos a los usuarios sobre cualquier cambio material a través de la Aplicación o por correo electrónico.",
+                supported_languages_heading: "9. Idiomas admitidos",
+                supported_languages: `<li>Alemán</li><li>Inglés</li><li>Español</li><li>Francés</li><li>Hindi</li><li>Italiano</li><li>Japonés</li><li>Kikongo</li><li>Coreano</li><li>Portugués</li><li>Ruso</li><li>Kiswahili</li><li>Chino simplificado</li>`,
+                terms_section_10_heading: "10. Información de Contacto",
+                terms_section_10_text: "Para preguntas sobre estos Términos, contáctenos en <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>",
+                back_to_home: "← Volver a la página principal"
+            },
+            fr: {
+                terms_title: "KIMYA – Conditions d'utilisation",
+                terms_of_service_heading: "Conditions d'utilisation",
+                last_updated: "Dernière mise à jour : 22 septembre 2025",
+                terms_section_1_heading: "1. Acceptation des conditions",
+                terms_section_1_text: "En téléchargeant, installant ou utilisant KIMYA ('l'Application'), vous acceptez d'être lié par ces Conditions d'utilisation. Si vous n'êtes pas d'accord avec ces conditions, veuillez ne pas utiliser l'Application.",
+                terms_section_2_heading: "2. Description du service",
+                terms_section_2_text: "KIMYA est un utilitaire de silence automatique intelligent qui gère les modes de mise au point de votre appareil en fonction de la localisation, de la détection de mouvement et de règles personnalisées. L'Application nécessite certaines autorisations pour fonctionner correctement.",
+                terms_section_3_heading: "3. Responsabilités de l'utilisateur",
+                terms_section_3_text: "Vous êtes responsable de la confidentialité de votre compte et de toutes les activités qui se produisent sous votre compte. Vous acceptez d'utiliser l'Application en conformité avec toutes les lois et réglementations applicables.",
+                terms_section_4_heading: "4. Confidentialité et données",
+                terms_section_4_text: "Votre utilisation de l'Application est également régie par notre <a href='./privacy-policy.html'>politique de confidentialité</a>. Nous collectons et traitons les données de localisation, les données de mouvement et les paramètres de l'appareil pour fournir le service. Toutes les données sont traitées localement sur votre appareil.",
+                terms_section_5_heading: "5. Abonnement et facturation",
+                terms_section_5_text: "KIMYA nécessite un abonnement payant. Des plans mensuels et annuels sont disponibles, les deux donnant un accès complet à toutes les fonctionnalités. Les abonnements sont facturés via votre Apple ID et se renouvellent automatiquement à moins d'être annulés au moins 24 heures avant la fin de la période en cours. Une période d'essai de 7 jours peut être proposée par Apple en fonction de votre région ; la disponibilité et la gestion de l'essai sont gérées uniquement par Apple.",
+                terms_section_6_heading: "6. Propriété intellectuelle",
+                terms_section_6_text: "Tout le contenu, les fonctionnalités et la fonctionnalité de l'Application sont la propriété de KIMYA et sont protégés par le droit d'auteur international, les marques de commerce et d'autres lois sur la propriété intellectuelle.",
+                terms_section_7_heading: "7. Limitation de responsabilité",
+                terms_section_7_text: "KIMYA ne sera pas responsable des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs résultant de votre utilisation ou de votre incapacité à utiliser l'Application.",
+                terms_section_8_heading: "8. Modifications des conditions",
+                terms_section_8_text: "Nous nous réservons le droit de modifier ces conditions à tout moment. Nous informerons les utilisateurs de tout changement matériel via l'Application ou par e-mail.",
+                supported_languages_heading: "9. Langues prises en charge",
+                supported_languages: `<li>Allemand</li><li>Anglais</li><li>Espagnol</li><li>Français</li><li>Hindi</li><li>Italien</li><li>Japonais</li><li>Kikongo</li><li>Coréen</li><li>Portugais</li><li>Russe</li><li>Kiswahili</li><li>Chinois simplifié</li>`,
+                terms_section_10_heading: "10. Informations de contact",
+                terms_section_10_text: "Pour des questions concernant ces conditions, veuillez nous contacter à <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>",
+                back_to_home: "← Retour à l'accueil"
+            },
+            hi: {
+                terms_title: "किमया - सेवा की शर्तें",
+                terms_of_service_heading: "सेवा की शर्तें",
+                last_updated: "अंतिम अपडेट: 22 सितंबर 2025",
+                terms_section_1_heading: "1. शर्तों की स्वीकृति",
+                terms_section_1_text: "किमया ('ऐप') को डाउनलोड, इंस्टॉल या उपयोग करके, आप इन सेवा की शर्तों से बाध्य होने के लिए सहमत हैं। यदि आप इन शर्तों से सहमत नहीं हैं, तो कृपया ऐप का उपयोग न करें।",
+                terms_section_2_heading: "2. सेवा का विवरण",
+                terms_section_2_text: "किमया एक बुद्धिमान ऑटो-साइलेंट यूटिलिटी है जो स्थान, गति का पता लगाने और कस्टम नियमों के आधार पर आपके डिवाइस के फ़ोकस मोड को प्रबंधित करती है। ऐप को ठीक से काम करने के लिए कुछ अनुमतियों की आवश्यकता होती है।",
+                terms_section_3_heading: "3. उपयोगकर्ता जिम्मेदारियाँ",
+                terms_section_3_text: "आप अपने खाते की गोपनीयता बनाए रखने और आपके खाते के तहत होने वाली सभी गतिविधियों के लिए जिम्मेदार हैं। आप सभी लागू कानूनों और विनियमों के अनुपालन में ऐप का उपयोग करने के लिए सहमत हैं।",
+                terms_section_4_heading: "4. गोपनीयता और डेटा",
+                terms_section_4_text: "आपके ऐप का उपयोग हमारी <a href='./privacy-policy.html'>गोपनीयता नीति</a> द्वारा भी नियंत्रित होता है। हम सेवा प्रदान करने के लिए स्थान डेटा, गति डेटा और डिवाइस सेटिंग्स एकत्र और संसाधित करते हैं। सभी डेटा आपके डिवाइस पर स्थानीय रूप से संसाधित होते हैं।",
+                terms_section_5_heading: "5. सदस्यता और बिलिंग",
+                terms_section_5_text: "किमया को एक सशुल्क सदस्यता की आवश्यकता है। मासिक और वार्षिक योजनाएं उपलब्ध हैं, दोनों सभी सुविधाओं तक पूर्ण पहुँच प्रदान करती हैं। सदस्यताएँ आपके Apple ID के माध्यम से बिल की जाती हैं और वर्तमान अवधि के अंत से कम से कम 24 घंटे पहले रद्द नहीं होने पर स्वचालित रूप से नवीनीकृत हो जाती हैं। आपकी Apple द्वारा आपके क्षेत्र के आधार पर 7-दिवसीय परीक्षण की पेशकश की जा सकती है; परीक्षण की उपलब्धता और प्रबंधन पूरी तरह से Apple द्वारा संभाला जाता है।",
+                terms_section_6_heading: "6. बौद्धिक संपदा",
+                terms_section_6_text: "ऐप की सभी सामग्री, सुविधाएँ और कार्यक्षमता किमया के स्वामित्व में हैं और अंतरराष्ट्रीय कॉपीराइट, ट्रेडमार्क और अन्य बौद्धिक संपदा कानूनों द्वारा संरक्षित हैं।",
+                terms_section_7_heading: "7. दायित्व की सीमा",
+                terms_section_7_text: "किमया आपके ऐप के उपयोग या उपयोग करने में असमर्थता से उत्पन्न होने वाले किसी भी अप्रत्यक्ष, आकस्मिक, विशेष, परिणामी या दंडात्मक क्षति के लिए उत्तरदायी नहीं होगा।",
+                terms_section_8_heading: "8. शर्तों में परिवर्तन",
+                terms_section_8_text: "हम किसी भी समय इन शर्तों को संशोधित करने का अधिकार सुरक्षित रखते हैं। हम ऐप या ईमेल के माध्यम से किसी भी महत्वपूर्ण परिवर्तन के बारे में उपयोगकर्ताओं को सूचित करेंगे।",
+                supported_languages_heading: "9. समर्थित भाषाएँ",
+                supported_languages: `<li>जर्मन</li><li>अंग्रेजी</li><li>स्पेनिश</li><li>फ्रेंच</li><li>हिंदी</li><li>इतालवी</li><li>जापानी</li><li>किकोंगो</li><li>कोरियाई</li><li>पुर्तगाली</li><li>रूसी</li><li>किस्वाहिली</li><li>सरलीकृत चीनी</li>`,
+                terms_section_10_heading: "10. संपर्क जानकारी",
+                terms_section_10_text: "इन शर्तों के बारे में प्रश्नों के लिए, कृपया हमसे <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a> पर संपर्क करें",
+                back_to_home: "← होम पर वापस जाएँ"
+            },
+            it: {
+                terms_title: "KIMYA – Termini di Servizio",
+                terms_of_service_heading: "Termini di Servizio",
+                last_updated: "Ultimo aggiornamento: 22 settembre 2025",
+                terms_section_1_heading: "1. Accettazione dei Termini",
+                terms_section_1_text: "Scaricando, installando o utilizzando KIMYA ('l'App'), accetti di essere vincolato da questi Termini di Servizio. Se non accetti questi termini, ti preghiamo di non utilizzare l'App.",
+                terms_section_2_heading: "2. Descrizione del Servizio",
+                terms_section_2_text: "KIMYA è un'utility di silenzio automatico intelligente che gestisce le modalità di Focus del tuo dispositivo in base a posizione, rilevamento del movimento e regole personalizzate. L'App richiede determinate autorizzazioni per funzionare correttamente.",
+                terms_section_3_heading: "3. Responsabilità dell'Utente",
+                terms_section_3_text: "Sei responsabile del mantenimento della riservatezza del tuo account e di tutte le attività che si verificano sotto il tuo account. Accetti di utilizzare l'App in conformità con tutte le leggi e i regolamenti applicabili.",
+                terms_section_4_heading: "4. Privacy e Dati",
+                terms_section_4_text: "Il tuo utilizzo dell'App è anche regolato dalla nostra <a href='./privacy-policy.html'>Informativa sulla privacy</a>. Raccogliamo ed elaboriamo dati sulla posizione, dati sul movimento e impostazioni del dispositivo per fornire il servizio. Tutti i dati vengono elaborati localmente sul tuo dispositivo.",
+                terms_section_5_heading: "5. Abbonamento e Fatturazione",
+                terms_section_5_text: "KIMYA richiede un abbonamento a pagamento. Sono disponibili piani mensili e annuali, entrambi che garantiscono l'accesso completo a tutte le funzionalità. Gli abbonamenti vengono fatturati tramite il tuo Apple ID e si rinnovano automaticamente a meno che non vengano annullati almeno 24 ore prima della fine del periodo corrente. Potrebbe essere offerto un periodo di prova di 7 giorni da Apple a seconda della tua regione; la disponibilità e la gestione della prova sono gestite esclusivamente da Apple.",
+                terms_section_6_heading: "6. Proprietà Intellettuale",
+                terms_section_6_text: "Tutto il contenuto, le funzionalità e la funzionalità dell'App sono di proprietà di KIMYA e sono protetti da leggi internazionali sul copyright, marchi e altre leggi sulla proprietà intellettuale.",
+                terms_section_7_heading: "7. Limitazione di Responsabilità",
+                terms_section_7_text: "KIMYA non sarà responsabile per eventuali danni indiretti, incidentali, speciali, consequenziali o punitivi derivanti dal tuo utilizzo o dall'incapacità di utilizzare l'App.",
+                terms_section_8_heading: "8. Modifiche ai Termini",
+                terms_section_8_text: "Ci riserviamo il diritto di modificare questi Termini in qualsiasi momento. Avviseremo gli utenti di eventuali modifiche sostanziali tramite l'App o via e-mail.",
+                supported_languages_heading: "9. Lingue supportate",
+                supported_languages: `<li>Tedesco</li><li>Inglese</li><li>Spagnolo</li><li>Francese</li><li>Hindi</li><li>Italiano</li><li>Giapponese</li><li>Kikongo</li><li>Coreano</li><li>Portoghese</li><li>Russo</li><li>Kiswahili</li><li>Cinese semplificato</li>`,
+                terms_section_10_heading: "10. Informazioni di Contatto",
+                terms_section_10_text: "Per domande su questi Termini, ti preghiamo di contattarci all'indirizzo <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>",
+                back_to_home: "← Torna alla Home"
+            },
+            ja: {
+                terms_title: "KIMYA – 利用規約",
+                terms_of_service_heading: "利用規約",
+                last_updated: "最終更新日：2025年9月22日",
+                terms_section_1_heading: "1. 利用規約の承諾",
+                terms_section_1_text: "KIMYA（「本アプリ」）をダウンロード、インストール、または使用することにより、本利用規約に拘束されることに同意するものとします。本規約に同意しない場合は、本アプリを使用しないでください。",
+                terms_section_2_heading: "2. サービスの説明",
+                terms_section_2_text: "KIMYAは、位置情報、動作検出、カスタムルールに基づいてデバイスのフォーカスモードをインテリジェントに管理する、インテリジェントな自動サイレントユーティリティです。本アプリは、適切に機能するために特定の権限を必要とします。",
+                terms_section_3_heading: "3. ユーザーの責任",
+                terms_section_3_text: "あなたは、あなたのアカウントの機密性を維持し、あなたのアカウントで行われるすべての活動に責任を負います。あなたは、すべての適用される法律および規制を遵守して本アプリを使用することに同意します。",
+                terms_section_4_heading: "4. プライバシーとデータ",
+                terms_section_4_text: "本アプリの使用は、当社の<a href='./privacy-policy.html'>プライバシーポリシー</a>にも準拠します。当社は、サービスを提供するために、位置情報データ、動作データ、およびデバイス設定を収集および処理します。すべてのデータは、あなたのデバイス上でローカルに処理されます。",
+                terms_section_5_heading: "5. サブスクリプションと請求",
+                terms_section_5_text: "KIMYAは有料サブスクリプションが必要です。月額および年額プランが利用可能で、どちらもすべての機能への完全なアクセスを許可します。サブスクリプションはあなたのApple IDを通じて請求され、現在の期間の終了の少なくとも24時間前にキャンセルされない限り、自動的に更新されます。お住まいの地域によっては、Appleから7日間のトライアルが提供される場合があります。トライアルの利用可能性と管理は、Appleによってのみ処理されます。",
+                terms_section_6_heading: "6. 知的財産",
+                terms_section_6_text: "本アプリのすべてのコンテンツ、機能、および機能性はKIMYAが所有しており、国際的な著作権、商標、およびその他の知的財産法によって保護されています。",
+                terms_section_7_heading: "7. 責任の制限",
+                terms_section_7_text: "KIMYAは、本アプリの使用または使用不能から生じるいかなる間接的、偶発的、特別、結果的、または懲罰的な損害についても責任を負わないものとします。",
+                terms_section_8_heading: "8. 利用規約の変更",
+                terms_section_8_text: "当社は、本規約をいつでも変更する権利を留保します。重要な変更については、本アプリまたは電子メールを通じてユーザーに通知します。",
+                supported_languages_heading: "9. サポートされている言語",
+                supported_languages: `<li>ドイツ語</li><li>英語</li><li>スペイン語</li><li>フランス語</li><li>ヒンディー語</li><li>イタリア語</li><li>日本語</li><li>キコンゴ語</li><li>韓国語</li><li>ポルトガル語</li><li>ロシア語</li><li>スワヒリ語</li><li>簡体字中国語</li>`,
+                terms_section_10_heading: "10. 連絡先情報",
+                terms_section_10_text: "本規約に関するご質問は、<a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>までお問い合わせください",
+                back_to_home: "← ホームに戻る"
+            },
+            ko: {
+                terms_title: "KIMYA – 서비스 약관",
+                terms_of_service_heading: "서비스 약관",
+                last_updated: "최종 업데이트: 2025년 9월 22일",
+                terms_section_1_heading: "1. 약관 동의",
+                terms_section_1_text: "KIMYA('앱')를 다운로드, 설치 또는 사용함으로써, 귀하는 이 서비스 약관에 구속되는 것에 동의합니다. 이 약관에 동의하지 않으면 앱을 사용하지 마십시오.",
+                terms_section_2_heading: "2. 서비스 설명",
+                terms_section_2_text: "KIMYA는 위치, 동작 감지 및 사용자 정의 규칙을 기반으로 장치의 집중 모드를 지능적으로 관리하는 자동 무음 유틸리티입니다. 앱은 제대로 작동하기 위해 특정 권한이 필요합니다.",
+                terms_section_3_heading: "3. 사용자 책임",
+                terms_section_3_text: "귀하는 계정의 기밀성을 유지하고 계정에서 발생하는 모든 활동에 대한 책임이 있습니다. 귀하는 모든 관련 법률 및 규정을 준수하여 앱을 사용하는 것에 동의합니다.",
+                terms_section_4_heading: "4. 개인 정보 및 데이터",
+                terms_section_4_text: "앱 사용은 또한 당사의 <a href='./privacy-policy.html'>개인정보처리방침</a>에 의해 규제됩니다. 당사는 서비스를 제공하기 위해 위치 데이터, 동작 데이터 및 장치 설정을 수집하고 처리합니다. 모든 데이터는 귀하의 장치에서 로컬로 처리됩니다.",
+                terms_section_5_heading: "5. 구독 및 청구",
+                terms_section_5_text: "KIMYA는 유료 구독이 필요합니다. 월간 및 연간 플랜을 사용할 수 있으며, 둘 다 모든 기능에 대한 전체 액세스를 제공합니다. 구독은 귀하의 Apple ID를 통해 청구되며, 현재 기간 종료 최소 24시간 전에 취소하지 않으면 자동 갱신됩니다. 귀하의 지역에 따라 Apple이 7일 무료 평가판을 제공할 수 있습니다. 평가판의 가용성과 관리는 전적으로 Apple이 담당합니다.",
+                terms_section_6_heading: "6. 지적 재산",
+                terms_section_6_text: "앱의 모든 콘텐츠, 기능 및 기능은 KIMYA의 소유이며 국제 저작권, 상표 및 기타 지적 재산권 법률에 의해 보호됩니다.",
+                terms_section_7_heading: "7. 책임의 한계",
+                terms_section_7_text: "KIMYA는 귀하의 앱 사용 또는 사용 불능으로 인해 발생하는 간접적, 우발적, 특별, 결과적 또는 징벌적 손해에 대해 책임을 지지 않습니다.",
+                terms_section_8_heading: "8. 약관 변경",
+                terms_section_8_text: "당사는 언제든지 이 약관을 수정할 권리를 보유합니다. 중대한 변경 사항은 앱 또는 이메일을 통해 사용자에게 통지할 것입니다.",
+                supported_languages_heading: "9. 지원되는 언어",
+                supported_languages: `<li>독일어</li><li>영어</li><li>스페인어</li><li>프랑스어</li><li>힌디어</li><li>이탈리아어</li><li>일본어</li><li>키콩고어</li><li>한국어</li><li>포르투갈어</li><li>러시아어</li><li>스와힐리어</li><li>중국어 간체</li>`,
+                terms_section_10_heading: "10. 연락처 정보",
+                terms_section_10_text: "이 약관에 대한 질문은 <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>으로 문의하십시오",
+                back_to_home: "← 홈으로 돌아가기"
+            },
+            pt: {
+                terms_title: "KIMYA – Termos de Serviço",
+                terms_of_service_heading: "Termos de Serviço",
+                last_updated: "Última atualização: 22 de setembro de 2025",
+                terms_section_1_heading: "1. Aceitação dos Termos",
+                terms_section_1_text: "Ao baixar, instalar ou usar o KIMYA ('o Aplicativo'), você concorda em ficar vinculado a estes Termos de Serviço. Se você não concorda com estes termos, por favor, não use o Aplicativo.",
+                terms_section_2_heading: "2. Descrição do Serviço",
+                terms_section_2_text: "KIMYA é um utilitário de silêncio automático inteligente que gerencia os modos de foco do seu dispositivo com base em localização, detecção de movimento e regras personalizadas. O Aplicativo requer certas permissões para funcionar corretamente.",
+                terms_section_3_heading: "3. Responsabilidades do Usuário",
+                terms_section_3_text: "Você é responsável por manter a confidencialidade de sua conta e por todas as atividades que ocorrem sob sua conta. Você concorda em usar o Aplicativo em conformidade com todas as leis e regulamentos aplicáveis.",
+                terms_section_4_heading: "4. Privacidade e Dados",
+                terms_section_4_text: "O uso do Aplicativo também é regido por nossa <a href='./privacy-policy.html'>Política de Privacidade</a>. Coletamos e processamos dados de localização, dados de movimento e configurações do dispositivo para fornecer o serviço. Todos os dados são processados localmente em seu dispositivo.",
+                terms_section_5_heading: "5. Assinatura e Cobrança",
+                terms_section_5_text: "KIMYA requer uma assinatura paga. Planos mensais e anuais estão disponíveis, ambos concedendo acesso total a todos os recursos. As assinaturas são cobradas através do seu Apple ID e são renovadas automaticamente, a menos que sejam canceladas pelo menos 24 horas antes do final do período atual. Um teste de 7 dias pode ser oferecido pela Apple dependendo da sua região; a disponibilidade e o gerenciamento do teste são tratados exclusivamente pela Apple.",
+                terms_section_6_heading: "6. Propriedade Intelectual",
+                terms_section_6_text: "Todo o conteúdo, recursos e funcionalidades do Aplicativo são de propriedade da KIMYA e são protegidos por direitos autorais internacionais, marcas registradas e outras leis de propriedade intelectual.",
+                terms_section_7_heading: "7. Limitação de Responsabilidade",
+                terms_section_7_text: "A KIMYA não será responsável por quaisquer danos indiretos, incidentais, especiais, consequenciais ou punitivos resultantes do seu uso ou incapacidade de usar o Aplicativo.",
+                terms_section_8_heading: "8. Alterações nos Termos",
+                terms_section_8_text: "Reservamo-nos o direito de modificar estes Termos a qualquer momento. Notificaremos os usuários sobre quaisquer alterações materiais através do Aplicativo ou por e-mail.",
+                supported_languages_heading: "9. Idiomas suportados",
+                supported_languages: `<li>Alemão</li><li>Inglês</li><li>Espanhol</li><li>Francês</li><li>Hindi</li><li>Italiano</li><li>Japonês</li><li>Kikongo</li><li>Coreano</li><li>Português</li><li>Russo</li><li>Kiswahili</li><li>Chinês simplificado</li>`,
+                terms_section_10_heading: "10. Informações de Contato",
+                terms_section_10_text: "Para perguntas sobre estes Termos, entre em contato conosco em <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>",
+                back_to_home: "← Voltar ao Início"
+            },
+            ru: {
+                terms_title: "KIMYA – Условия обслуживания",
+                terms_of_service_heading: "Условия обслуживания",
+                last_updated: "Последнее обновление: 22 сентября 2025 г.",
+                terms_section_1_heading: "1. Принятие Условий",
+                terms_section_1_text: "Загружая, устанавливая или используя KIMYA ('Приложение'), вы соглашаетесь быть связанными настоящими Условиями обслуживания. Если вы не согласны с этими условиями, пожалуйста, не используйте Приложение.",
+                terms_section_2_heading: "2. Описание Сервиса",
+                terms_section_2_text: "KIMYA — это интеллектуальная утилита автоматического отключения звука, которая управляет режимами фокусировки вашего устройства на основе местоположения, обнаружения движения и пользовательских правил. Приложению требуются определенные разрешения для правильной работы.",
+                terms_section_3_heading: "3. Обязанности пользователя",
+                terms_section_3_text: "Вы несете ответственность за сохранение конфиденциальности своей учетной записи и за все действия, которые происходят под вашей учетной записью. Вы соглашаетесь использовать Приложение в соответствии со всеми применимыми законами и правилами.",
+                terms_section_4_heading: "4. Конфиденциальность и данные",
+                terms_section_4_text: "Использование вами Приложения также регулируется нашей <a href='./privacy-policy.html'>Политикой конфиденциальности</a>. Мы собираем и обрабатываем данные о местоположении, данные о движении и настройки устройства, чтобы предоставить услугу. Все данные обрабатываются локально на вашем устройстве.",
+                terms_section_5_heading: "5. Подписка и оплата",
+                terms_section_5_text: "KIMYA требует платной подписки. Доступны месячные и годовые планы, оба предоставляют полный доступ ко всем функциям. Подписки оплачиваются через ваш Apple ID и автоматически продлеваются, если они не отменены по крайней мере за 24 часа до окончания текущего периода. Apple может предложить 7-дневную пробную версию в зависимости от вашего региона; доступность и управление пробной версией обрабатываются исключительно Apple.",
+                terms_section_6_heading: "6. Интеллектуальная собственность",
+                terms_section_6_text: "Все содержимое, функции и функциональность Приложения принадлежат KIMYA и защищены международным авторским правом, товарным знаком и другими законами об интеллектуальной собственности.",
+                terms_section_7_heading: "7. Ограничение ответственности",
+                terms_section_7_text: "KIMYA не несет ответственности за любые косвенные, случайные, специальные, косвенные или штрафные убытки, возникшие в результате вашего использования или невозможности использования Приложения.",
+                terms_section_8_heading: "8. Изменения в Условиях",
+                terms_section_8_text: "Мы оставляем за собой право изменять эти Условия в любое время. Мы будем уведомлять пользователей о любых существенных изменениях через Приложение или по электронной почте.",
+                supported_languages_heading: "9. Поддерживаемые языки",
+                supported_languages: `<li>Немецкий</li><li>Английский</li><li>Испанский</li><li>Французский</li><li>Хинди</li><li>Итальянский</li><li>Японский</li><li>Киконго</li><li>Корейский</li><li>Португальский</li><li>Русский</li><li>Кисуахили</li><li>Упрощенный китайский</li>`,
+                terms_section_10_heading: "10. Контактная информация",
+                terms_section_10_text: "По вопросам об этих Условиях, пожалуйста, свяжитесь с нами по адресу <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>",
+                back_to_home: "← Назад на главную"
+            },
+            sw: {
+                terms_title: "KIMYA – Masharti ya Huduma",
+                terms_of_service_heading: "Masharti ya Huduma",
+                last_updated: "Iliyosasishwa Mwisho: Septemba 22, 2025",
+                terms_section_1_heading: "1. Kukubali Masharti",
+                terms_section_1_text: "Kwa kupakua, kusakinisha, au kutumia KIMYA ('Programu'), unakubali kufungwa na Masharti haya ya Huduma. Ikiwa hukubaliani na masharti haya, tafadhali usitumie Programu.",
+                terms_section_2_heading: "2. Maelezo ya Huduma",
+                terms_section_2_text: "KIMYA ni huduma ya kiotomatiki ya kiotomatiki inayodhibiti modi za Kuzingatia za kifaa chako kulingana na eneo, utambuzi wa mwendo, na sheria maalum. Programu inahitaji ruhusa fulani kufanya kazi vizuri.",
+                terms_section_3_heading: "3. Majukumu ya Mtumiaji",
+                terms_section_3_text: "Una jukumu la kudumisha usiri wa akaunti yako na kwa shughuli zote zinazotokea chini ya akaunti yako. Unakubali kutumia Programu kwa kufuata sheria na kanuni zote zinazotumika.",
+                terms_section_4_heading: "4. Faragha na Data",
+                terms_section_4_text: "Matumizi yako ya Programu pia yanasimamiwa na <a href='./privacy-policy.html'>Sera yetu ya Faragha</a>. Tunakusanya na kuchakata data ya eneo, data ya mwendo, na mipangilio ya kifaa ili kutoa huduma. Data zote huchakatwa ndani ya kifaa chako.",
+                terms_section_5_heading: "5. Usajili na Malipo",
+                terms_section_5_text: "KIMYA inahitaji usajili wa kulipia. Mipango ya Kila mwezi na Kila mwaka inapatikana, yote ikikupa ufikiaji kamili wa vipengele vyote. Usajili hutozwa kupitia Kitambulisho chako cha Apple na husasishwa kiotomatiki isipokuwa ukitenguliwa angalau saa 24 kabla ya mwisho wa kipindi cha sasa. Jaribio la siku 7 linaweza kutolewa na Apple kulingana na eneo lako; upatikanaji na usimamizi wa jaribio unashughulikiwa peke yake na Apple.",
+                terms_section_6_heading: "6. Miliki ya Akili",
+                terms_section_6_text: "Maudhui yote, vipengele, na utendaji wa Programu vinamilikiwa na KIMYA na vinalindwa na hakimiliki ya kimataifa, alama ya biashara, na sheria nyingine za miliki ya akili.",
+                terms_section_7_heading: "7. Ukomo wa Dhima",
+                terms_section_7_text: "KIMYA haitawajibika kwa uharibifu wowote usio wa moja kwa moja, wa bahati mbaya, maalum, wa matokeo, au wa adhabu unaotokana na matumizi yako au kutokuwa na uwezo wa kutumia Programu.",
+                terms_section_8_heading: "8. Mabadiliko ya Masharti",
+                terms_section_8_text: "Tunahifadhi haki ya kurekebisha Masharti haya wakati wowote. Tutawaarifu watumiaji wa mabadiliko yoyote muhimu kupitia Programu au kupitia barua pepe.",
+                supported_languages_heading: "9. Lugha Zinazotumika",
+                supported_languages: `<li>Kijerumani</li><li>Kiingereza</li><li>Kihispania</li><li>Kifaransa</li><li>Kihindi</li><li>Kiitaliano</li><li>Kijapani</li><li>Kikongo</li><li>Kikorea</li><li>Kireno</li><li>Kirusi</li><li>Kiswahili</li><li>Kichina Rahisi</li>`,
+                terms_section_10_heading: "10. Taarifa za Mawasiliano",
+                terms_section_10_text: "Kwa maswali kuhusu Masharti haya, tafadhali wasiliana nasi kwa <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a>",
+                back_to_home: "← Rudi Nyumbani"
+            },
+            zh: {
+                terms_title: "KIMYA – 服务条款",
+                terms_of_service_heading: "服务条款",
+                last_updated: "最后更新：2025年9月22日",
+                terms_section_1_heading: "1. 服务条款的接受",
+                terms_section_1_text: "通过下载、安装或使用 KIMYA（“本应用”），即表示您同意受本服务条款的约束。如果您不同意这些条款，请不要使用本应用。",
+                terms_section_2_heading: "2. 服务描述",
+                terms_section_2_text: "KIMYA 是一款智能自动静音实用程序，可根据位置、运动检测和自定义规则管理您设备的专注模式。本应用需要某些权限才能正常运行。",
+                terms_section_3_heading: "3. 用户责任",
+                terms_section_3_text: "您有责任维护您账户的机密性以及在您账户下发生的所有活动。您同意遵守所有适用的法律法规使用本应用。",
+                terms_section_4_heading: "4. 隐私和数据",
+                terms_section_4_text: "您对本应用的使用也受我们的<a href='./privacy-policy.html'>隐私政策</a>的约束。我们收集并处理位置数据、运动数据和设备设置以提供服务。所有数据都在您的设备上本地处理。",
+                terms_section_5_heading: "5. 订阅和账单",
+                terms_section_5_text: "KIMYA 需要付费订阅。提供月度和年度计划，两者均可完全访问所有功能。订阅通过您的 Apple ID 计费，除非在当前期间结束前至少 24 小时取消，否则将自动续订。根据您的地区，Apple 可能会提供 7 天的试用期；试用期的可用性和管理完全由 Apple 处理。",
+                terms_section_6_heading: "6. 知识产权",
+                terms_section_6_text: "本应用的所有内容、功能和功能均归 KIMYA 所有，并受国际版权、商标和其他知识产权法的保护。",
+                terms_section_7_heading: "7. 责任限制",
+                terms_section_7_text: "KIMYA 对因您使用或无法使用本应用而导致的任何间接、附带、特殊、后果性或惩罚性损害不承担任何责任。",
+                terms_section_8_heading: "8. 条款变更",
+                terms_section_8_text: "我们保留随时修改这些条款的权利。我们将通过本应用或电子邮件通知用户任何重大变更。",
+                supported_languages_heading: "9. 支持的语言",
+                supported_languages: `<li>德语</li><li>英语</li><li>西班牙语</li><li>法语</li><li>印地语</li><li>意大利语</li><li>日语</li><li>基孔戈语</li><li>韩语</li><li>葡萄牙语</li><li>俄语</li><li>斯瓦希里语</li><li>简体中文</li>`,
+                terms_section_10_heading: "10. 联系信息",
+                terms_section_10_text: "有关这些条款的问题，请通过 <a href='mailto:contact@kimyaapp.com'>contact@kimyaapp.com</a> 联系我们",
+                back_to_home: "← 返回主页"
+            }
+        };
 
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('[data-lang-key]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-lang-key');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            document.documentElement.lang = lang;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const languageSelector = document.getElementById('language-selector');
+            const urlParams = new URLSearchParams(window.location.search);
+            const initialLang = urlParams.get('lang') || 'en';
+            languageSelector.value = initialLang;
+            changeLanguage(initialLang);
+        });
+    </script>
 </body>
 </html>
